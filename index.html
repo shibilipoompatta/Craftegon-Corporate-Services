@@ -34,13 +34,13 @@
     <!-- Top Announcement Bar -->
     <div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-sm">
         <span>🚀 Special Offer: Get <strong>20% OFF</strong> Corporate Filings & Free CA Consultation this week!</span>
-        <a href="#contact" class="underline ml-2 hover:text-brand-goldLight font-semibold">Claim Offer &rarr;</a>
+        <a href="contact.html" class="underline ml-2 hover:text-brand-goldLight font-semibold">Claim Offer &rarr;</a>
     </div>
 
     <!-- Header Navigation -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-md">
                     C
                 </div>
@@ -48,19 +48,22 @@
                     <span class="text-xl font-extrabold text-brand-dark tracking-tight">CRAFTEGON</span>
                     <span class="block text-[10px] font-bold text-brand-sky tracking-widest uppercase">Corporate Services</span>
                 </div>
-            </div>
+            </a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
-                <a href="#services" class="hover:text-brand-sky transition">Services Catalog</a>
-                <a href="#pricing" class="hover:text-brand-sky transition">Split Fee Structure</a>
-                <a href="#contact" class="hover:text-brand-sky transition">Consulting</a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#services" class="hover:text-brand-sky transition">Catalog</a>
+                <a href="pvt-ltd.html" class="hover:text-brand-sky transition">Incorporation</a>
+                <a href="gst.html" class="hover:text-brand-sky transition">GST & Tax</a>
+                <a href="trademark.html" class="hover:text-brand-sky transition">Trademark</a>
+                <a href="licenses.html" class="hover:text-brand-sky transition">Licenses</a>
+                <a href="about.html" class="hover:text-brand-sky transition">About</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="tel:+918606918247" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
-                    📞 +91 86069 18247
+                <a href="tel:+919000000000" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
+                    📞 +91 90000 00000
                 </a>
-                <a href="#contact" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
+                <a href="contact.html" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
                     Talk to Expert
                 </a>
             </div>
@@ -88,10 +91,10 @@
                 <div class="relative max-w-xl mx-auto md:mx-0 pt-2">
                     <div class="flex items-center bg-white rounded-xl shadow-lg border border-slate-200 p-2">
                         <span class="pl-3 text-slate-400">🔍</span>
-                        <input type="text" placeholder="Search 150+ services (e.g. Pvt Ltd, GST, Trademark)..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
-                        <button class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition">
-                            Search Catalog
-                        </button>
+                        <input type="text" id="catalog-search" placeholder="Search 150+ services (e.g. Pvt Ltd, GST, Trademark)..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
+                        <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});" class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition whitespace-nowrap">
+                            Explore Catalog
+                        </a>
                     </div>
                 </div>
 
@@ -153,9 +156,90 @@
         </div>
     </section>
 
+    <!-- Core Vertical Portals Grid -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Service Verticals</h2>
+                <h3 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Explore Legal & Compliance Services</h3>
+                <p class="text-slate-600 text-sm mt-2">Select a dedicated portal to access transparent split-pricing, document checklists, and fast-track filings.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Portal 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky font-bold rounded-xl flex items-center justify-center mb-4 text-xl">🏛️</div>
+                        <h4 class="text-lg font-bold text-brand-dark mb-2">Business Incorporation</h4>
+                        <p class="text-xs text-slate-500 mb-4">Pvt Ltd, LLP, OPC & Partnership registrations with SPICe+ MCA filing.</p>
+                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3 mb-6">
+                            <li>✔️ 2 DSC & DIN Included</li>
+                            <li>✔️ COI, PAN, TAN Allotment</li>
+                            <li>✔️ Free Bank Account Assistance</li>
+                        </ul>
+                    </div>
+                    <a href="pvt-ltd.html" class="w-full block text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg transition shadow">Open Pvt Ltd Portal &rarr;</a>
+                </div>
+
+                <!-- Portal 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-goldLight text-brand-gold font-bold rounded-xl flex items-center justify-center mb-4 text-xl">📄</div>
+                        <h4 class="text-lg font-bold text-brand-dark mb-2">GST & Tax Compliance</h4>
+                        <p class="text-xs text-slate-500 mb-4">Fast GSTIN allotment & monthly GSTR-1 / GSTR-3B filings with ITC reconciliation.</p>
+                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3 mb-6">
+                            <li>✔️ TRN & ARN Fast Tracking</li>
+                            <li>✔️ Auto ITC 2B Reconciliation</li>
+                            <li>✔️ E-Commerce Seller Setup</li>
+                        </ul>
+                    </div>
+                    <a href="gst.html" class="w-full block text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg transition shadow">Open GST Portal &rarr;</a>
+                </div>
+
+                <!-- Portal 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky font-bold rounded-xl flex items-center justify-center mb-4 text-xl">🛡️</div>
+                        <h4 class="text-lg font-bold text-brand-dark mb-2">Trademark & IP</h4>
+                        <p class="text-xs text-slate-500 mb-4">Brand name & logo protection, NICE class selection, and objection defense.</p>
+                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3 mb-6">
+                            <li>✔️ Free Public TM Search</li>
+                            <li>✔️ Same-Day ™ Symbol Rights</li>
+                            <li>✔️ Section 9/11 Objection Reply</li>
+                        </ul>
+                    </div>
+                    <a href="trademark.html" class="w-full block text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg transition shadow">Open TM Portal &rarr;</a>
+                </div>
+
+                <!-- Portal 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-goldLight text-brand-gold font-bold rounded-xl flex items-center justify-center mb-4 text-xl">📜</div>
+                        <h4 class="text-lg font-bold text-brand-dark mb-2">Licenses & Certifications</h4>
+                        <p class="text-xs text-slate-500 mb-4">FSSAI food license, Udyam MSME, Import Export Code (IEC) & ISO certifications.</p>
+                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3 mb-6">
+                            <li>✔️ 24-48 Hr Fast Allotments</li>
+                            <li>✔️ FoSCoS & DGFT Direct Filing</li>
+                            <li>✔️ Lifetime Validity Registrations</li>
+                        </ul>
+                    </div>
+                    <a href="licenses.html" class="w-full block text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg transition shadow">Open Licenses Portal &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex justify-center space-x-6 text-slate-300 font-semibold mb-4">
+                <a href="pvt-ltd.html" class="hover:text-white">Pvt Ltd Registration</a>
+                <a href="gst.html" class="hover:text-white">GST Filing</a>
+                <a href="trademark.html" class="hover:text-white">Trademark Protection</a>
+                <a href="licenses.html" class="hover:text-white">Licenses</a>
+                <a href="about.html" class="hover:text-white">About Us</a>
+                <a href="contact.html" class="hover:text-white">Contact Us</a>
+            </div>
             <p class="font-semibold text-white">Craftegon Corporate Services</p>
             <p>&copy; 2026 Craftegon Corporate Services. All rights reserved.</p>
         </div>
