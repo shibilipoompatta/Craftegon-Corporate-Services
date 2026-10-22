@@ -52,6 +52,7 @@
 
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
                 <a href="#services" class="hover:text-brand-sky transition">Catalog</a>
+                <a href="#knowledge-hub" class="hover:text-brand-sky transition">Knowledge Hub</a>
                 <a href="pvt-ltd.html" class="hover:text-brand-sky transition">Incorporation</a>
                 <a href="gst.html" class="hover:text-brand-sky transition">GST & Tax</a>
                 <a href="trademark.html" class="hover:text-brand-sky transition">Trademark</a>
@@ -98,9 +99,9 @@
                         <div class="flex items-center bg-white rounded-xl shadow-lg border border-slate-200 p-2">
                             <span class="pl-3 text-slate-400">🔍</span>
                             <input type="text" id="catalog-search" placeholder="Search 150+ services (e.g. Pvt Ltd, GST, Trademark)..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
-                            <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});" class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition whitespace-nowrap">
-                                Explore Catalog
-                            </a>
+                            <button onclick="searchKnowledgeHub()" class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition whitespace-nowrap">
+                                Search Hub
+                            </button>
                         </div>
                     </div>
 
@@ -181,6 +182,23 @@
                         <span>Browse Expert Directory & Book Slot</span>
                         <span>&rarr;</span>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Knowledge Hub Section -->
+        <section id="knowledge-hub" class="py-16 bg-slate-100/70 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                    <div>
+                        <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Knowledge Base</h2>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Featured Guides & Statutory Manuals</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 md:mt-0">Live data loaded from <code class="bg-slate-200 px-1.5 py-0.5 rounded text-brand-dark">indiafilings-knowledge-hub.json</code></p>
+                </div>
+
+                <div id="articles-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="col-span-full text-center py-8 text-slate-400 text-sm">Loading guides from Knowledge Hub...</div>
                 </div>
             </div>
         </section>
@@ -326,6 +344,86 @@
             </div>
         </div>
     </footer>
+
+    <!-- Knowledge Hub Fetch Script -->
+    <script>
+        let hubBlogs = [];
+
+        async function loadKnowledgeHub() {
+            try {
+                const response = await fetch('indiafilings-knowledge-hub.json');
+                const data = await response.json();
+                hubBlogs = data.blog_pages || data.blogs || [];
+                renderArticles(hubBlogs.slice(0, 6));
+            } catch (err) {
+                console.warn('Falling back to default articles as JSON dataset is loading or unavailable:', err);
+                renderFallbackArticles();
+            }
+        }
+
+        function renderArticles(blogs) {
+            const grid = document.getElementById('articles-grid');
+            if (!blogs || blogs.length === 0) {
+                renderFallbackArticles();
+                return;
+            }
+
+            grid.innerHTML = blogs.map(blog => {
+                const title = typeof blog === 'string' ? blog : (blog.title || blog.name || 'Legal & Compliance Guide');
+                const summary = blog.summary || blog.description || 'Step-by-step procedures, required documents, statutory fees, and filing deadlines for business compliance.';
+                const url = blog.url || '#contact';
+
+                return `
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold text-brand-sky uppercase bg-brand-skyLight px-2.5 py-1 rounded-full">Guide</span>
+                            <h4 class="text-base font-bold text-brand-dark mt-3 mb-2 line-clamp-2">${title}</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed line-clamp-3">${summary}</p>
+                        </div>
+                        <a href="${url}" target="_blank" class="mt-5 text-xs font-bold text-brand-sky hover:text-brand-skyHover flex items-center gap-1">
+                            <span>Read Full Manual</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderFallbackArticles() {
+            const fallback = [
+                { title: 'Private Limited Company Registration Guide', summary: 'Step-by-step guide on SPICe+ MCA filing, Digital Signature Certificates, DIN allotment, and MOA/AOA drafting.' },
+                { title: 'GST Registration Process & Mandatory Documents', summary: 'Complete document checklist for TRN generation, ARN tracking, principal place of business proof, and HSN code classification.' },
+                { title: 'Trademark Search & Nice Class 1-45 Selection Guide', summary: 'How to run brand availability searches on the IP India portal, resolve Section 9/11 objections, and secure TM symbol rights.' }
+            ];
+            renderArticles(fallback);
+        }
+
+        function searchKnowledgeHub() {
+            const query = document.getElementById('catalog-search').value.toLowerCase().trim();
+            document.getElementById('knowledge-hub').scrollIntoView({ behavior: 'smooth' });
+            
+            if (!query) {
+                renderArticles(hubBlogs.slice(0, 6));
+                return;
+            }
+
+            const filtered = hubBlogs.filter(blog => {
+                const title = typeof blog === 'string' ? blog : (blog.title || blog.name || '');
+                const summary = blog.summary || blog.description || '';
+                return title.toLowerCase().includes(query) || summary.toLowerCase().includes(query);
+            });
+
+            renderArticles(filtered.slice(0, 6));
+        }
+
+        document.getElementById('catalog-search').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchKnowledgeHub();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', loadKnowledgeHub);
+    </script>
 
 </body>
 </html>

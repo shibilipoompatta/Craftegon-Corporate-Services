@@ -57,7 +57,11 @@
                 <a href="gst.html" class="hover:text-brand-sky transition">GST & Tax</a>
                 <a href="trademark.html" class="hover:text-brand-sky transition">Trademark</a>
                 <a href="licenses.html" class="hover:text-brand-sky transition">Licenses</a>
-                <a href="experts.html" class="text-brand-sky font-bold transition">Talk to Experts</a>
+                <a href="#knowledge-hub" class="hover:text-brand-sky transition">Guides</a>
+                <a href="experts.html" class="text-brand-sky font-bold transition flex items-center gap-1.5">
+                    <span>Talk to Experts</span>
+                    <span class="bg-brand-goldLight text-brand-gold text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Live</span>
+                </a>
                 <a href="about.html" class="hover:text-brand-sky transition">About</a>
             </nav>
 
@@ -375,6 +379,23 @@
             </div>
         </section>
 
+        <!-- Knowledge Hub Section for Expert Advisory Guides -->
+        <section id="knowledge-hub" class="py-16 bg-slate-100/70 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                    <div>
+                        <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Knowledge Base</h2>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Expert Advisory Guides & Compliance Articles</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 md:mt-0">Fetched from Knowledge Hub</p>
+                </div>
+
+                <div id="expert-articles" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="col-span-full text-center py-8 text-slate-400 text-sm">Loading expert guides...</div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Consultation Booking Modal -->
@@ -411,7 +432,7 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number</label>
-                        <input type="tel" required placeholder="+91 98765 43210" class="w-full px-3 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:outline-none">
+                        <input type="tel" required placeholder="+91 86069 18247" class="w-full px-3 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:outline-none">
                     </div>
                 </div>
 
@@ -428,139 +449,6 @@
     </div>
 
     <!-- Master Corporate Footer -->
-    <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <!-- Brand Info -->
-                <div class="col-span-2 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-lg flex items-center justify-center text-white font-extrabold text-base shadow">
-                            C
-                        </div>
-                        <span class="text-lg font-extrabold text-white tracking-tight">CRAFTEGON</span>
-                    </div>
-                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
-                        Craftegon Corporate Services is India's leading LegalTech platform for company incorporation, GST filings, trademark registrations, and statutory business certifications.
-                    </p>
-                    <div class="text-slate-400 text-xs space-y-1">
-                        <p>📍 Markaz Knowledge City, Kaythapoyil, Kozhikode, Keralam - 673580</p>
-                        <p>📞 +91 86069 18247 | 📧 support@craftegon.com</p>
-                    </div>
-                </div>
-
-                <!-- Column 2 -->
-                <div class="space-y-3">
-                    <p class="font-bold text-white uppercase text-[11px] tracking-wider">Incorporation</p>
-                    <ul class="space-y-2">
-                        <li><a href="pvt-ltd.html" class="hover:text-white transition">Private Limited Company</a></li>
-                        <li><a href="pvt-ltd.html" class="hover:text-white transition">Limited Liability Partnership</a></li>
-                        <li><a href="pvt-ltd.html" class="hover:text-white transition">One Person Company (OPC)</a></li>
-                        <li><a href="pvt-ltd.html" class="hover:text-white transition">Sole Proprietorship</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3 -->
-                <div class="space-y-3">
-                    <p class="font-bold text-white uppercase text-[11px] tracking-wider">Tax & Compliance</p>
-                    <ul class="space-y-2">
-                        <li><a href="gst.html" class="hover:text-white transition">GST Registration</a></li>
-                        <li><a href="gst.html" class="hover:text-white transition">GST Return Filing</a></li>
-                        <li><a href="trademark.html" class="hover:text-white transition">Trademark Search</a></li>
-                        <li><a href="trademark.html" class="hover:text-white transition">TM Objection Reply</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4 -->
-                <div class="space-y-3">
-                    <p class="font-bold text-white uppercase text-[11px] tracking-wider">Company</p>
-                    <ul class="space-y-2">
-                        <li><a href="licenses.html" class="hover:text-white transition">FSSAI & Licenses</a></li>
-                        <li><a href="experts.html" class="hover:text-white transition">Talk to Experts</a></li>
-                        <li><a href="about.html" class="hover:text-white transition">About Craftegon</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Bottom Disclaimer -->
-            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-slate-500 gap-4 text-center md:text-left">
-                <p>&copy; 2026 Craftegon Corporate Services. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="about.html" class="hover:text-slate-300">Privacy Policy</a>
-                    <a href="about.html" class="hover:text-slate-300">Terms of Service</a>
-                    <a href="contact.html" class="hover:text-slate-300">Consultation Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Interactive Scripts -->
-    <script>
-        // Set Default Date in Picker
-        document.addEventListener('DOMContentLoaded', () => {
-            const dateInput = document.getElementById('booking-date');
-            if (dateInput) {
-                const today = new Date();
-                today.setDate(today.getDate() + 1);
-                dateInput.value = today.toISOString().split('T')[0];
-            }
-        });
-
-        // Filter Expert Cards
-        function filterExperts(category, buttonEl) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-sky', 'text-white', 'active');
-                btn.classList.add('bg-white', 'text-slate-700');
-            });
-
-            buttonEl.classList.remove('bg-white', 'text-slate-700');
-            buttonEl.classList.add('bg-brand-sky', 'text-white', 'active');
-
-            const cards = document.querySelectorAll('.expert-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category').includes(category)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Modal Controls
-        function openBookingModal(name, title, fee) {
-            document.getElementById('modal-expert-name').innerText = name;
-            document.getElementById('modal-expert-title').innerText = title;
-            document.getElementById('modal-expert-fee').innerText = fee;
-            document.getElementById('booking-modal').classList.remove('hidden');
-        }
-
-        function closeBookingModal() {
-            document.getElementById('booking-modal').classList.add('hidden');
-        }
-
-        // Slot Button Selection
-        function selectSlot(btn) {
-            document.querySelectorAll('.slot-btn').forEach(b => {
-                b.classList.remove('bg-brand-sky', 'text-white', 'border-brand-sky');
-                b.classList.add('text-slate-700', 'border-slate-200');
-            });
-            btn.classList.remove('text-slate-700', 'border-slate-200');
-            btn.classList.add('bg-brand-sky', 'text-white', 'border-brand-sky');
-        }
-
-        // Form Submit Handler
-        function handleSlotBooking(e) {
-            e.preventDefault();
-            const expert = document.getElementById('modal-expert-name').innerText;
-            closeBookingModal();
-            const notification = document.createElement('div');
-            notification.className = 'fixed bottom-5 right-5 bg-emerald-600 text-white font-bold text-xs px-5 py-3 rounded-xl shadow-2xl z-50 transition';
-            notification.innerText = ` Consultation slot confirmed with ${expert}! Link sent via SMS/Email.`;
-            document.body.appendChild(notification);
-            setTimeout(() => notification.remove(), 4000);
-        }
-    </script>
-<!-- Master Corporate Footer -->
     <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <!-- Footer Multi-Column Navigation Grid -->
@@ -627,6 +515,125 @@
             </div>
         </div>
     </footer>
+
+    <!-- Interactive & Knowledge Hub Scripts -->
+    <script>
+        // Set Default Date in Picker
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('booking-date');
+            if (dateInput) {
+                const today = new Date();
+                today.setDate(today.getDate() + 1);
+                dateInput.value = today.toISOString().split('T')[0];
+            }
+            loadExpertGuides();
+        });
+
+        // Filter Expert Cards
+        function filterExperts(category, buttonEl) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-sky', 'text-white', 'active');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            buttonEl.classList.remove('bg-white', 'text-slate-700');
+            buttonEl.classList.add('bg-brand-sky', 'text-white', 'active');
+
+            const cards = document.querySelectorAll('.expert-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Controls
+        function openBookingModal(name, title, fee) {
+            document.getElementById('modal-expert-name').innerText = name;
+            document.getElementById('modal-expert-title').innerText = title;
+            document.getElementById('modal-expert-fee').innerText = fee;
+            document.getElementById('booking-modal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+
+        // Slot Button Selection
+        function selectSlot(btn) {
+            document.querySelectorAll('.slot-btn').forEach(b => {
+                b.classList.remove('bg-brand-sky', 'text-white', 'border-brand-sky');
+                b.classList.add('text-slate-700', 'border-slate-200');
+            });
+            btn.classList.remove('text-slate-700', 'border-slate-200');
+            btn.classList.add('bg-brand-sky', 'text-white', 'border-brand-sky');
+        }
+
+        // Form Submit Handler
+        function handleSlotBooking(e) {
+            e.preventDefault();
+            const expert = document.getElementById('modal-expert-name').innerText;
+            closeBookingModal();
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-5 right-5 bg-emerald-600 text-white font-bold text-xs px-5 py-3 rounded-xl shadow-2xl z-50 transition';
+            notification.innerText = `Consultation slot confirmed with ${expert}! Link sent via SMS/Email.`;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 4000);
+        }
+
+        // Knowledge Hub Fetch Script
+        async function loadExpertGuides() {
+            try {
+                const response = await fetch('indiafilings-knowledge-hub.json');
+                const data = await response.json();
+                const blogs = data.blog_pages || data.blogs || [];
+                
+                renderExpertGuides(blogs.slice(0, 6));
+            } catch (err) {
+                console.warn('Loading fallback expert guides:', err);
+                renderFallbackExpertGuides();
+            }
+        }
+
+        function renderExpertGuides(guides) {
+            const container = document.getElementById('expert-articles');
+            if (!guides || guides.length === 0) {
+                renderFallbackExpertGuides();
+                return;
+            }
+
+            container.innerHTML = guides.map(guide => {
+                const title = typeof guide === 'string' ? guide : (guide.title || guide.name || 'Advisory Article');
+                const summary = guide.summary || guide.description || 'Learn key legal, tax, and compliance insights from top Chartered Accountants and Corporate Lawyers.';
+                const url = guide.url || '#booking-modal';
+
+                return `
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold text-brand-sky uppercase bg-brand-skyLight px-2.5 py-1 rounded-full">Expert Insight</span>
+                            <h4 class="text-base font-bold text-brand-dark mt-3 mb-2 line-clamp-2">${title}</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed line-clamp-3">${summary}</p>
+                        </div>
+                        <a href="${url}" target="_blank" class="mt-5 text-xs font-bold text-brand-sky hover:text-brand-skyHover flex items-center gap-1">
+                            <span>Read Advisory Note</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderFallbackExpertGuides() {
+            const fallback = [
+                { title: 'Tax Audit & GST Scrutiny Defense Playbook', summary: 'How senior CAs analyze GST ASMT-10 notices, reconcile GSTR-2B vs 3B discrepancies, and construct responses.' },
+                { title: 'Startup Fundraising & ESOP Pool Drafting Rules', summary: 'Essential legal structures for term sheet negotiations, sharesholder agreements, and cap table management.' },
+                { title: 'Trademark Counter-Opposition & Injunction Strategy', summary: 'Navigating trademark Registry hearings, handling notice of opposition filings, and brand coexistence agreements.' }
+            ];
+            renderExpertGuides(fallback);
+        }
+    </script>
     
 </body>
 </html>
