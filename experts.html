@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Experts & CA Consultation - Craftegon Corporate Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Plus Jakarta Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            white: '#FFFFFF',
+                            sky: '#0284C7',
+                            skyLight: '#E0F2FE',
+                            skyHover: '#0369A1',
+                            slate: '#F1F5F9',
+                            silver: '#94A3B8',
+                            gold: '#D97706',
+                            goldLight: '#FEF3C7',
+                            dark: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-brand-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-sm">
+        <span>🎓 <strong>1-on-1 Expert Advisory:</strong> Book a 30-min confidential video consultation with senior CAs & Legal Specialists!</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-md">
+                    C
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold text-brand-dark tracking-tight">CRAFTEGON</span>
+                    <span class="block text-[10px] font-bold text-brand-sky tracking-widest uppercase">Corporate Services</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-brand-sky transition">Home</a>
+                <a href="pvt-ltd.html" class="hover:text-brand-sky transition">Incorporation</a>
+                <a href="gst.html" class="hover:text-brand-sky transition">GST & Tax</a>
+                <a href="trademark.html" class="hover:text-brand-sky transition">Trademark</a>
+                <a href="licenses.html" class="hover:text-brand-sky transition">Licenses</a>
+                <a href="experts.html" class="text-brand-sky font-bold transition">Talk to Experts</a>
+                <a href="about.html" class="hover:text-brand-sky transition">About</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+919000000000" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
+                    📞 +91 90000 00000
+                </a>
+                <a href="contact.html" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
+                    General Inquiry
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-b from-brand-skyLight/50 via-white to-slate-50 py-12 md:py-16 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-goldLight border border-brand-gold/30 text-brand-gold text-xs font-bold mb-4">
+                     Verified Chartered Accountants, CSs & IP Attorneys
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight mb-4">
+                    Book 1-on-1 Consultations with <span class="text-brand-sky">India's Top Corporate Experts</span>
+                </h1>
+                <p class="text-slate-600 text-sm md:text-base mb-8">
+                    Direct advisory on Private Limited setup, GST scrutiny notices, Trademark opposition defense, FEMA/FDI compliance, and startup fundraising structures.
+                </p>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3" id="filter-buttons">
+                    <button onclick="filterExperts('all', this)" class="filter-btn active bg-brand-sky text-white px-4 py-2 rounded-xl text-xs md:text-sm font-bold shadow-sm transition">
+                        All Experts (6)
+                    </button>
+                    <button onclick="filterExperts('ca', this)" class="filter-btn bg-white text-slate-700 border border-slate-200 hover:border-brand-sky px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition">
+                        Chartered Accountants (CAs)
+                    </button>
+                    <button onclick="filterExperts('cs', this)" class="filter-btn bg-white text-slate-700 border border-slate-200 hover:border-brand-sky px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition">
+                        Company Secretaries (CSs)
+                    </button>
+                    <button onclick="filterExperts('tm', this)" class="filter-btn bg-white text-slate-700 border border-slate-200 hover:border-brand-sky px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition">
+                        IP & Trademark Attorneys
+                    </button>
+                    <button onclick="filterExperts('tax', this)" class="filter-btn bg-white text-slate-700 border border-slate-200 hover:border-brand-sky px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition">
+                        GST & Tax Audit Specialists
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experts Directory Grid -->
+        <section class="py-12 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="experts-grid">
+
+                    <!-- Expert 1: Senior CA -->
+                    <div class="expert-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="ca tax">
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="https://placehold.co/120x120/0284C7/FFFFFF?text=CA+Rajesh" alt="CA Rajesh Kumar" class="w-16 h-16 rounded-2xl object-cover border-2 border-brand-skyLight shadow-sm">
+                                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full text-[10px]" title="Verified Practitioner">✓</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Available Today</span>
+                                    <div class="text-xs font-bold text-brand-gold mt-2">★ 4.95 <span class="text-slate-400 font-normal">(420+ Consults)</span></div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brand-dark">CA Rajesh Kumar</h3>
+                            <p class="text-xs font-bold text-brand-sky mb-1">FCA, DISA (ICAI) • Senior Tax Partner</p>
+                            <p class="text-xs text-slate-500 font-medium mb-3">14+ Years Practice Experience</p>
+
+                            <!-- Specialization Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Pvt Ltd Restructuring</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">GST Notice Appeals</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Income Tax Scrutiny</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Consultation Fee</span>
+                                <span class="text-base font-extrabold text-brand-dark">₹499 <span class="text-xs font-normal text-slate-500">/ 30 min</span></span>
+                            </div>
+                            <button onclick="openBookingModal('CA Rajesh Kumar', 'FCA, DISA', '₹499 / 30 min')" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition">
+                                Book Slot &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expert 2: Senior CS -->
+                    <div class="expert-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="cs">
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="https://placehold.co/120x120/D97706/FFFFFF?text=CS+Ananya" alt="CS Ananya Sharma" class="w-16 h-16 rounded-2xl object-cover border-2 border-brand-goldLight shadow-sm">
+                                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full text-[10px]">✓</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Available Tomorrow</span>
+                                    <div class="text-xs font-bold text-brand-gold mt-2">★ 4.90 <span class="text-slate-400 font-normal">(310+ Consults)</span></div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brand-dark">CS Ananya Sharma</h3>
+                            <p class="text-xs font-bold text-brand-sky mb-1">FCS, Insolvency Professional • CS Practice Leader</p>
+                            <p class="text-xs text-slate-500 font-medium mb-3">11+ Years Experience</p>
+
+                            <!-- Specialization Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Startup Pitch Deck Legal</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">MCA Annual Filings</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">ESOP Structuring</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Consultation Fee</span>
+                                <span class="text-base font-extrabold text-brand-dark">₹599 <span class="text-xs font-normal text-slate-500">/ 30 min</span></span>
+                            </div>
+                            <button onclick="openBookingModal('CS Ananya Sharma', 'FCS, Insolvency Professional', '₹599 / 30 min')" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition">
+                                Book Slot &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expert 3: IP Attorney -->
+                    <div class="expert-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tm">
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="https://placehold.co/120x120/0F172A/FFFFFF?text=Adv+Vikram" alt="Adv Vikramaditya" class="w-16 h-16 rounded-2xl object-cover border-2 border-slate-200 shadow-sm">
+                                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full text-[10px]">✓</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Available Today</span>
+                                    <div class="text-xs font-bold text-brand-gold mt-2">★ 4.98 <span class="text-slate-400 font-normal">(540+ Consults)</span></div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brand-dark">Adv. Vikramaditya Roy</h3>
+                            <p class="text-xs font-bold text-brand-sky mb-1">LL.M (Intellectual Property) • Registered Patent & TM Attorney</p>
+                            <p class="text-xs text-slate-500 font-medium mb-3">16+ Years Experience</p>
+
+                            <!-- Specialization Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">TM Objection Defense</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Copyright Infringement</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">International Brand Filing</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Consultation Fee</span>
+                                <span class="text-base font-extrabold text-brand-dark">₹699 <span class="text-xs font-normal text-slate-500">/ 30 min</span></span>
+                            </div>
+                            <button onclick="openBookingModal('Adv. Vikramaditya Roy', 'LL.M, IP Attorney', '₹699 / 30 min')" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition">
+                                Book Slot &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expert 4: GST Audit CA -->
+                    <div class="expert-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="ca tax">
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="https://placehold.co/120x120/0284C7/FFFFFF?text=CA+Suresh" alt="CA Suresh Menon" class="w-16 h-16 rounded-2xl object-cover border-2 border-brand-skyLight shadow-sm">
+                                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full text-[10px]">✓</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Available Tomorrow</span>
+                                    <div class="text-xs font-bold text-brand-gold mt-2">★ 4.88 <span class="text-slate-400 font-normal">(280+ Consults)</span></div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brand-dark">CA Suresh Menon</h3>
+                            <p class="text-xs font-bold text-brand-sky mb-1">ACA, Indirect Tax Specialist</p>
+                            <p class="text-xs text-slate-500 font-medium mb-3">9+ Years Experience</p>
+
+                            <!-- Specialization Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">GST Audit & Reconciliations</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Input Tax Credit Claims</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Export GST Refunds</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Consultation Fee</span>
+                                <span class="text-base font-extrabold text-brand-dark">₹499 <span class="text-xs font-normal text-slate-500">/ 30 min</span></span>
+                            </div>
+                            <button onclick="openBookingModal('CA Suresh Menon', 'ACA, GST Specialist', '₹499 / 30 min')" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition">
+                                Book Slot &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expert 5: FEMA & Cross Border Legal -->
+                    <div class="expert-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="cs ca">
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="https://placehold.co/120x120/D97706/FFFFFF?text=CS+Megha" alt="CS Megha Deshmukh" class="w-16 h-16 rounded-2xl object-cover border-2 border-brand-goldLight shadow-sm">
+                                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full text-[10px]">✓</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Available Today</span>
+                                    <div class="text-xs font-bold text-brand-gold mt-2">★ 4.93 <span class="text-slate-400 font-normal">(390+ Consults)</span></div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brand-dark">CS Megha Deshmukh</h3>
+                            <p class="text-xs font-bold text-brand-sky mb-1">ACS, LL.B • Cross-Border Corporate Specialist</p>
+                            <p class="text-xs text-slate-500 font-medium mb-3">12+ Years Experience</p>
+
+                            <!-- Specialization Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">FDI & RBI Reporting</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Overseas Subsidiary Incorporation</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">Shareholders Agreements</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Consultation Fee</span>
+                                <span class="text-base font-extrabold text-brand-dark">₹799 <span class="text-xs font-normal text-slate-500">/ 30 min</span></span>
+                            </div>
+                            <button onclick="openBookingModal('CS Megha Deshmukh', 'ACS, Cross-Border Specialist', '₹799 / 30 min')" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition">
+                                Book Slot &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expert 6: Food & Regulatory License Expert -->
+                    <div class="expert-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tm tax">
+                        <div>
+                            <div class="flex items-start justify-between gap-4 mb-4">
+                                <div class="relative">
+                                    <img src="https://placehold.co/120x120/0F172A/FFFFFF?text=Adv+Pooja" alt="Adv Pooja Hegde" class="w-16 h-16 rounded-2xl object-cover border-2 border-slate-200 shadow-sm">
+                                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-1 rounded-full text-[10px]">✓</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">Available Today</span>
+                                    <div class="text-xs font-bold text-brand-gold mt-2">★ 4.91 <span class="text-slate-400 font-normal">(210+ Consults)</span></div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-lg font-bold text-brand-dark">Adv. Pooja Hegde</h3>
+                            <p class="text-xs font-bold text-brand-sky mb-1">LL.B • Regulatory & Licensing Counsel</p>
+                            <p class="text-xs text-slate-500 font-medium mb-3">8+ Years Experience</p>
+
+                            <!-- Specialization Tags -->
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">FSSAI Central Licensing</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">DGFT IEC Approvals</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md">ISO & BIS Certifications</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Consultation Fee</span>
+                                <span class="text-base font-extrabold text-brand-dark">₹399 <span class="text-xs font-normal text-slate-500">/ 30 min</span></span>
+                            </div>
+                            <button onclick="openBookingModal('Adv. Pooja Hegde', 'LL.B, Regulatory Counsel', '₹399 / 30 min')" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition">
+                                Book Slot &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Trust Pillars Section -->
+        <section class="py-16 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Why Consult Craftegon Experts</h2>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Seamless 1-on-1 Consultation Experience</h3>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-3xl mb-3">🔒</div>
+                        <h4 class="font-bold text-brand-dark text-base mb-1">100% Confidentiality</h4>
+                        <p class="text-xs text-slate-600">All discussions are covered under non-disclosure agreements and client privacy protection.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-3xl mb-3">🎓</div>
+                        <h4 class="font-bold text-brand-dark text-base mb-1">Verified Practitioners</h4>
+                        <p class="text-xs text-slate-600">Strictly peer-vetted Chartered Accountants, Company Secretaries, and Advocates.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-3xl mb-3">📹</div>
+                        <h4 class="font-bold text-brand-dark text-base mb-1">Video or Audio Call</h4>
+                        <p class="text-xs text-slate-600">Join consultation via Google Meet or HD phone bridge with zero app downloads.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="text-3xl mb-3">📑</div>
+                        <h4 class="font-bold text-brand-dark text-base mb-1">Follow-up Summary</h4>
+                        <p class="text-xs text-slate-600">Receive written advisory notes and legal checklists on your email post-call.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Consultation Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative border border-slate-200">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+            
+            <div class="mb-4">
+                <span class="text-[10px] font-bold text-brand-sky uppercase tracking-wider">Book Consultation</span>
+                <h3 id="modal-expert-name" class="text-xl font-extrabold text-brand-dark">CA Name</h3>
+                <p id="modal-expert-title" class="text-xs text-slate-500">Title</p>
+                <div class="mt-2 inline-block bg-brand-goldLight text-brand-gold px-2.5 py-1 rounded-md text-xs font-bold" id="modal-expert-fee">₹499 / 30 min</div>
+            </div>
+
+            <form class="space-y-4" onsubmit="handleSlotBooking(event)">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Date</label>
+                    <input type="date" id="booking-date" required class="w-full px-3.5 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Select Time Slot</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button type="button" onclick="selectSlot(this)" class="slot-btn border border-slate-200 hover:border-brand-sky rounded-lg p-2 text-center text-xs font-semibold text-slate-700 transition">10:30 AM</button>
+                        <button type="button" onclick="selectSlot(this)" class="slot-btn border border-slate-200 hover:border-brand-sky rounded-lg p-2 text-center text-xs font-semibold text-slate-700 transition">02:30 PM</button>
+                        <button type="button" onclick="selectSlot(this)" class="slot-btn border border-slate-200 hover:border-brand-sky rounded-lg p-2 text-center text-xs font-semibold text-slate-700 transition">05:00 PM</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name</label>
+                        <input type="text" required placeholder="Full Name" class="w-full px-3 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number</label>
+                        <input type="tel" required placeholder="+91 98765 43210" class="w-full px-3 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Consultation Query</label>
+                    <textarea rows="2" placeholder="e.g. GST notice clarification or Pvt Ltd setup query..." class="w-full px-3 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-brand-sky to-brand-skyHover text-white font-bold text-sm py-3 rounded-xl shadow-md hover:shadow-lg transition">
+                    Confirm & Proceed to Video Slot Booking &rarr;
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Master Corporate Footer -->
+    <footer class="bg-brand-dark text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <!-- Brand Info -->
+                <div class="col-span-2 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-lg flex items-center justify-center text-white font-extrabold text-base shadow">
+                            C
+                        </div>
+                        <span class="text-lg font-extrabold text-white tracking-tight">CRAFTEGON</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Craftegon Corporate Services is India's leading LegalTech platform for company incorporation, GST filings, trademark registrations, and statutory business certifications.
+                    </p>
+                    <div class="text-slate-400 text-xs space-y-1">
+                        <p>📍 MG Road, Business Bay, Bengaluru, KA - 560001</p>
+                        <p>📞 +91 90000 00000 | 📧 support@craftegon.com</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-3">
+                    <p class="font-bold text-white uppercase text-[11px] tracking-wider">Incorporation</p>
+                    <ul class="space-y-2">
+                        <li><a href="pvt-ltd.html" class="hover:text-white transition">Private Limited Company</a></li>
+                        <li><a href="pvt-ltd.html" class="hover:text-white transition">Limited Liability Partnership</a></li>
+                        <li><a href="pvt-ltd.html" class="hover:text-white transition">One Person Company (OPC)</a></li>
+                        <li><a href="pvt-ltd.html" class="hover:text-white transition">Sole Proprietorship</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-3">
+                    <p class="font-bold text-white uppercase text-[11px] tracking-wider">Tax & Compliance</p>
+                    <ul class="space-y-2">
+                        <li><a href="gst.html" class="hover:text-white transition">GST Registration</a></li>
+                        <li><a href="gst.html" class="hover:text-white transition">GST Return Filing</a></li>
+                        <li><a href="trademark.html" class="hover:text-white transition">Trademark Search</a></li>
+                        <li><a href="trademark.html" class="hover:text-white transition">TM Objection Reply</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="space-y-3">
+                    <p class="font-bold text-white uppercase text-[11px] tracking-wider">Company</p>
+                    <ul class="space-y-2">
+                        <li><a href="licenses.html" class="hover:text-white transition">FSSAI & Licenses</a></li>
+                        <li><a href="experts.html" class="hover:text-white transition">Talk to Experts</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Craftegon</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Disclaimer -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-slate-500 gap-4 text-center md:text-left">
+                <p>&copy; 2026 Craftegon Corporate Services. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="about.html" class="hover:text-slate-300">Privacy Policy</a>
+                    <a href="about.html" class="hover:text-slate-300">Terms of Service</a>
+                    <a href="contact.html" class="hover:text-slate-300">Consultation Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set Default Date in Picker
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('booking-date');
+            if (dateInput) {
+                const today = new Date();
+                today.setDate(today.getDate() + 1);
+                dateInput.value = today.toISOString().split('T')[0];
+            }
+        });
+
+        // Filter Expert Cards
+        function filterExperts(category, buttonEl) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-sky', 'text-white', 'active');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            buttonEl.classList.remove('bg-white', 'text-slate-700');
+            buttonEl.classList.add('bg-brand-sky', 'text-white', 'active');
+
+            const cards = document.querySelectorAll('.expert-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Controls
+        function openBookingModal(name, title, fee) {
+            document.getElementById('modal-expert-name').innerText = name;
+            document.getElementById('modal-expert-title').innerText = title;
+            document.getElementById('modal-expert-fee').innerText = fee;
+            document.getElementById('booking-modal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+
+        // Slot Button Selection
+        function selectSlot(btn) {
+            document.querySelectorAll('.slot-btn').forEach(b => {
+                b.classList.remove('bg-brand-sky', 'text-white', 'border-brand-sky');
+                b.classList.add('text-slate-700', 'border-slate-200');
+            });
+            btn.classList.remove('text-slate-700', 'border-slate-200');
+            btn.classList.add('bg-brand-sky', 'text-white', 'border-brand-sky');
+        }
+
+        // Form Submit Handler
+        function handleSlotBooking(e) {
+            e.preventDefault();
+            const expert = document.getElementById('modal-expert-name').innerText;
+            closeBookingModal();
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-5 right-5 bg-emerald-600 text-white font-bold text-xs px-5 py-3 rounded-xl shadow-2xl z-50 transition';
+            notification.innerText = ` Consultation slot confirmed with ${expert}! Link sent via SMS/Email.`;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 4000);
+        }
+    </script>
+
+</body>
+</html>
