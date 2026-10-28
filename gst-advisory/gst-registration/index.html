@@ -7,153 +7,177 @@
   <meta name="description" content="End-to-end GST registration filing on GST Common Portal, TRN generation, Aadhaar authentication, and GSTIN allocation." />
   <link rel="canonical" href="https://corporateservices.craftegon.com/gst-advisory/gst-registration/" />
   
-  <!-- Fonts -->
+  <!-- Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Manrope', 'sans-serif'],
-            serif: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
             mono: ['DM Mono', 'monospace'],
           },
           colors: {
-            gold: { DEFAULT: '#c5a059', deep: '#c59b27' },
-            dark: { DEFAULT: '#0e1712', alt: '#090d16' },
+            brand: {
+              white: '#FFFFFF',
+              sky: '#0284C7',
+              skyLight: '#E0F2FE',
+              skyHover: '#0369A1',
+              slate: '#F1F5F9',
+              silver: '#94A3B8',
+              gold: '#D97706',
+              goldLight: '#FEF3C7',
+              dark: '#0F172A',
+              darkAlt: '#1E293B',
+            }
           }
         }
       }
     }
   </script>
   <link rel="stylesheet" href="/assets/css/theme.css" />
-  
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-[#f8f9f6] text-[#2e3a33] font-sans antialiased">
+<body class="bg-slate-50 text-brand-dark font-sans antialiased min-h-screen flex flex-col justify-between">
 
-<header class="sticky top-0 z-50 bg-[#0e1712] border-b border-white/10 shadow-lg backdrop-blur-md">
+<div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
+  <span>🚀 Special Offer: Get <strong>20% OFF</strong> MCA Filing &amp; Free Expert Consultation this week!</span>
+  <a href="#inquiry" class="underline hover:text-brand-goldLight font-bold transition">Claim Offer &rarr;</a>
+</div>
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-    <a href="/" class="flex items-center space-x-3">
-      <span class="font-serif text-2xl font-bold tracking-wider text-white">Craft<span class="text-[#c5a059]">Egon</span></span>
-      <span class="text-[10px] font-mono tracking-widest uppercase bg-[#c5a059]/20 text-[#c5a059] px-2 py-0.5 rounded border border-[#c5a059]/40">Corporate Services</span>
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
+        C
+      </div>
+      <div>
+        <span class="text-xl font-extrabold text-brand-dark tracking-tight">CRAFTEGON</span>
+        <span class="block text-[10px] font-bold text-brand-sky tracking-widest uppercase">Corporate Services</span>
+      </div>
     </a>
-    <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-gray-200">
-      <a href="/business-setup/" class="hover:text-[#c5a059] transition">Business Setup</a>
-      <a href="/gst-advisory/" class="hover:text-[#c5a059] transition">GST Advisory</a>
-      <a href="/corporate-governance/" class="hover:text-[#c5a059] transition">Governance & MCA</a>
-      <a href="/direct-tax/" class="hover:text-[#c5a059] transition">Direct Tax</a>
-      <a href="/brand-protection/" class="hover:text-[#c5a059] transition">Brand & IP</a>
-      <a href="/workforce-digital/" class="hover:text-[#c5a059] transition">Workforce & Digital</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-600">
+      <a href="/business-setup/" class="hover:text-brand-sky transition">Business Setup</a>
+      <a href="/gst-advisory/" class="hover:text-brand-sky transition">GST Advisory</a>
+      <a href="/corporate-governance/" class="hover:text-brand-sky transition">Governance &amp; MCA</a>
+      <a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax</a>
+      <a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP</a>
+      <a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a>
     </nav>
-    <div class="hidden sm:flex items-center space-x-4">
-      <a href="https://wa.me/919995204905" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white flex items-center gap-1.5">
-        <i data-lucide="message-square" class="w-4 h-4 text-[#c5a059]"></i>
-        <span>WhatsApp</span>
+
+    <!-- CTA Buttons -->
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
+        <span class="text-emerald-600 font-bold">●</span> Desk: +91 99952 04905
       </a>
-      <a href="#inquiry" class="bg-[#c5a059] hover:bg-[#c59b27] text-[#0e1712] font-semibold text-sm px-4 py-2.5 rounded-lg transition shadow-md">
-        Get Consultation
+      <a href="#inquiry" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
+        Get Started
       </a>
+      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
     </div>
-    <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-white p-2">
-      <i data-lucide="menu" class="w-6 h-6"></i>
-    </button>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden bg-[#090d16] border-b border-white/10 px-4 py-4 space-y-3">
-    <a href="/business-setup/" class="block text-gray-200 hover:text-[#c5a059]">Business Setup</a>
-    <a href="/gst-advisory/" class="block text-gray-200 hover:text-[#c5a059]">GST Advisory</a>
-    <a href="/corporate-governance/" class="block text-gray-200 hover:text-[#c5a059]">Corporate Governance</a>
-    <a href="/direct-tax/" class="block text-gray-200 hover:text-[#c5a059]">Direct Tax</a>
-    <a href="/brand-protection/" class="block text-gray-200 hover:text-[#c5a059]">Brand Protection</a>
-    <a href="/workforce-digital/" class="block text-gray-200 hover:text-[#c5a059]">Workforce & Digital</a>
-    <a href="#inquiry" class="block w-full text-center bg-[#c5a059] text-[#0e1712] py-2 rounded font-semibold mt-2">Get Free Consultation</a>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
+    <a href="/business-setup/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Business Setup &amp; Formation</a>
+    <a href="/gst-advisory/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">GST Advisory &amp; Filings</a>
+    <a href="/corporate-governance/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Corporate Governance &amp; MCA</a>
+    <a href="/direct-tax/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Direct Tax &amp; TDS</a>
+    <a href="/brand-protection/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Brand Protection &amp; Trademarks</a>
+    <a href="/workforce-digital/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Workforce &amp; Digital Infrastructure</a>
+    <div class="pt-2">
+      <a href="#inquiry" class="block w-full text-center bg-brand-sky text-white font-bold text-sm py-3 rounded-lg shadow">Get Free Consultation</a>
+    </div>
   </div>
 </header>
 
-<!-- PART 1: HERO HEADER & QUICK ONBOARDING FORM -->
-<section class="bg-[#0e1712] text-white pt-12 pb-16 border-b border-white/10 relative overflow-hidden">
-  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <nav class="flex items-center space-x-2 text-xs font-mono text-gray-400 mb-6">
-      <a href="/" class="hover:text-white transition">Home</a>
+<!-- HERO SECTION & QUICK ONBOARDING -->
+<section class="relative bg-gradient-to-b from-brand-skyLight/50 via-white to-slate-50 py-12 md:py-16 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-4">
+      <a href="/" class="hover:text-brand-sky transition">Home</a>
       <span>/</span>
-      <a href="/gst-advisory/" class="hover:text-white transition uppercase">gst advisory</a>
+      <a href="/gst-advisory/" class="hover:text-brand-sky transition uppercase">gst advisory</a>
       <span>/</span>
-      <span class="text-[#c5a059] uppercase">gst-registration</span>
+      <span class="text-brand-sky uppercase">gst-registration</span>
     </nav>
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
       <div class="lg:col-span-7 space-y-4">
         <div class="flex flex-wrap items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 text-xs font-mono font-bold">
-            <i data-lucide="clock" class="w-3.5 h-3.5 inline mr-1"></i> 5-7 Working Days
+          <span class="px-3 py-1 rounded-full bg-brand-skyLight text-brand-sky border border-brand-sky/20 text-xs font-bold">
+            ⏱ 5-7 Working Days
           </span>
-          <span class="px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/15 text-xs font-mono">
-            State Duty: Variable
+          <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200 text-xs font-semibold">
+            State Duty: Transparent
           </span>
-          <span class="px-3 py-1 rounded-full bg-white/10 text-white/90 border border-white/15 text-xs font-mono">
-            Base: ₹2,499
+          <span class="px-3 py-1 rounded-full bg-brand-goldLight text-brand-gold border border-brand-gold/30 text-xs font-bold">
+            Starting @ ₹2,499
           </span>
         </div>
         
-        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
           GST Registration
         </h1>
         
-        <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl">
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl">
           End-to-end GST registration filing on GST Common Portal, TRN generation, Aadhaar authentication, and GSTIN allocation.
         </p>
         
         
-        <div class="mt-4 p-3 rounded-lg bg-amber-950/40 border border-amber-500/40 text-amber-200 text-xs flex items-center gap-2.5 max-w-2xl">
-          <i data-lucide="shield-alert" class="w-4 h-4 text-amber-400 shrink-0"></i>
+        <div class="mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center gap-2.5 max-w-2xl">
+          <span class="text-base">⚠️</span>
           <span><strong>Statutory Practice Notice:</strong> GST litigation before the Appellate Tribunal or High Court is executed via independent licensed Advocates.</span>
         </div>
         
         
-        <div class="pt-2 flex items-center gap-6 text-xs text-gray-400 font-mono">
-          <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> MCA / Govt Verified</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4 text-[#c5a059]"></i> Fast-Track Filing</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="lock" class="w-4 h-4 text-blue-400"></i> DPDP Compliant</span>
+        <div class="pt-2 flex flex-wrap items-center gap-5 text-xs text-slate-600 font-medium">
+          <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✓</span> MCA V3 Portal Verified</span>
+          <span class="flex items-center gap-1.5"><span class="text-brand-sky font-bold">⚡</span> Express Fast-Track</span>
+          <span class="flex items-center gap-1.5"><span class="text-brand-gold font-bold">🔒</span> DPDP Act Compliant</span>
         </div>
       </div>
       
       <!-- QUICK ONBOARDING FORM -->
       <div class="lg:col-span-5">
-        <div class="bg-white rounded-2xl p-6 sm:p-7 text-[#2e3a33] shadow-2xl border border-white/10">
-          <div class="mb-4">
-            <span class="font-mono text-[11px] uppercase tracking-wider text-[#c5a059] font-bold">Express Docket Setup</span>
-            <h3 class="font-serif text-lg font-bold text-[#0e1712]">Start GST Registration</h3>
-            <p class="text-xs text-gray-500">Initiate statutory documentation in 60 seconds.</p>
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200 relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">
+            Express Filing
           </div>
           
-          <form data-ccs-form="true" data-category="gst-advisory" data-service-id="gst-registration" class="space-y-3">
+          <h3 class="text-xl font-bold text-brand-dark mb-1">Apply for GST Registration</h3>
+          <p class="text-xs text-slate-500 mb-6">Initiate statutory documentation in 60 seconds.</p>
+          
+          <form data-ccs-form="true" data-category="gst-advisory" data-service-id="gst-registration" class="space-y-4">
             <div>
-              <label class="block text-[11px] font-mono uppercase text-gray-600 mb-1">Your Full Name *</label>
-              <input type="text" name="user_name" required placeholder="Shibili Poompatta" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3 py-2 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none" />
+              <label class="block text-xs font-bold text-slate-700 mb-1">Full Legal Name *</label>
+              <input type="text" name="user_name" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition" />
             </div>
             
             <div class="grid grid-cols-2 gap-3">
               <div>
-                <label class="block text-[11px] font-mono uppercase text-gray-600 mb-1">Email ID *</label>
-                <input type="email" name="email" required placeholder="name@company.com" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3 py-2 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none" />
+                <label class="block text-xs font-bold text-slate-700 mb-1">Email ID *</label>
+                <input type="email" name="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition" />
               </div>
               <div>
-                <label class="block text-[11px] font-mono uppercase text-gray-600 mb-1">Phone / WhatsApp *</label>
-                <input type="tel" name="phone" required placeholder="9876543210" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3 py-2 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none" />
+                <label class="block text-xs font-bold text-slate-700 mb-1">Phone / WhatsApp *</label>
+                <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition" />
               </div>
             </div>
             
             <div class="grid grid-cols-2 gap-3">
               <div>
-                <label class="block text-[11px] font-mono uppercase text-gray-600 mb-1">State *</label>
-                <select name="selected_state" required class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3 py-2 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none">
+                <label class="block text-xs font-bold text-slate-700 mb-1">State *</label>
+                <select name="selected_state" required class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
                   <option value="Kerala">Kerala</option>
                   <option value="Maharashtra">Maharashtra</option>
                   <option value="Karnataka">Karnataka</option>
@@ -164,8 +188,8 @@
                 </select>
               </div>
               <div>
-                <label class="block text-[11px] font-mono uppercase text-gray-600 mb-1">Timeline</label>
-                <select name="timeline" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3 py-2 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none">
+                <label class="block text-xs font-bold text-slate-700 mb-1">Timeline</label>
+                <select name="timeline" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
                   <option value="Immediate">Immediate (1-3 days)</option>
                   <option value="This Month">This Month</option>
                   <option value="Planning">Information Only</option>
@@ -173,8 +197,8 @@
               </div>
             </div>
             
-            <button type="submit" class="w-full bg-[#0e1712] hover:bg-black text-[#c5a059] font-bold text-xs uppercase tracking-wider py-3 rounded-lg transition shadow-md mt-2">
-              Proceed to Onboarding &rarr;
+            <button type="submit" class="w-full bg-gradient-to-r from-brand-sky to-brand-skyHover text-white font-bold text-sm py-3.5 rounded-lg shadow-md hover:shadow-lg transition">
+              Get Started Now &rarr;
             </button>
           </form>
         </div>
@@ -183,13 +207,13 @@
   </div>
 </section>
 
-<!-- PART 2: STATUTORY OVERVIEW & LEGAL FRAMEWORK -->
-<section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-200">
+<!-- STATUTORY FRAMEWORK -->
+<section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200">
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
     <div class="lg:col-span-8">
-      <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Statutory Provisions</span>
-      <h2 class="font-serif text-2xl font-bold text-[#0e1712] mt-1 mb-4">Current Legal Framework &amp; Regulatory Mandate</h2>
-      <div class="prose prose-sm text-gray-700 leading-relaxed text-xs sm:text-sm">
+      <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-1">Statutory Provisions</h2>
+      <h3 class="text-2xl font-extrabold text-brand-dark mb-4">Current Legal Framework &amp; Regulatory Mandate</h3>
+      <div class="prose prose-sm text-slate-700 leading-relaxed text-sm">
         Goods and Services Tax registration is regulated under Chapter VI (Sections 22 to 30) of the <strong>Central Goods and Services Tax (CGST) Act, 2017</strong> read with Chapter III of the <strong>CGST Rules, 2017</strong>.<br><br>
         Key regulatory contours:
         <ul class="list-disc pl-5 mt-2 space-y-1">
@@ -201,127 +225,127 @@
       </div>
     </div>
     
-    <div class="lg:col-span-4 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
-      <h3 class="font-serif text-base font-bold text-[#0e1712] uppercase tracking-wider text-[#c5a059]">Statutory Meta</h3>
+    <div class="lg:col-span-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+      <h4 class="text-xs font-bold uppercase tracking-wider text-brand-sky">Statutory Overview</h4>
       <div class="space-y-3 text-xs">
         <div>
-          <span class="block text-gray-400 font-mono">Governing Act:</span>
-          <span class="font-semibold text-gray-800">Central Goods and Services Tax Act, 2017 (Section 22-25, Form GST REG-01)</span>
+          <span class="block text-slate-500 font-semibold">Governing Act:</span>
+          <span class="font-bold text-brand-dark">Central Goods and Services Tax Act, 2017 (Section 22-25, Form GST REG-01)</span>
         </div>
         <div>
-          <span class="block text-gray-400 font-mono">Government Portal:</span>
-          <span class="font-semibold text-gray-800">Ministry of Corporate Affairs (MCA V3) / Official Portals</span>
+          <span class="block text-slate-500 font-semibold">Government Portal:</span>
+          <span class="font-bold text-brand-dark">Ministry of Corporate Affairs (MCA V3) / Official Portals</span>
         </div>
         <div>
-          <span class="block text-gray-400 font-mono">Filing Authority:</span>
-          <span class="font-semibold text-gray-800">Registrar of Companies (ROC) / Central Board</span>
+          <span class="block text-slate-500 font-semibold">Filing Authority:</span>
+          <span class="font-bold text-brand-dark">Registrar of Companies (ROC) / Central Board</span>
         </div>
         <div>
-          <span class="block text-gray-400 font-mono">Turnaround Standard:</span>
-          <span class="font-semibold text-gray-800">5-7 Working Days</span>
+          <span class="block text-slate-500 font-semibold">Standard Turnaround:</span>
+          <span class="font-bold text-brand-dark">5-7 Working Days</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PART 3: ELIGIBILITY CRITERIA -->
-<section class="py-14 bg-white border-b border-gray-200">
+<!-- ELIGIBILITY -->
+<section class="py-14 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Statutory Prerequisites</span>
-    <h2 class="font-serif text-2xl font-bold text-[#0e1712] mt-1 mb-6">Eligibility Criteria &amp; Structural Minimums</h2>
+    <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-1">Prerequisites</h2>
+    <h3 class="text-2xl font-extrabold text-brand-dark mb-6">Eligibility Criteria &amp; Structural Minimums</h3>
     
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i><span>Aggregate turnover > ₹40L for goods (₹20L for special states) or > ₹20L for services</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i><span>Inter-state taxable supply of goods/services</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i><span>E-commerce sellers and marketplace aggregators</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i><span>Voluntary registration for input tax credit eligibility</span></li>
+      <li class="flex items-start gap-3 text-xs sm:text-sm text-slate-700"><span class="text-emerald-600 font-bold shrink-0">✓</span><span>Aggregate turnover > ₹40L for goods (₹20L for special states) or > ₹20L for services</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-slate-700"><span class="text-emerald-600 font-bold shrink-0">✓</span><span>Inter-state taxable supply of goods/services</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-slate-700"><span class="text-emerald-600 font-bold shrink-0">✓</span><span>E-commerce sellers and marketplace aggregators</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-slate-700"><span class="text-emerald-600 font-bold shrink-0">✓</span><span>Voluntary registration for input tax credit eligibility</span></li>
     </ul>
   </div>
 </section>
 
-<!-- PART 4: MANDATORY DOCUMENT CHECKLIST -->
-<section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-200">
+<!-- DOCUMENT CHECKLIST -->
+<section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200">
   <div class="mb-6">
-    <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Verification Matrix</span>
-    <h2 class="font-serif text-2xl font-bold text-[#0e1712] mt-1">Mandatory Document Checklist</h2>
-    <p class="text-xs text-gray-500 mt-1">Ensure self-attested, clear scanned copies to avoid ROC / departmental resubmission requisitions.</p>
+    <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-1">Verification Checklist</h2>
+    <h3 class="text-2xl font-extrabold text-brand-dark">Mandatory Document Checklist</h3>
+    <p class="text-xs text-slate-500 mt-1">Ensure clear self-attested copies to avoid departmental resubmission requisitions.</p>
   </div>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     
-        <div class="bg-white p-5 rounded-xl border border-gray-200/80 shadow-sm">
-          <h4 class="font-serif text-sm font-bold text-[#0e1712] mb-3 uppercase tracking-wider text-[#c5a059]">Promoter Checklist</h4>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-brand-sky mb-4">Promoter Checklist</h4>
           <ul class="space-y-1">
-            <li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>PAN Card</span></li><li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>Aadhaar Card</span></li><li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>Photograph</span></li><li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>Bank Account Details (Cancelled Cheque / Passbook)</span></li>
+            <li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>PAN Card</span></li><li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>Aadhaar Card</span></li><li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>Photograph</span></li><li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>Bank Account Details (Cancelled Cheque / Passbook)</span></li>
           </ul>
         </div>
         
-        <div class="bg-white p-5 rounded-xl border border-gray-200/80 shadow-sm">
-          <h4 class="font-serif text-sm font-bold text-[#0e1712] mb-3 uppercase tracking-wider text-[#c5a059]">Business Checklist</h4>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-brand-sky mb-4">Business Checklist</h4>
           <ul class="space-y-1">
-            <li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>Certificate of Incorporation / Partnership Deed</span></li><li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>Electricity Bill / Municipal Khata Copy</span></li><li class="flex items-center gap-2 text-xs text-gray-700 py-1.5 border-b border-gray-100 last:border-0"><i data-lucide="file-text" class="w-4 h-4 text-[#c5a059] shrink-0"></i><span>NOC / Rent Agreement</span></li>
+            <li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>Certificate of Incorporation / Partnership Deed</span></li><li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>Electricity Bill / Municipal Khata Copy</span></li><li class="flex items-center gap-2 text-xs text-slate-700 py-1.5 border-b border-slate-100 last:border-0"><span class="text-brand-sky font-bold">•</span><span>NOC / Rent Agreement</span></li>
           </ul>
         </div>
         
   </div>
 </section>
 
-<!-- PART 5: 5-STEP EXECUTION FLOW -->
-<section class="py-14 bg-[#fcfbf7] border-b border-gray-200">
+<!-- 5-STEP EXECUTION FLOW -->
+<section class="py-14 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-8">
-      <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Workflow Blueprint</span>
-      <h2 class="font-serif text-2xl font-bold text-[#0e1712] mt-1">5-Step Statutory Execution Architecture</h2>
-      <p class="text-xs text-gray-500 mt-1">From digital signature acquisition to formal registration issuance.</p>
+      <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-1">Workflow Architecture</h2>
+      <h3 class="text-2xl font-extrabold text-brand-dark">5-Step Statutory Execution Flow</h3>
+      <p class="text-xs text-slate-500 mt-1">From initial digital signature verification to Certificate of Incorporation issuance.</p>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
       
-        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 shadow-sm">
-          <div class="w-8 h-8 rounded-full bg-[#0e1712] text-[#c5a059] flex items-center justify-center font-mono font-bold text-sm shrink-0">
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-9 h-9 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
             1
           </div>
           <div>
-            <h4 class="font-serif text-sm font-bold text-[#0e1712]">Document Verification & Classification (HSN/SAC)</h4>
-            <p class="text-xs text-gray-500 mt-1">Managed electronically with statutory accuracy and verified via client dashboard.</p>
+            <h4 class="text-sm font-bold text-brand-dark">Document Verification & Classification (HSN/SAC)</h4>
+            <p class="text-xs text-slate-500 mt-1">Processed digitally with real-time statutory portal verification.</p>
           </div>
         </div>
         
-        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 shadow-sm">
-          <div class="w-8 h-8 rounded-full bg-[#0e1712] text-[#c5a059] flex items-center justify-center font-mono font-bold text-sm shrink-0">
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-9 h-9 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
             2
           </div>
           <div>
-            <h4 class="font-serif text-sm font-bold text-[#0e1712]">Part-A Generation & TRN Allotment</h4>
-            <p class="text-xs text-gray-500 mt-1">Managed electronically with statutory accuracy and verified via client dashboard.</p>
+            <h4 class="text-sm font-bold text-brand-dark">Part-A Generation & TRN Allotment</h4>
+            <p class="text-xs text-slate-500 mt-1">Processed digitally with real-time statutory portal verification.</p>
           </div>
         </div>
         
-        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 shadow-sm">
-          <div class="w-8 h-8 rounded-full bg-[#0e1712] text-[#c5a059] flex items-center justify-center font-mono font-bold text-sm shrink-0">
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-9 h-9 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
             3
           </div>
           <div>
-            <h4 class="font-serif text-sm font-bold text-[#0e1712]">Form GST REG-01 Filing with DSC/EVC</h4>
-            <p class="text-xs text-gray-500 mt-1">Managed electronically with statutory accuracy and verified via client dashboard.</p>
+            <h4 class="text-sm font-bold text-brand-dark">Form GST REG-01 Filing with DSC/EVC</h4>
+            <p class="text-xs text-slate-500 mt-1">Processed digitally with real-time statutory portal verification.</p>
           </div>
         </div>
         
-        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 shadow-sm">
-          <div class="w-8 h-8 rounded-full bg-[#0e1712] text-[#c5a059] flex items-center justify-center font-mono font-bold text-sm shrink-0">
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-9 h-9 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
             4
           </div>
           <div>
-            <h4 class="font-serif text-sm font-bold text-[#0e1712]">Aadhaar Authentication / Biometric Verification</h4>
-            <p class="text-xs text-gray-500 mt-1">Managed electronically with statutory accuracy and verified via client dashboard.</p>
+            <h4 class="text-sm font-bold text-brand-dark">Aadhaar Authentication / Biometric Verification</h4>
+            <p class="text-xs text-slate-500 mt-1">Processed digitally with real-time statutory portal verification.</p>
           </div>
         </div>
         
-        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 shadow-sm">
-          <div class="w-8 h-8 rounded-full bg-[#0e1712] text-[#c5a059] flex items-center justify-center font-mono font-bold text-sm shrink-0">
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-9 h-9 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
             5
           </div>
           <div>
-            <h4 class="font-serif text-sm font-bold text-[#0e1712]">GSTIN & Registration Certificate (Form REG-06)</h4>
-            <p class="text-xs text-gray-500 mt-1">Managed electronically with statutory accuracy and verified via client dashboard.</p>
+            <h4 class="text-sm font-bold text-brand-dark">GSTIN & Registration Certificate (Form REG-06)</h4>
+            <p class="text-xs text-slate-500 mt-1">Processed digitally with real-time statutory portal verification.</p>
           </div>
         </div>
         
@@ -329,45 +353,45 @@
   </div>
 </section>
 
-<!-- PART 6: POST-REGISTRATION COMPLIANCE SCHEDULE -->
-<section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-200">
+<!-- COMPLIANCE SCHEDULE -->
+<section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200">
   <div class="mb-6">
-    <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Lifecycle Governance</span>
-    <h2 class="font-serif text-2xl font-bold text-[#0e1712] mt-1">Post-Registration Compliance Schedule</h2>
-    <p class="text-xs text-gray-500 mt-1">Critical statutory timelines following receipt of registration certificate.</p>
+    <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-1">Ongoing Governance</h2>
+    <h3 class="text-2xl font-extrabold text-brand-dark">Post-Registration Compliance Schedule</h3>
+    <p class="text-xs text-slate-500 mt-1">Mandatory timelines following receipt of registration certificate.</p>
   </div>
   
-  <div class="bg-white rounded-xl border border-gray-200 overflow-x-auto shadow-sm">
+  <div class="bg-white rounded-2xl border border-slate-200 overflow-x-auto shadow-sm">
     <table class="w-full text-left border-collapse">
       <thead>
-        <tr class="bg-gray-50 border-b border-gray-200 text-gray-600 font-mono text-[11px] uppercase">
-          <th class="py-3 px-4">Statutory Timeline</th>
-          <th class="py-3 px-4">Mandatory Compliance Action</th>
-          <th class="py-3 px-4">Statutory Form / Section</th>
-          <th class="py-3 px-4">Non-Compliance Consequence</th>
+        <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 text-xs uppercase font-bold">
+          <th class="py-3.5 px-4">Statutory Timeline</th>
+          <th class="py-3.5 px-4">Mandatory Compliance Action</th>
+          <th class="py-3.5 px-4">Section / Form</th>
+          <th class="py-3.5 px-4">Non-Compliance Penalty</th>
         </tr>
       </thead>
       <tbody>
         
-        <tr class="border-b border-gray-100 text-xs">
-          <td class="py-3 px-4 font-mono font-semibold text-[#0e1712]">Within 30 Days of Threshold</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Application for GST Registration</td>
-          <td class="py-3 px-4 font-mono text-[#c5a059]">Form GST REG-01</td>
-          <td class="py-3 px-4 text-gray-500">Loss of input tax credit; Section 122 penalty</td>
+        <tr class="border-b border-slate-100 text-xs hover:bg-slate-50">
+          <td class="py-3.5 px-4 font-mono font-bold text-brand-dark">Within 30 Days of Threshold</td>
+          <td class="py-3.5 px-4 font-medium text-slate-700">Application for GST Registration</td>
+          <td class="py-3.5 px-4 font-mono font-bold text-brand-sky">Form GST REG-01</td>
+          <td class="py-3.5 px-4 text-slate-500">Loss of input tax credit; Section 122 penalty</td>
         </tr>
         
-        <tr class="border-b border-gray-100 text-xs">
-          <td class="py-3 px-4 font-mono font-semibold text-[#0e1712]">Monthly by 11th</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Filing Outward Supplies</td>
-          <td class="py-3 px-4 font-mono text-[#c5a059]">Form GSTR-1</td>
-          <td class="py-3 px-4 text-gray-500">Late fee ₹50/day (₹20 for Nil)</td>
+        <tr class="border-b border-slate-100 text-xs hover:bg-slate-50">
+          <td class="py-3.5 px-4 font-mono font-bold text-brand-dark">Monthly by 11th</td>
+          <td class="py-3.5 px-4 font-medium text-slate-700">Filing Outward Supplies</td>
+          <td class="py-3.5 px-4 font-mono font-bold text-brand-sky">Form GSTR-1</td>
+          <td class="py-3.5 px-4 text-slate-500">Late fee ₹50/day (₹20 for Nil)</td>
         </tr>
         
-        <tr class="border-b border-gray-100 text-xs">
-          <td class="py-3 px-4 font-mono font-semibold text-[#0e1712]">Monthly by 20th</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Filing Monthly Return & Tax Settlement</td>
-          <td class="py-3 px-4 font-mono text-[#c5a059]">Form GSTR-3B</td>
-          <td class="py-3 px-4 text-gray-500">Interest @ 18% p.a. on net tax liability</td>
+        <tr class="border-b border-slate-100 text-xs hover:bg-slate-50">
+          <td class="py-3.5 px-4 font-mono font-bold text-brand-dark">Monthly by 20th</td>
+          <td class="py-3.5 px-4 font-medium text-slate-700">Filing Monthly Return & Tax Settlement</td>
+          <td class="py-3.5 px-4 font-mono font-bold text-brand-sky">Form GSTR-3B</td>
+          <td class="py-3.5 px-4 text-slate-500">Interest @ 18% p.a. on net tax liability</td>
         </tr>
         
       </tbody>
@@ -375,20 +399,20 @@
   </div>
 </section>
 
-<!-- PART 7: INTERACTIVE FEE BREAKDOWN CALCULATOR -->
-<section class="py-14 bg-[#0e1712] text-white border-b border-white/10">
+<!-- FEE BREAKDOWN -->
+<section class="py-14 bg-slate-50 border-b border-slate-200">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-8">
-      <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Transparent Fee Matrix</span>
-      <h2 class="font-serif text-2xl font-bold text-white mt-1">Fee Structure &amp; Stamp Duty Breakdown</h2>
-      <p class="text-xs text-gray-400 mt-1">Government stamp duties are computed dynamically according to state stamp laws.</p>
+      <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-1">Fee Transparency</h2>
+      <h3 class="text-2xl font-extrabold text-brand-dark">Fee Structure &amp; Stamp Duty Breakdown</h3>
+      <p class="text-xs text-slate-500 mt-1">Government stamp duties are computed based on state stamp laws.</p>
     </div>
     
-    <div class="bg-[#090d16] p-6 rounded-xl border border-white/15" data-ccs-calculator="gst-registration">
+    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm" data-ccs-calculator="gst-registration">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
         <div>
-          <label class="block text-xs font-mono uppercase text-gray-400 mb-1">State / Union Territory</label>
-          <select id="prod-calc-state" class="w-full bg-[#0e1712] border border-white/20 rounded-lg px-3 py-2 text-xs text-white focus:border-[#c5a059] focus:outline-none">
+          <label class="block text-xs font-bold uppercase text-slate-700 mb-1">State / Jurisdiction</label>
+          <select id="prod-calc-state" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none">
             <option value="Kerala" selected>Kerala</option>
             <option value="Maharashtra">Maharashtra</option>
             <option value="Karnataka">Karnataka</option>
@@ -399,8 +423,8 @@
           </select>
         </div>
         <div>
-          <label class="block text-xs font-mono uppercase text-gray-400 mb-1">Authorized Capital</label>
-          <select id="prod-calc-capital" class="w-full bg-[#0e1712] border border-white/20 rounded-lg px-3 py-2 text-xs text-white focus:border-[#c5a059] focus:outline-none">
+          <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Authorized Capital</label>
+          <select id="prod-calc-capital" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none">
             <option value="100000">₹1,00,000</option>
             <option value="1000000" selected>₹10,00,000 (Standard)</option>
             <option value="2500000">₹25,00,000</option>
@@ -410,58 +434,57 @@
         </div>
       </div>
       
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-4 border-t border-white/10">
-        <div class="p-3 bg-[#0e1712] rounded-lg">
-          <span class="block text-[10px] font-mono text-gray-400 uppercase">Professional Fee</span>
-          <span class="font-mono text-sm font-bold text-white mt-1 block">₹2,499</span>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-4 border-t border-slate-200">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+          <span class="block text-[10px] uppercase font-bold text-slate-500">Professional Fee</span>
+          <span class="font-black text-sm text-brand-dark mt-1 block">₹2,499</span>
         </div>
-        <div class="p-3 bg-[#0e1712] rounded-lg">
-          <span class="block text-[10px] font-mono text-gray-400 uppercase">State Stamp Duty</span>
-          <span id="prod-stamp-duty" class="font-mono text-sm font-bold text-[#c5a059] mt-1 block">₹2,000</span>
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+          <span class="block text-[10px] uppercase font-bold text-slate-500">State Stamp Duty</span>
+          <span id="prod-stamp-duty" class="font-black text-sm text-brand-gold mt-1 block">₹2,000</span>
         </div>
-        <div class="p-3 bg-[#0e1712] rounded-lg">
-          <span class="block text-[10px] font-mono text-gray-400 uppercase">GST (18%)</span>
-          <span class="font-mono text-sm font-bold text-white mt-1 block">₹449</span>
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+          <span class="block text-[10px] uppercase font-bold text-slate-500">GST (18%)</span>
+          <span class="font-black text-sm text-brand-dark mt-1 block">₹449</span>
         </div>
-        <div class="p-3 bg-[#c5a059]/15 rounded-lg border border-[#c5a059]/30">
-          <span class="block text-[10px] font-mono text-[#c5a059] uppercase font-bold">Estimated Total</span>
-          <span id="prod-total-fee" class="font-mono text-sm font-bold text-white mt-1 block">₹4,948</span>
+        <div class="p-3 bg-brand-skyLight rounded-xl border border-brand-sky/30">
+          <span class="block text-[10px] uppercase font-bold text-brand-sky">Estimated Total</span>
+          <span id="prod-total-fee" class="font-black text-sm text-brand-dark mt-1 block">₹4,948</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PART 8: SERVICE-SPECIFIC DIRECT INQUIRY FORM -->
-<section id="inquiry" class="py-16 bg-[#fcfbf7]">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md">
+<!-- DIRECT INQUIRY FORM -->
+<section id="inquiry" class="py-16 bg-white">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 shadow-md">
       <div class="text-center mb-6">
-        <span class="font-mono text-xs uppercase tracking-widest text-[#c5a059] font-bold">Direct Docket Engagement</span>
-        <h2 class="font-serif text-2xl font-bold text-[#0e1712] mt-1">Initiate GST Registration</h2>
-        <p class="text-xs text-gray-500 mt-1">Submit your details or proceed to instant WhatsApp direct checkout.</p>
+        <h3 class="text-xl font-bold text-brand-dark">Initiate GST Registration</h3>
+        <p class="text-xs text-slate-500 mt-1">Connect with our specialized CA/CS team for fast-track processing.</p>
       </div>
       
       <form data-ccs-form="true" data-category="gst-advisory" data-service-id="gst-registration" class="space-y-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-mono uppercase text-gray-600 mb-1">Your Full Name *</label>
-            <input type="text" name="user_name" required placeholder="Shibili Poompatta" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3.5 py-2.5 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none" />
+            <label class="block text-xs font-bold text-slate-700 mb-1">Full Legal Name *</label>
+            <input type="text" name="user_name" required placeholder="e.g. Rahul Sharma" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-brand-dark focus:ring-2 focus:ring-brand-sky focus:outline-none" />
           </div>
           <div>
-            <label class="block text-xs font-mono uppercase text-gray-600 mb-1">Business Email *</label>
-            <input type="email" name="email" required placeholder="shibili@domain.com" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3.5 py-2.5 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none" />
+            <label class="block text-xs font-bold text-slate-700 mb-1">Work Email ID *</label>
+            <input type="email" name="email" required placeholder="rahul@company.com" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-brand-dark focus:ring-2 focus:ring-brand-sky focus:outline-none" />
           </div>
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-mono uppercase text-gray-600 mb-1">Mobile / WhatsApp *</label>
-            <input type="tel" name="phone" required placeholder="9876543210" class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3.5 py-2.5 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none" />
+            <label class="block text-xs font-bold text-slate-700 mb-1">Mobile / WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-brand-dark focus:ring-2 focus:ring-brand-sky focus:outline-none" />
           </div>
           <div>
-            <label class="block text-xs font-mono uppercase text-gray-600 mb-1">Jurisdiction / State *</label>
-            <select name="selected_state" required class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3.5 py-2.5 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none">
+            <label class="block text-xs font-bold text-slate-700 mb-1">State *</label>
+            <select name="selected_state" required class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-brand-dark focus:ring-2 focus:ring-brand-sky focus:outline-none">
               <option value="Kerala">Kerala</option>
               <option value="Maharashtra">Maharashtra</option>
               <option value="Karnataka">Karnataka</option>
@@ -474,93 +497,93 @@
         </div>
         
         <div>
-          <label class="block text-xs font-mono uppercase text-gray-600 mb-1">Specific Instructions / Existing Registrations</label>
-          <textarea name="custom_message" rows="3" placeholder="Provide any details regarding proposed company names, existing DINs, turnover brackets, or special requirements..." class="w-full bg-[#f8f9f6] border border-gray-300 rounded-lg px-3.5 py-2.5 text-xs text-[#0e1712] focus:border-[#c5a059] focus:outline-none"></textarea>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Specific Requirements / Notes</label>
+          <textarea name="custom_message" rows="3" placeholder="Provide any details regarding proposed company names, existing DINs, or special timeline requirements..." class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-brand-dark focus:ring-2 focus:ring-brand-sky focus:outline-none"></textarea>
         </div>
         
-        <button type="submit" class="w-full bg-[#0e1712] hover:bg-black text-[#c5a059] font-bold text-xs uppercase tracking-wider py-3.5 rounded-lg transition shadow-md">
-          Submit Service Mandate &rarr;
+        <button type="submit" class="w-full bg-gradient-to-r from-brand-sky to-brand-skyHover text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-lg shadow-md hover:shadow-lg transition">
+          Submit Service Request &rarr;
         </button>
       </form>
     </div>
   </div>
 </section>
 
-<footer class="bg-[#090d16] text-gray-300 pt-16 pb-12 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-      <div class="lg:col-span-2 space-y-4">
-        <a href="/" class="flex items-center space-x-3">
-          <span class="font-serif text-2xl font-bold tracking-wider text-white">Craft<span class="text-[#c5a059]">Egon</span></span>
-          <span class="text-[10px] font-mono tracking-widest uppercase bg-[#c5a059]/20 text-[#c5a059] px-2 py-0.5 rounded border border-[#c5a059]/40">Corporate Services</span>
-        </a>
-        <p class="text-sm text-gray-400 max-w-sm leading-relaxed">
-          India's enterprise legal-technology, corporate governance, and indirect tax operations platform. Orchestrating statutory precision for modern businesses.
-        </p>
-        <div class="pt-2 text-sm text-gray-300 space-y-1.5">
-          <p><span class="text-[#c5a059] font-medium">Headquarters:</span> Technopark, Trivandrum, Kerala, India</p>
-          <p><span class="text-[#c5a059] font-medium">Corporate Desk:</span> support@craftegon.com | +91 99952 04905</p>
+<footer class="bg-brand-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-lg flex items-center justify-center text-white font-extrabold text-lg shadow">
+            C
+          </div>
+          <span class="text-lg font-bold text-white tracking-tight">CRAFTEGON</span>
         </div>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          India's enterprise corporate technology, secretarial governance, and compliance operations platform.
+        </p>
+        <p class="text-slate-400 text-xs">Technopark, Trivandrum, Kerala, India</p>
+        <p class="text-slate-400 text-xs mt-1">support@craftegon.com | +91 99952 04905</p>
       </div>
+
       <div>
-        <h4 class="font-serif text-white font-semibold mb-4 text-sm tracking-wider uppercase text-[#c5a059]">Service Verticals</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/business-setup/" class="hover:text-[#c5a059] transition">Business Setup</a></li>
-          <li><a href="/gst-advisory/" class="hover:text-[#c5a059] transition">GST & Indirect Tax</a></li>
-          <li><a href="/corporate-governance/" class="hover:text-[#c5a059] transition">Corporate Governance</a></li>
-          <li><a href="/direct-tax/" class="hover:text-[#c5a059] transition">Direct Tax & TDS</a></li>
-          <li><a href="/brand-protection/" class="hover:text-[#c5a059] transition">Brand Protection</a></li>
-          <li><a href="/workforce-digital/" class="hover:text-[#c5a059] transition">Workforce & Digital</a></li>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Practice Hubs</h5>
+        <ul class="space-y-2">
+          <li><a href="/business-setup/" class="hover:text-brand-sky transition">Business Setup &amp; Formation</a></li>
+          <li><a href="/gst-advisory/" class="hover:text-brand-sky transition">GST Advisory &amp; Filings</a></li>
+          <li><a href="/corporate-governance/" class="hover:text-brand-sky transition">Corporate Governance &amp; MCA</a></li>
+          <li><a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax &amp; TDS</a></li>
+          <li><a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP Protection</a></li>
+          <li><a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a></li>
         </ul>
       </div>
+
       <div>
-        <h4 class="font-serif text-white font-semibold mb-4 text-sm tracking-wider uppercase text-[#c5a059]">Core Highlights</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/business-setup/private-limited-company-incorporation/" class="hover:text-[#c5a059] transition">Pvt Ltd Incorporation</a></li>
-          <li><a href="/business-setup/llp-registration/" class="hover:text-[#c5a059] transition">LLP Registration</a></li>
-          <li><a href="/gst-advisory/gst-registration/" class="hover:text-[#c5a059] transition">GST Registration</a></li>
-          <li><a href="/corporate-governance/annual-mca-roc-filings/" class="hover:text-[#c5a059] transition">Annual ROC Filings</a></li>
-          <li><a href="/brand-protection/trademark-registration-filing/" class="hover:text-[#c5a059] transition">Trademark Filing</a></li>
-          <li><a href="/workforce-digital/dpdp-act-data-privacy-readiness/" class="hover:text-[#c5a059] transition">DPDP Act Compliance</a></li>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Popular Filings</h5>
+        <ul class="space-y-2">
+          <li><a href="/business-setup/private-limited-company-incorporation/" class="hover:text-brand-sky transition">Pvt Ltd Company Incorporation</a></li>
+          <li><a href="/business-setup/llp-registration/" class="hover:text-brand-sky transition">LLP Registration</a></li>
+          <li><a href="/gst-advisory/gst-registration/" class="hover:text-brand-sky transition">GST Registration</a></li>
+          <li><a href="/corporate-governance/annual-mca-roc-filings/" class="hover:text-brand-sky transition">Annual ROC Filings (AOC-4)</a></li>
+          <li><a href="/brand-protection/trademark-registration-filing/" class="hover:text-brand-sky transition">Trademark Registration (TM-A)</a></li>
         </ul>
       </div>
+
       <div>
-        <h4 class="font-serif text-white font-semibold mb-4 text-sm tracking-wider uppercase text-[#c5a059]">Direct Checkout</h4>
-        <p class="text-xs text-gray-400 mb-3">Instant statutory case desk via WhatsApp Business Channel:</p>
-        <a href="https://wa.me/919995204905" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2 rounded text-xs font-semibold transition">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>Direct WhatsApp Case Desk</span>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Direct Case Desk</h5>
+        <p class="text-slate-400 mb-3">Connect directly via WhatsApp Business for express onboarding:</p>
+        <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2.5 rounded-lg text-xs font-bold transition">
+          <span>💬 Direct WhatsApp Case Desk</span>
         </a>
       </div>
     </div>
-    <div class="border-t border-white/10 pt-8 mt-8">
-      <p class="text-xs text-gray-400 leading-relaxed">
-  <strong class="text-gold">Regulatory Notice:</strong> CraftEgon Corporate Services (CCS) is a corporate technology, compliance, and management platform. CCS is not a law firm and does not provide court litigation or judicial representation. All court litigation and tribunal appearances are executed exclusively through independent, licensed advocates or associate law firms (such as Everest Law Firm) in accordance with the Advocates Act, 1961. Statutory audits, tax certifications, and regulated professional services are fulfilled by qualified, independent Chartered Accountants, Company Secretaries, and registered professionals in compliance with ICAI, ICSI, and statutory guidelines.
+
+    <!-- Mandatory Non-Litigation Disclaimer -->
+    <div class="border-t border-slate-800 pt-8">
+      <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+        <p class="text-xs text-slate-400 leading-relaxed text-justify">
+  <strong class="text-brand-gold font-bold uppercase">Regulatory Notice:</strong> CraftEgon Corporate Services (CCS) is a corporate technology, compliance, and management platform. CCS is not a law firm and does not provide court litigation or judicial representation before courts or tribunals. All court litigation and tribunal appearances are executed exclusively through independent, licensed advocates or associate law firms (such as Everest Law Firm) in accordance with the Advocates Act, 1961. Statutory audits, tax certifications, and regulated professional services are fulfilled by qualified, independent Chartered Accountants, Company Secretaries, and registered professionals in compliance with ICAI, ICSI, and statutory guidelines.
 </p>
-      <div class="mt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
-        <p>&copy; 2026 CraftEgon Corporate Services Platform. All rights reserved.</p>
-        <p class="mt-2 sm:mt-0 font-mono">corporateservices.craftegon.com</p>
+      </div>
+      <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
+        <p>&copy; 2026 CraftEgon Corporate Services. All rights reserved.</p>
+        <p class="mt-1 sm:mt-0 font-mono">corporateservices.craftegon.com</p>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- SCRIPTS -->
 <script src="/assets/js/forms.js"></script>
 <script src="/assets/js/calculator.js"></script>
 <script>
   if (window.lucide) { lucide.createIcons(); }
 
-  // Mobile menu toggle
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+  const mBtn = document.getElementById('mobileMenuBtn');
+  const mMenu = document.getElementById('mobileMenu');
+  if (mBtn && mMenu) {
+    mBtn.addEventListener('click', () => mMenu.classList.toggle('hidden'));
   }
 
-  // Stamp duty local calculation
   const pState = document.getElementById('prod-calc-state');
   const pCap = document.getElementById('prod-calc-capital');
   const pDuty = document.getElementById('prod-stamp-duty');

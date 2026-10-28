@@ -1,754 +1,469 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  
-  <!-- Primary SEO Meta Tags -->
-  <title>CraftEgon Corporate Services | Enterprise Compliance &amp; Corporate Systems</title>
-  <meta name="title" content="CraftEgon Corporate Services | Enterprise Compliance &amp; Corporate Systems" />
-  <meta name="description" content="India's integrated corporate legal-tech, compliance management, and corporate systems platform. High-velocity company formation, GST operations, MCA secretarial governance, direct tax advisory, and DPDP Act readiness." />
-  <meta name="keywords" content="corporate compliance, company incorporation India, private limited, LLP registration, GST advisory, MCA ROC filing, direct tax, trademark registration, DPDP Act 2023, corporate secretarial services" />
-  <meta name="author" content="CraftEgon Corporate Services" />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://corporateservices.craftegon.com/" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://corporateservices.craftegon.com/" />
-  <meta property="og:title" content="CraftEgon Corporate Services | Enterprise Compliance &amp; Corporate Systems" />
-  <meta property="og:description" content="India's integrated corporate legal-tech, compliance management, and corporate systems platform. Fast-track SPICe+ MCA V3 incorporation, GST advisory, and corporate governance." />
-  <meta property="og:image" content="https://corporateservices.craftegon.com/assets/images/og-brand.jpg" />
-  <meta property="og:site_name" content="CraftEgon Corporate Services" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://corporateservices.craftegon.com/" />
-  <meta property="twitter:title" content="CraftEgon Corporate Services | Enterprise Compliance &amp; Corporate Systems" />
-  <meta property="twitter:description" content="Corporate legal-tech, compliance management, and company incorporation platform for high-growth enterprises in India." />
-  <meta property="twitter:image" content="https://corporateservices.craftegon.com/assets/images/og-brand.jpg" />
-  
-  <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c5a059'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
-  
-  <!-- Google Fonts: Manrope (Body), Cinzel (Headings), DM Mono (Code/Badges) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            serif: ['Cinzel', 'Georgia', 'serif'],
-            mono: ['DM Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              ivory: '#f8f9f6',
-              ivoryLight: '#fcfbf7',
-              obsidian: '#0e1712',
-              obsidianDark: '#090d16',
-              charcoal: '#2e3a33',
-              gold: '#c5a059',
-              goldDeep: '#b38e46',
-              goldLight: '#e6c88b',
-              goldMuted: 'rgba(197, 160, 89, 0.15)',
-              borderDark: 'rgba(255, 255, 255, 0.12)',
-            }
-          },
-          boxShadow: {
-            'gold-glow': '0 0 25px rgba(197, 160, 89, 0.18)',
-            'card-hover': '0 12px 30px -10px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(197, 160, 89, 0.35)',
-          }
-        }
-      }
-    };
-  </script>
-  
-  <!-- Global Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/theme.css" />
-  
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Structured Data: Organization & WebSite Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://corporateservices.craftegon.com/#organization",
-        "name": "CraftEgon Corporate Services",
-        "alternateName": "CCS Legal-Tech Platform",
-        "url": "https://corporateservices.craftegon.com/",
-        "logo": "https://corporateservices.craftegon.com/assets/images/logo.png",
-        "description": "Enterprise Corporate Legal-Tech, Statutory Compliance & Management Platform.",
-        "telephone": "+91-9995204905",
-        "email": "support@craftegon.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Trivandrum",
-          "addressRegion": "Kerala",
-          "addressCountry": "IN"
-        },
-        "sameAs": [
-          "https://github.com/shibilipoompatta/Craftegon-Corporate-Services",
-          "https://craftegon.com"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://corporateservices.craftegon.com/#website",
-        "url": "https://corporateservices.craftegon.com/",
-        "name": "CraftEgon Corporate Services",
-        "publisher": {
-          "@id": "https://corporateservices.craftegon.com/#organization"
-        },
-        "inLanguage": "en-US"
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    /* iOS input zoom fix & touch targets */
-    @media screen and (max-width: 768px) {
-      input, select, textarea {
-        font-size: 16px !important;
-      }
-    }
-    .min-touch {
-      min-height: 44px;
-      min-width: 44px;
-    }
-  </style>
-</head>
-<body class="bg-brand-ivory text-brand-charcoal font-sans antialiased selection:bg-brand-gold selection:text-brand-obsidian overflow-x-hidden min-h-screen flex flex-col justify-between">
-
-  <!-- A. EXECUTIVE NAVIGATION HEADER -->
-  <header class="sticky top-0 z-50 bg-[#0e1712]/95 backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo & Wordmark -->
-      <a href="/" class="flex items-center space-x-3 group min-touch" aria-label="CraftEgon Corporate Services Home">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-gold via-brand-goldDeep to-[#8a6828] p-0.5 shadow-md flex items-center justify-center">
-          <div class="w-full h-full bg-[#0e1712] rounded-[6px] flex items-center justify-center">
-            <span class="font-serif font-black text-xl text-brand-gold group-hover:scale-105 transition-transform duration-300">C</span>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white leading-none">
-            CRAFT<span class="text-brand-gold">EGON</span>
-          </span>
-          <span class="text-[10px] font-mono tracking-widest uppercase text-gray-400 mt-1">
-            Corporate Services
-          </span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation Links (6 Practice Hubs) -->
-      <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-xs font-semibold uppercase tracking-wider text-gray-300">
-        <a href="/business-setup/" class="hover:text-brand-gold transition-colors py-2 border-b-2 border-transparent hover:border-brand-gold">Setup</a>
-        <a href="/gst-advisory/" class="hover:text-brand-gold transition-colors py-2 border-b-2 border-transparent hover:border-brand-gold">GST</a>
-        <a href="/corporate-governance/" class="hover:text-brand-gold transition-colors py-2 border-b-2 border-transparent hover:border-brand-gold">Governance</a>
-        <a href="/direct-tax/" class="hover:text-brand-gold transition-colors py-2 border-b-2 border-transparent hover:border-brand-gold">Direct Tax</a>
-        <a href="/brand-protection/" class="hover:text-brand-gold transition-colors py-2 border-b-2 border-transparent hover:border-brand-gold">IP Protection</a>
-        <a href="/workforce-digital/" class="hover:text-brand-gold transition-colors py-2 border-b-2 border-transparent hover:border-brand-gold">Digital Ops</a>
-      </nav>
-
-      <!-- Header CTAs (Desktop) -->
-      <div class="hidden sm:flex items-center space-x-4">
-        <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="text-xs font-mono text-gray-300 hover:text-white flex items-center gap-1.5 py-2 px-3 rounded-lg border border-white/10 hover:border-brand-gold/40 transition min-touch">
-          <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
-          <span>Desk: +91 99952 04905</span>
-        </a>
-        <a href="#consultation" class="bg-gradient-to-r from-brand-gold to-brand-goldDeep hover:brightness-110 text-brand-obsidian font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-lg shadow-md transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center min-touch">
-          Engage Counsel
-        </a>
-      </div>
-
-      <!-- Mobile Hamburger Toggle Button -->
-      <button id="mobileMenuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden text-gray-300 hover:text-brand-gold p-2 min-touch flex items-center justify-center rounded-lg hover:bg-white/5 transition" aria-label="Toggle navigation menu">
-        <i data-lucide="menu" id="menuOpenIcon" class="w-6 h-6"></i>
-        <i data-lucide="x" id="menuCloseIcon" class="w-6 h-6 hidden"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Slide-Over Drawer Navigation -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-brand-obsidianDark/98 border-b border-white/10 backdrop-blur-xl px-5 pt-4 pb-8 space-y-4 animate-in slide-in-from-top-4 duration-300">
-      <div class="text-[11px] font-mono uppercase tracking-widest text-brand-gold px-2 pt-2 pb-1 border-b border-white/10">
-        6 Core Practice Hubs
-      </div>
-      <nav class="grid grid-cols-1 gap-1">
-        <a href="/business-setup/" class="flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-brand-gold py-3 px-3 rounded-lg hover:bg-white/5 transition min-touch">
-          <span class="flex items-center gap-3"><i data-lucide="building" class="w-4 h-4 text-brand-gold"></i> Business Setup &amp; Formation</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-        </a>
-        <a href="/gst-advisory/" class="flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-brand-gold py-3 px-3 rounded-lg hover:bg-white/5 transition min-touch">
-          <span class="flex items-center gap-3"><i data-lucide="receipt" class="w-4 h-4 text-brand-gold"></i> GST Advisory &amp; Filings</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-        </a>
-        <a href="/corporate-governance/" class="flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-brand-gold py-3 px-3 rounded-lg hover:bg-white/5 transition min-touch">
-          <span class="flex items-center gap-3"><i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i> Corporate Secretarial &amp; Governance</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-        </a>
-        <a href="/direct-tax/" class="flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-brand-gold py-3 px-3 rounded-lg hover:bg-white/5 transition min-touch">
-          <span class="flex items-center gap-3"><i data-lucide="calculator" class="w-4 h-4 text-brand-gold"></i> Direct Tax &amp; Income Tax</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-        </a>
-        <a href="/brand-protection/" class="flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-brand-gold py-3 px-3 rounded-lg hover:bg-white/5 transition min-touch">
-          <span class="flex items-center gap-3"><i data-lucide="copyright" class="w-4 h-4 text-brand-gold"></i> Brand &amp; IP Protection</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-        </a>
-        <a href="/workforce-digital/" class="flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-brand-gold py-3 px-3 rounded-lg hover:bg-white/5 transition min-touch">
-          <span class="flex items-center gap-3"><i data-lucide="cpu" class="w-4 h-4 text-brand-gold"></i> Workforce &amp; Digital Infrastructure</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-        </a>
-      </nav>
-      
-      <div class="pt-4 border-t border-white/10 space-y-3">
-        <a href="#consultation" onclick="closeMobileMenu()" class="w-full bg-brand-gold hover:bg-brand-goldDeep text-brand-obsidian font-bold text-xs uppercase tracking-wider py-3.5 rounded-lg shadow-md transition flex items-center justify-center min-touch">
-          Schedule Legal Consultation
-        </a>
-        <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="w-full bg-white/10 hover:bg-white/15 text-white font-semibold text-xs py-3 rounded-lg border border-white/20 transition flex items-center justify-center gap-2 min-touch">
-          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-          <span>Direct WhatsApp Case Desk</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- B. MINIMALIST HERO SECTION -->
-  <section class="bg-[#0e1712] text-white pt-16 sm:pt-24 pb-20 sm:pb-28 border-b border-white/10 relative overflow-hidden">
-    <!-- Grid pattern & gold ambient glow -->
-    <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
-    <div class="absolute top-1/4 -right-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-20 -left-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      
-      <!-- Top Live Status Pill -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-brand-gold/30 text-gray-300 text-xs font-mono mb-8 backdrop-blur-sm shadow-inner">
-        <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-        <span class="text-white font-medium">Building Business Infrastructure</span>
-        <span class="text-gray-500">•</span>
-        <span class="text-brand-gold">MCA V3 &amp; GST Ready</span>
-      </div>
-
-      <!-- Main Institutional Headline -->
-      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-5xl mx-auto leading-[1.15] sm:leading-[1.15] mb-6">
-        Architecting Enterprise Compliance &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-goldDeep">Corporate Systems</span>
-      </h1>
-
-      <!-- Sub-headline -->
-      <p class="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
-        India's integrated corporate legal-tech platform for high-velocity company formation, secretarial filings, contract architecture, IPR protection, and digital operational infrastructure.
-      </p>
-
-      <!-- Dual CTA Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto mb-16">
-        <a href="#consultation" class="w-full sm:w-auto bg-gradient-to-r from-brand-gold via-brand-gold to-brand-goldDeep hover:brightness-110 text-brand-obsidian font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg shadow-brand-gold/20 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center min-touch">
-          Schedule Legal Consultation &rarr;
-        </a>
-        <a href="#practices" class="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider px-8 py-4 rounded-xl border border-white/20 hover:border-brand-gold/40 transition-all duration-200 flex items-center justify-center min-touch">
-          Explore 6 Practice Hubs
-        </a>
-      </div>
-
-      <!-- Trust Metrics Bar (3 Execution Pillars) -->
-      <div class="pt-10 border-t border-white/10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-        <div class="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-lg bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
-            <i data-lucide="clock" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <span class="block text-[11px] font-mono text-gray-400 uppercase tracking-wider">Standard Turnaround</span>
-            <span class="font-serif text-lg font-bold text-white mt-0.5 block">7–10 Days Execution</span>
-            <span class="text-xs text-gray-500">Accelerated SPICe+ MCA V3 processing</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-lg bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
-            <i data-lucide="scale" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <span class="block text-[11px] font-mono text-gray-400 uppercase tracking-wider">Commercial Model</span>
-            <span class="font-serif text-lg font-bold text-white mt-0.5 block">Fixed Fee &amp; Retainers</span>
-            <span class="text-xs text-gray-500">Transparent state stamp duty parity</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-lg bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
-            <i data-lucide="shield" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <span class="block text-[11px] font-mono text-gray-400 uppercase tracking-wider">Legal Practice</span>
-            <span class="font-serif text-lg font-bold text-white mt-0.5 block">Corporate &amp; Strategic</span>
-            <span class="text-xs text-gray-500">Non-litigation compliance architecture</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- C. CORE PRACTICE ARCHITECTURE SHOWCASE (EXACTLY 6 ENTRANCE CARDS) -->
-  <main id="practices" class="py-20 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftegon Corporate Services - Legal &amp; Business Compliance</title>
+    <meta name="description" content="Fastest Company Incorporation, GST Registration, Trademark Filing &amp; MCA Compliance handled by expert Chartered Accountants and Legal Consultants.">
+    <link rel="canonical" href="https://corporateservices.craftegon.com/" />
     
-    <!-- Section Narrative Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="font-mono text-xs uppercase tracking-widest text-brand-goldDeep font-bold">Comprehensive Service Architecture</span>
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-obsidian mt-2 mb-4">
-        6 Core Practice Verticals
-      </h2>
-      <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-        Select your required operational domain below to access dedicated practice hubs containing detailed statutory breakdowns, dynamic state calculators, document requirements, and tiered compliance retainers.
-      </p>
+    <!-- Google Fonts: Plus Jakarta Sans & DM Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['DM Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            white: '#FFFFFF',
+                            sky: '#0284C7',
+                            skyLight: '#E0F2FE',
+                            skyHover: '#0369A1',
+                            slate: '#F1F5F9',
+                            silver: '#94A3B8',
+                            gold: '#D97706',
+                            goldLight: '#FEF3C7',
+                            dark: '#0F172A',
+                            darkAlt: '#1E293B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CraftEgon Corporate Services",
+      "url": "https://corporateservices.craftegon.com/",
+      "logo": "https://corporateservices.craftegon.com/assets/images/logo.png",
+      "description": "Fastest Company Incorporation, GST Registration, Trademark Filing & MCA Compliance.",
+      "telephone": "+91-9995204905",
+      "email": "support@craftegon.com"
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-brand-dark font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
+        <span>🚀 Special Offer: Get <strong>20% OFF</strong> MCA Filing &amp; Free Expert Consultation this week!</span>
+        <a href="#contact" class="underline hover:text-brand-goldLight font-bold transition">Claim Offer &rarr;</a>
     </div>
 
-    <!-- The 6 Vertical Entrance Cards Grid (Strictly 6 Cards) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      
-      <!-- 1. Business Setup & Formation -->
-      <a href="/business-setup/" class="group bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldDeep opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-[#0e1712] text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <i data-lucide="building" class="w-6 h-6"></i>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    C
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold text-brand-dark tracking-tight">CRAFTEGON</span>
+                    <span class="block text-[10px] font-bold text-brand-sky tracking-widest uppercase">Corporate Services</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav (6 Practice Verticals) -->
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-600">
+                <a href="/business-setup/" class="hover:text-brand-sky transition">Business Setup</a>
+                <a href="/gst-advisory/" class="hover:text-brand-sky transition">GST Advisory</a>
+                <a href="/corporate-governance/" class="hover:text-brand-sky transition">Governance &amp; MCA</a>
+                <a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax</a>
+                <a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP</a>
+                <a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
+                    <span class="text-emerald-600 font-bold">●</span> Desk: +91 99952 04905
+                </a>
+                <a href="#contact" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
+                    Get Started
+                </a>
+                <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
-            <span class="font-mono text-[11px] font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              From ₹5,999
-            </span>
-          </div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors mb-3">
-            Business Setup &amp; Formation
-          </h3>
-          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
-            Private Limited, LLP, OPC, Section 8, Foreign Subsidiary Incorporation, and DPIIT Startup recognition under Companies Act 2013 and SPICe+ MCA V3.
-          </p>
         </div>
-        <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors">
-          <span>Enter Practice Hub</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-        </div>
-      </a>
 
-      <!-- 2. GST Advisory & Filings -->
-      <a href="/gst-advisory/" class="group bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldDeep opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-[#0e1712] text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <i data-lucide="receipt" class="w-6 h-6"></i>
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
+            <a href="/business-setup/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Business Setup &amp; Formation</a>
+            <a href="/gst-advisory/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">GST Advisory &amp; Filings</a>
+            <a href="/corporate-governance/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Corporate Governance &amp; MCA</a>
+            <a href="/direct-tax/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Direct Tax &amp; TDS</a>
+            <a href="/brand-protection/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Brand Protection &amp; Trademarks</a>
+            <a href="/workforce-digital/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Workforce &amp; Digital Infrastructure</a>
+            <div class="pt-2">
+                <a href="#contact" onclick="toggleMobileMenu()" class="block w-full text-center bg-brand-sky text-white font-bold text-sm py-3 rounded-lg shadow">Get Free Consultation</a>
             </div>
-            <span class="font-mono text-[11px] font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              From ₹2,499
-            </span>
-          </div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors mb-3">
-            GST Advisory &amp; Filings
-          </h3>
-          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
-            Monthly GSTR filings, annual reconciliation (GSTR-9), e-invoicing setup, LUT, Rule 36(4) ITC matching, and non-litigation notice reply drafting.
-          </p>
         </div>
-        <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors">
-          <span>Enter Practice Hub</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-        </div>
-      </a>
+    </header>
 
-      <!-- 3. Corporate Secretarial & Governance -->
-      <a href="/corporate-governance/" class="group bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldDeep opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-[#0e1712] text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <i data-lucide="shield-check" class="w-6 h-6"></i>
+    <!-- Hero Section with Search & Instant Lead Capture -->
+    <section class="relative bg-gradient-to-b from-brand-skyLight/50 via-white to-slate-50 py-12 md:py-20 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Hero Content -->
+            <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-goldLight border border-brand-gold/30 text-brand-gold text-xs font-bold">
+                    ⭐ Trusted LegalTech Platform for Indian Entrepreneurs
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-tight">
+                    Start &amp; Scale Your Business <span class="text-brand-sky">Without Legal Hassles</span>
+                </h1>
+                
+                <p class="text-slate-600 text-base md:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                    Fastest Company Incorporation, GST Registration, Trademark Filing &amp; MCA Compliance handled by expert Chartered Accountants and Legal Consultants.
+                </p>
+
+                <!-- Search Bar (Quick Direct Routing) -->
+                <div class="relative max-w-xl mx-auto md:mx-0 pt-2">
+                    <form onsubmit="handleQuickSearch(event)" class="flex items-center bg-white rounded-xl shadow-lg border border-slate-200 p-2">
+                        <span class="pl-3 text-slate-400">🔍</span>
+                        <input id="searchInput" type="text" placeholder="Search service e.g. Private Limited, GST, Trademark, MCA..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
+                        <button type="submit" class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition shrink-0">
+                            Search
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Trust Metrics -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200 text-center md:text-left">
+                    <div>
+                        <div class="text-xl md:text-2xl font-black text-brand-dark">500+</div>
+                        <div class="text-xs text-slate-500 font-medium">Businesses Registered</div>
+                    </div>
+                    <div>
+                        <div class="text-xl md:text-2xl font-black text-brand-dark">99.8%</div>
+                        <div class="text-xs text-slate-500 font-medium">Approval Rate</div>
+                    </div>
+                    <div>
+                        <div class="text-xl md:text-2xl font-black text-brand-gold">4.9/5 ★</div>
+                        <div class="text-xs text-slate-500 font-medium">Customer Rating</div>
+                    </div>
+                </div>
             </div>
-            <span class="font-mono text-[11px] font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              From ₹1,499
-            </span>
-          </div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors mb-3">
-            Corporate Secretarial &amp; Governance
-          </h3>
-          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
-            Annual MCA filings (AOC-4/MGT-7), Director KYC, share allotments, FEMA/RBI filings, board resolutions, and comprehensive secretarial retainers.
-          </p>
-        </div>
-        <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors">
-          <span>Enter Practice Hub</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-        </div>
-      </a>
 
-      <!-- 4. Direct Tax & Income Tax -->
-      <a href="/direct-tax/" class="group bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldDeep opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-[#0e1712] text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <i data-lucide="calculator" class="w-6 h-6"></i>
+            <!-- Right Lead Capture Form -->
+            <div class="md:col-span-5" id="contact">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-slate-200 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">
+                        Free Call Back
+                    </div>
+
+                    <h3 class="text-xl font-bold text-brand-dark mb-1">Talk to a Legal Expert</h3>
+                    <p class="text-xs text-slate-500 mb-6">Get free advice on business registration in 10 minutes.</p>
+
+                    <form id="heroForm" class="space-y-4" data-ccs-form="true" data-service-id="general-consultation" onsubmit="handleHeroSubmit(event)">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                            <input type="text" name="user_name" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile / WhatsApp Number *</label>
+                            <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Target Service Vertical *</label>
+                            <select name="category" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
+                                <option value="business-setup">Private Limited / LLP Incorporation</option>
+                                <option value="gst-advisory">GST Registration &amp; Return Filing</option>
+                                <option value="brand-protection">Trademark Registration &amp; IP Protection</option>
+                                <option value="corporate-governance">Annual MCA &amp; ROC Filings</option>
+                                <option value="direct-tax">Corporate Income Tax &amp; TDS</option>
+                                <option value="workforce-digital">Workforce Compliance &amp; DPDP Act</option>
+                            </select>
+                        </div>
+
+                        <div class="text-[11px] text-slate-500 leading-tight">
+                            By submitting, you agree to receive expert calls &amp; WhatsApp advisory on your registered number.
+                        </div>
+
+                        <button id="heroSubmitBtn" type="submit" class="w-full bg-gradient-to-r from-brand-sky to-brand-skyHover text-white font-bold text-sm py-3.5 rounded-lg shadow-md hover:shadow-lg transition">
+                            Get Free Consultation &rarr;
+                        </button>
+                    </form>
+                </div>
             </div>
-            <span class="font-mono text-[11px] font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              From ₹2,999
-            </span>
-          </div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors mb-3">
-            Direct Tax &amp; Income Tax
-          </h3>
-          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
-            Corporate ITR-6 filings, TDS quarterly returns, transfer pricing documentation, scrutiny reply drafting, advance tax, and Form 3CD audit support.
-          </p>
-        </div>
-        <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors">
-          <span>Enter Practice Hub</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-        </div>
-      </a>
 
-      <!-- 5. Brand & IP Protection -->
-      <a href="/brand-protection/" class="group bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldDeep opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-[#0e1712] text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <i data-lucide="copyright" class="w-6 h-6"></i>
+        </div>
+    </section>
+
+    <!-- Core Practice Verticals Showcase (6 Cards) -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">High-Demand Practice Verticals</h2>
+                <h3 class="text-2xl md:text-4xl font-extrabold text-brand-dark">6 Core Practice Hubs for Indian Startups</h3>
+                <p class="text-sm text-slate-500 mt-2">Explore our specialized compliance verticals featuring real-time state calculators, transparent fee schedules, and execution blueprints.</p>
             </div>
-            <span class="font-mono text-[11px] font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              From ₹3,999
-            </span>
-          </div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors mb-3">
-            Brand &amp; IP Protection
-          </h3>
-          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
-            Trademark registration across 45 classes, Section 9 &amp; 11 objection replies, copyright drafting, patent facilitation, and brand monitoring.
-          </p>
-        </div>
-        <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors">
-          <span>Enter Practice Hub</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-        </div>
-      </a>
 
-      <!-- 6. Workforce & Digital Infrastructure -->
-      <a href="/workforce-digital/" class="group bg-white rounded-2xl p-7 sm:p-8 border border-gray-200/90 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldDeep opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-[#0e1712] text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <i data-lucide="cpu" class="w-6 h-6"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Practice Card 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">🏛️</div>
+                        <h4 class="text-xl font-bold text-brand-dark mb-2">Business Setup &amp; Formation</h4>
+                        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                            Private Limited, LLP, One Person Company (OPC), Section 8 NGO, and Foreign Subsidiary setup with SPICe+ MCA V3 fast-track clearance.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹5,999 + Govt Fees</span>
+                        <a href="/business-setup/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Practice Card 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">📄</div>
+                        <h4 class="text-xl font-bold text-brand-dark mb-2">GST Advisory &amp; Filings</h4>
+                        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                            Hassle-free GSTIN allocation within 3–7 working days, monthly GSTR-1/3B filings, Rule 36(4) ITC reconciliation, and annual GSTR-9 returns.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹2,499</span>
+                        <a href="/gst-advisory/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Practice Card 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">🛡️</div>
+                        <h4 class="text-xl font-bold text-brand-dark mb-2">Brand &amp; IP Protection</h4>
+                        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                            Protect your brand name &amp; logo across 45 classes with Form TM-A filing, Section 9 &amp; 11 objection replies, and copyright registration.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹3,999 + Govt Fees</span>
+                        <a href="/brand-protection/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Practice Card 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">⚖️</div>
+                        <h4 class="text-xl font-bold text-brand-dark mb-2">Corporate Secretarial &amp; MCA</h4>
+                        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                            Mandatory Form AOC-4 &amp; MGT-7 annual filings, Director DIR-3 KYC, share transfers, board resolutions, and statutory register maintenance.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹1,499</span>
+                        <a href="/corporate-governance/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Practice Card 5 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">📊</div>
+                        <h4 class="text-xl font-bold text-brand-dark mb-2">Direct Tax &amp; Income Tax</h4>
+                        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                            Corporate ITR-6 filing, quarterly TDS 24Q/26Q returns, advance tax computation, Section 115BAA corporate regime, and Form 3CD tax audit coordination.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹2,999</span>
+                        <a href="/direct-tax/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Practice Card 6 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">👥</div>
+                        <h4 class="text-xl font-bold text-brand-dark mb-2">Workforce &amp; Digital Infrastructure</h4>
+                        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+                            Employment agreements, executive NDAs, POSH policy &amp; ICC constitution, EPF/ESIC registrations, and DPDP Act 2023 privacy readiness audits.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹2,999</span>
+                        <a href="/workforce-digital/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
+                    </div>
+                </div>
+
             </div>
-            <span class="font-mono text-[11px] font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              From ₹2,999
-            </span>
-          </div>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors mb-3">
-            Workforce &amp; Digital Infrastructure
-          </h3>
-          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
-            EPFO/ESIC labour compliance, POSH framework, DPDP Act 2023 privacy readiness, MSA/SLA drafting, and AI governance integration.
-          </p>
         </div>
-        <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-brand-obsidian group-hover:text-brand-goldDeep transition-colors">
-          <span>Enter Practice Hub</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-        </div>
-      </a>
+    </section>
 
-    </div>
-  </main>
-
-  <!-- D. CONSULTATION & LEAD CAPTURE SECTION -->
-  <section id="consultation" class="py-20 sm:py-24 bg-brand-ivoryLight border-t border-gray-200 relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200/90 shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-brand-gold via-brand-goldDeep to-brand-obsidian"></div>
-        
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="font-mono text-xs uppercase tracking-widest text-brand-goldDeep font-bold">Direct Docket Intake</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-obsidian mt-1">
-            Schedule Strategic Corporate Consultation
-          </h2>
-          <p class="text-xs sm:text-sm text-gray-600 mt-2">
-            Connect directly with our legal-technology operations desk. Inquiries receive dedicated statutory docket review within 2 business hours.
-          </p>
-        </div>
-
-        <form id="consultationForm" onsubmit="handleConsultationSubmit(event)" data-ccs-form="true" data-service-id="general-consultation" class="space-y-5">
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">Full Legal Name *</label>
-              <input type="text" name="user_name" required placeholder="e.g. Vikram Malhotra" class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition min-touch" />
+    <!-- Why Us Section (Trust & Speed Pillars) -->
+    <section class="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Institutional Advantage</h2>
+                <h3 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Why High-Growth Companies Rely on CraftEgon</h3>
             </div>
-            <div>
-              <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">Work Email Address *</label>
-              <input type="email" name="email" required placeholder="vikram@enterprise.com" class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition min-touch" />
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h4 class="font-bold text-brand-dark text-base mb-1">7–10 Days Execution</h4>
+                    <p class="text-xs text-slate-500">Accelerated SPICe+ MCA V3 processing with zero documentation friction.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h4 class="font-bold text-brand-dark text-base mb-1">100% Fixed Fees</h4>
+                    <p class="text-xs text-slate-500">Transparent state stamp duty parity with no surprise billing.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                    <div class="text-3xl mb-3">🔒</div>
+                    <h4 class="font-bold text-brand-dark text-base mb-1">DPDP Act Compliant</h4>
+                    <p class="text-xs text-slate-500">Encrypted document storage adhering strictly to Indian privacy laws.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                    <div class="text-3xl mb-3">🤝</div>
+                    <h4 class="font-bold text-brand-dark text-base mb-1">Dedicated Legal Desk</h4>
+                    <p class="text-xs text-slate-500">1-on-1 assistance via WhatsApp and senior compliance managers.</p>
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">Mobile / WhatsApp Number *</label>
-              <input type="tel" name="phone" required placeholder="9876543210" class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition min-touch" />
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-tr from-brand-sky to-brand-gold rounded-lg flex items-center justify-center text-white font-extrabold text-lg shadow">
+                            C
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-tight">CRAFTEGON</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                        India's enterprise corporate technology, secretarial governance, and compliance operations platform.
+                    </p>
+                    <p class="text-slate-400 text-xs">Technopark, Trivandrum, Kerala, India</p>
+                    <p class="text-slate-400 text-xs mt-1">support@craftegon.com | +91 99952 04905</p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Practice Hubs</h5>
+                    <ul class="space-y-2">
+                        <li><a href="/business-setup/" class="hover:text-brand-sky transition">Business Setup &amp; Formation</a></li>
+                        <li><a href="/gst-advisory/" class="hover:text-brand-sky transition">GST Advisory &amp; Filings</a></li>
+                        <li><a href="/corporate-governance/" class="hover:text-brand-sky transition">Corporate Governance &amp; MCA</a></li>
+                        <li><a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax &amp; TDS</a></li>
+                        <li><a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP Protection</a></li>
+                        <li><a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Popular Filings</h5>
+                    <ul class="space-y-2">
+                        <li><a href="/business-setup/private-limited-company-incorporation/" class="hover:text-brand-sky transition">Pvt Ltd Company Incorporation</a></li>
+                        <li><a href="/business-setup/llp-registration/" class="hover:text-brand-sky transition">LLP Registration</a></li>
+                        <li><a href="/gst-advisory/gst-registration/" class="hover:text-brand-sky transition">GST Registration</a></li>
+                        <li><a href="/corporate-governance/annual-mca-roc-filings/" class="hover:text-brand-sky transition">Annual ROC Filings (AOC-4)</a></li>
+                        <li><a href="/brand-protection/trademark-registration-filing/" class="hover:text-brand-sky transition">Trademark Registration (TM-A)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Direct Case Desk</h5>
+                    <p class="text-slate-400 mb-3">Connect directly via WhatsApp Business for express onboarding:</p>
+                    <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2.5 rounded-lg text-xs font-bold transition">
+                        <span>💬 Direct WhatsApp Case Desk</span>
+                    </a>
+                </div>
             </div>
-            <div>
-              <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">Company / Entity Name</label>
-              <input type="text" name="company_name" placeholder="Acme Technologies Private Limited" class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition min-touch" />
+
+            <!-- Mandatory Non-Litigation Disclaimer -->
+            <div class="border-t border-slate-800 pt-8">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                    <p class="text-[11px] text-slate-400 leading-relaxed text-justify">
+                        <strong class="text-brand-gold uppercase">Regulatory Notice:</strong> CraftEgon Corporate Services (CCS) is a corporate technology, compliance, and management platform. CCS is not a law firm and does not provide court litigation or judicial representation before courts or tribunals. All court litigation and tribunal appearances are executed exclusively through independent, licensed advocates or associate law firms (such as Everest Law Firm) in accordance with the Advocates Act, 1961. Statutory audits, tax certifications, and regulated professional services are fulfilled by qualified, independent Chartered Accountants, Company Secretaries, and registered professionals in compliance with ICAI, ICSI, and statutory guidelines.
+                    </p>
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
+                    <p>&copy; 2026 CraftEgon Corporate Services. All rights reserved.</p>
+                    <p class="mt-1 sm:mt-0 font-mono">corporateservices.craftegon.com</p>
+                </div>
             </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">Primary Service Vertical *</label>
-              <select name="category" required class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition min-touch">
-                <option value="business-setup">Business Setup &amp; Formation</option>
-                <option value="gst-advisory">GST Advisory &amp; Filings</option>
-                <option value="corporate-governance">Corporate Secretarial &amp; Governance</option>
-                <option value="direct-tax">Direct Tax &amp; Income Tax</option>
-                <option value="brand-protection">Brand &amp; IP Protection</option>
-                <option value="workforce-digital">Workforce &amp; Digital Infrastructure</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">State / Jurisdiction *</label>
-              <select name="selected_state" required class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition min-touch">
-                <option value="Kerala" selected>Kerala</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="West Bengal">West Bengal</option>
-                <option value="Other">Other States / UT</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-mono uppercase text-gray-600 mb-1.5 font-medium">Brief Operational Requirements</label>
-            <textarea name="custom_message" rows="3" placeholder="Provide details regarding expected capital, transaction scale, specific MCA/GST notices, or timeline expectations..." class="w-full bg-brand-ivory border border-gray-300 rounded-xl px-4 py-3 text-base sm:text-sm text-brand-obsidian focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:outline-none transition"></textarea>
-          </div>
-
-          <!-- Non-Litigation Regulatory Agreement Checkbox -->
-          <div class="flex items-start gap-3 pt-2">
-            <input type="checkbox" id="complianceTerms" required class="mt-1 w-4 h-4 rounded text-brand-gold border-gray-300 focus:ring-brand-gold" />
-            <label for="complianceTerms" class="text-xs text-gray-500 leading-relaxed cursor-pointer select-none">
-              I acknowledge that CraftEgon Corporate Services is a corporate technology, compliance, and management platform facilitating administrative and secretarial execution. Court litigation and formal attestations are executed through independent licensed advocates and chartered accountants.
-            </label>
-          </div>
-
-          <div class="pt-4">
-            <button id="submitBtn" type="submit" class="w-full bg-[#0e1712] hover:bg-black text-brand-gold font-bold text-xs uppercase tracking-wider py-4 rounded-xl shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 min-touch">
-              <span>Submit Consultation Docket &rarr;</span>
-            </button>
-          </div>
-
-          <!-- Direct Instant WhatsApp Route Fallback -->
-          <div class="text-center pt-2">
-            <p class="text-xs text-gray-500">
-              Need urgent assistance? 
-              <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="text-emerald-600 hover:text-emerald-700 font-semibold underline inline-flex items-center gap-1">
-                <span>Direct WhatsApp Route</span>
-                <i data-lucide="external-link" class="w-3 h-3"></i>
-              </a>
-            </p>
-          </div>
-        </form>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- E. STANDARDIZED INSTITUTIONAL FOOTER -->
-  <footer class="bg-[#090d16] text-gray-300 pt-16 pb-12 border-t border-white/10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Multi-Column Institutional Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
-        
-        <!-- Column 1: Brand & Mission -->
-        <div class="lg:col-span-2 space-y-4">
-          <a href="/" class="flex items-center space-x-3 group">
-            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-gold to-brand-goldDeep p-0.5 shadow-md flex items-center justify-center">
-              <div class="w-full h-full bg-[#0e1712] rounded-[6px] flex items-center justify-center">
-                <span class="font-serif font-black text-lg text-brand-gold">C</span>
-              </div>
-            </div>
-            <span class="font-serif text-2xl font-bold tracking-wider text-white">
-              CRAFT<span class="text-brand-gold">EGON</span>
-            </span>
-          </a>
-          <p class="text-xs sm:text-sm text-gray-400 max-w-sm leading-relaxed">
-            India's enterprise corporate technology, secretarial governance, and compliance operations platform. Orchestrating statutory precision for founders, CFOs, and international enterprises.
-          </p>
-          <div class="pt-2 text-xs text-gray-400 space-y-1.5 font-mono">
-            <p><span class="text-brand-gold">Operations Desk:</span> Technopark, Trivandrum, Kerala, India</p>
-            <p><span class="text-brand-gold">Corporate Inquiries:</span> support@craftegon.com</p>
-            <p><span class="text-brand-gold">Statutory Support:</span> +91 99952 04905</p>
-          </div>
         </div>
+    </footer>
 
-        <!-- Column 2: 6 Practice Hubs -->
-        <div>
-          <h4 class="font-serif text-white font-semibold mb-4 text-xs tracking-wider uppercase text-brand-gold">
-            Practice Hubs
-          </h4>
-          <ul class="space-y-2.5 text-xs text-gray-400">
-            <li><a href="/business-setup/" class="hover:text-brand-gold transition-colors py-1 block">Business Setup</a></li>
-            <li><a href="/gst-advisory/" class="hover:text-brand-gold transition-colors py-1 block">GST Advisory</a></li>
-            <li><a href="/corporate-governance/" class="hover:text-brand-gold transition-colors py-1 block">Corporate Governance</a></li>
-            <li><a href="/direct-tax/" class="hover:text-brand-gold transition-colors py-1 block">Direct Tax &amp; TDS</a></li>
-            <li><a href="/brand-protection/" class="hover:text-brand-gold transition-colors py-1 block">Brand Protection</a></li>
-            <li><a href="/workforce-digital/" class="hover:text-brand-gold transition-colors py-1 block">Workforce &amp; Digital</a></li>
-          </ul>
-        </div>
+    <!-- Scripts -->
+    <script src="/assets/js/forms.js"></script>
+    <script>
+        if (window.lucide) { lucide.createIcons(); }
 
-        <!-- Column 3: Popular Statutory Filings -->
-        <div>
-          <h4 class="font-serif text-white font-semibold mb-4 text-xs tracking-wider uppercase text-brand-gold">
-            Popular Filings
-          </h4>
-          <ul class="space-y-2.5 text-xs text-gray-400">
-            <li><a href="/business-setup/private-limited-company-incorporation/" class="hover:text-brand-gold transition-colors py-1 block">Pvt Ltd Incorporation</a></li>
-            <li><a href="/business-setup/llp-registration/" class="hover:text-brand-gold transition-colors py-1 block">LLP Registration</a></li>
-            <li><a href="/gst-advisory/gst-registration/" class="hover:text-brand-gold transition-colors py-1 block">GST Registration</a></li>
-            <li><a href="/corporate-governance/annual-mca-roc-filings/" class="hover:text-brand-gold transition-colors py-1 block">Annual ROC Filings</a></li>
-            <li><a href="/brand-protection/trademark-registration-filing/" class="hover:text-brand-gold transition-colors py-1 block">Trademark TM-A</a></li>
-            <li><a href="/workforce-digital/dpdp-act-data-privacy-readiness/" class="hover:text-brand-gold transition-colors py-1 block">DPDP Act Compliance</a></li>
-          </ul>
-        </div>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        function toggleMobileMenu() {
+            if (mobileMenu) mobileMenu.classList.toggle('hidden');
+        }
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        }
 
-        <!-- Column 4: Platform & Network -->
-        <div>
-          <h4 class="font-serif text-white font-semibold mb-4 text-xs tracking-wider uppercase text-brand-gold">
-            Ecosystem
-          </h4>
-          <ul class="space-y-2.5 text-xs text-gray-400 mb-6">
-            <li><a href="https://craftegon.com" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors py-1 block">CraftEgon Main Platform</a></li>
-            <li><a href="https://corporateservices.craftegon.com" class="hover:text-brand-gold transition-colors py-1 block">CCS Corporate Services</a></li>
-            <li><a href="https://github.com/shibilipoompatta/Craftegon-Corporate-Services" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors py-1 block">GitHub Repository</a></li>
-          </ul>
-          
-          <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/25 px-3 py-2 rounded-lg text-xs font-semibold transition min-touch">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp Business Desk</span>
-          </a>
-        </div>
+        function handleQuickSearch(e) {
+            e.preventDefault();
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (!q) return;
+            if (q.includes('gst')) window.location.href = '/gst-advisory/';
+            else if (q.includes('trade') || q.includes('ip') || q.includes('brand')) window.location.href = '/brand-protection/';
+            else if (q.includes('mca') || q.includes('roc') || q.includes('director')) window.location.href = '/corporate-governance/';
+            else if (q.includes('tax') || q.includes('tds') || q.includes('itr')) window.location.href = '/direct-tax/';
+            else if (q.includes('dpdp') || q.includes('posh') || q.includes('employ') || q.includes('hr')) window.location.href = '/workforce-digital/';
+            else window.location.href = '/business-setup/';
+        }
 
-      </div>
+        function handleHeroSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = document.getElementById('heroSubmitBtn');
+            const data = Object.fromEntries(new FormData(form));
 
-      <!-- Statutory Regulatory Non-Litigation Disclaimer Block -->
-      <div class="border-t border-white/10 pt-8 mt-8">
-        <div class="p-4 sm:p-5 rounded-2xl bg-[#0e1712]/80 border border-white/10">
-          <p class="text-xs text-gray-400 leading-relaxed text-justify">
-            <strong class="text-brand-gold font-serif tracking-wide uppercase">Regulatory Notice:</strong> CraftEgon Corporate Services (CCS) is a corporate technology, compliance, and management platform. CCS is not a law firm and does not provide court litigation or judicial representation before courts or tribunals. All court litigation and tribunal appearances are executed exclusively through independent, licensed advocates or associate law firms (such as Everest Law Firm) in accordance with the Advocates Act, 1961. Statutory audits, tax certifications, and regulated professional services are fulfilled by qualified, independent Chartered Accountants, Company Secretaries, and registered professionals in compliance with ICAI, ICSI, and statutory guidelines.
-          </p>
-        </div>
+            btn.disabled = true;
+            btn.innerHTML = 'Routing to Legal Desk...';
 
-        <!-- Copyright & Domain Identity -->
-        <div class="mt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 font-mono">
-          <p>&copy; 2026 CraftEgon Corporate Services Platform. All statutory rights reserved.</p>
-          <p class="mt-2 sm:mt-0 text-gray-400">corporateservices.craftegon.com</p>
-        </div>
-      </div>
+            const waMsg = encodeURIComponent(
+                `*Craftegon Corporate Services Inquiry*\\n` +
+                `• Name: ${data.user_name}\\n` +
+                `• Phone: ${data.phone}\\n` +
+                `• Service: ${data.category}\\n` +
+                `• Desk: Requesting Free 10-Minute Consultation`
+            );
 
-    </div>
-  </footer>
-
-  <!-- Centralized Form Engine Scripts -->
-  <script src="/assets/js/forms.js"></script>
-
-  <!-- Navigation Drawer & Client Submission Logic -->
-  <script>
-    // Initialize Lucide Icons
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.lucide) {
-        lucide.createIcons();
-      }
-    });
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuOpenIcon = document.getElementById('menuOpenIcon');
-    const menuCloseIcon = document.getElementById('menuCloseIcon');
-
-    function toggleMobileMenu() {
-      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-      mobileMenu.classList.toggle('hidden');
-      menuOpenIcon.classList.toggle('hidden');
-      menuCloseIcon.classList.toggle('hidden');
-    }
-
-    function closeMobileMenu() {
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      mobileMenu.classList.add('hidden');
-      menuOpenIcon.classList.remove('hidden');
-      menuCloseIcon.classList.add('hidden');
-    }
-
-    if (mobileMenuBtn) {
-      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-    }
-
-    // Client Consultation Submission Handler with WhatsApp Fallback
-    function handleConsultationSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const submitBtn = document.getElementById('submitBtn');
-      
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      // If CCSForms is loaded and available
-      if (window.CCSForms && typeof window.CCSForms.handleSubmit === 'function') {
-        window.CCSForms.handleSubmit(event);
-        return;
-      }
-
-      // Direct fallback handler
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Routing to Statutory Desk...</span>';
-
-      const waMsg = encodeURIComponent(
-        `*CraftEgon Corporate Services Inquiry*\\n` +
-        `• Name: ${data.user_name}\\n` +
-        `• Email: ${data.email}\\n` +
-        `• Phone: ${data.phone}\\n` +
-        `• Company: ${data.company_name || 'N/A'}\\n` +
-        `• Vertical: ${data.category}\\n` +
-        `• State: ${data.selected_state}\\n` +
-        `• Requirement: ${data.custom_message || 'Standard consultation requested.'}`
-      );
-
-      setTimeout(() => {
-        window.open(`https://wa.me/919995204905?text=${waMsg}`, '_blank');
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<span>Docket Submitted &rarr;</span>';
-        submitBtn.classList.remove('bg-[#0e1712]');
-        submitBtn.classList.add('bg-emerald-700', 'text-white');
-        form.reset();
-      }, 600);
-    }
-  </script>
+            setTimeout(() => {
+                window.open(`https://wa.me/919995204905?text=${waMsg}`, '_blank');
+                btn.disabled = false;
+                btn.innerHTML = 'Submitted! Connecting...';
+                btn.classList.add('bg-emerald-600');
+                form.reset();
+            }, 500);
+        }
+    </script>
 </body>
 </html>
