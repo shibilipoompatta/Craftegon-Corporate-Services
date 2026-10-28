@@ -48,8 +48,10 @@ NAV_HTML = """<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md bord
       <a href="#inquiry" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
         Get Started
       </a>
-      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle Menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
+      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
     </div>
   </div>
@@ -400,36 +402,8 @@ def render_product_page(service):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {{
-      theme: {{
-        extend: {{
-          fontFamily: {{
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['DM Mono', 'monospace'],
-          }},
-          colors: {{
-            brand: {{
-              white: '#FFFFFF',
-              sky: '#0284C7',
-              skyLight: '#E0F2FE',
-              skyHover: '#0369A1',
-              slate: '#F1F5F9',
-              silver: '#94A3B8',
-              gold: '#D97706',
-              goldLight: '#FEF3C7',
-              dark: '#0F172A',
-              darkAlt: '#1E293B',
-            }}
-          }}
-        }}
-      }}
-    }}
-  </script>
+  <!-- Production Compiled Stylesheet -->
   <link rel="stylesheet" href="/assets/css/theme.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-slate-50 text-brand-dark font-sans antialiased min-h-screen flex flex-col justify-between">
 

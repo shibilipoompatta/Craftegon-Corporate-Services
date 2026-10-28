@@ -12,36 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['DM Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              white: '#FFFFFF',
-              sky: '#0284C7',
-              skyLight: '#E0F2FE',
-              skyHover: '#0369A1',
-              slate: '#F1F5F9',
-              silver: '#94A3B8',
-              gold: '#D97706',
-              goldLight: '#FEF3C7',
-              dark: '#0F172A',
-              darkAlt: '#1E293B',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Production Compiled Stylesheet -->
   <link rel="stylesheet" href="/assets/css/theme.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
   
   <script type="application/ld+json">
   {
@@ -129,8 +101,10 @@
       <a href="#inquiry" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
         Get Started
       </a>
-      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle Menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
+      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
     </div>
   </div>
@@ -531,7 +505,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-workforce-digital-0">
             <span>What are corporate obligations under DPDP Act 2023?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-workforce-digital-0" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Data fiduciaries must provide clear multilingual consent notices, process data only for declared purposes, implement technical safeguards, and report breaches within prescribed windows.
@@ -542,7 +516,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-workforce-digital-1">
             <span>What are penalties under DPDP Act?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-workforce-digital-1" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Monetary penalties up to ₹250 Crore for failure to take reasonable security safeguards to prevent personal data breaches.
@@ -553,7 +527,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-workforce-digital-2">
             <span>Is a POSH Internal Committee (IC) mandatory?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-workforce-digital-2" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Yes. Under Section 4 of the POSH Act 2013, any workplace employing 10 or more employees must mandatorily constitute an Internal Committee.
@@ -564,7 +538,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-workforce-digital-3">
             <span>Are post-employment non-compete clauses enforceable in India?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-workforce-digital-3" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Under Section 27 of the Indian Contract Act 1872, agreements in restraint of trade are void. Non-solicitation and confidentiality clauses provide enforceable alternatives.
@@ -575,7 +549,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-workforce-digital-4">
             <span>When is an establishment required to register with EPFO and ESIC?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-workforce-digital-4" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             EPFO registration is compulsory for 20+ employees. ESIC registration applies to 10+ employees earning up to ₹21,000/month in notified areas.

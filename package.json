@@ -1,0 +1,19 @@
+{
+  "name": "craftegon-corporate-services",
+  "version": "1.0.0",
+  "description": "Official repository for Craftegon Corporate Services — managing corporate integrations, client portals, and web services.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/theme.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/theme.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shibilipoompatta/Craftegon-Corporate-Services.git"
+  },
+  "keywords": [],
+  "author": "CraftEgon",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

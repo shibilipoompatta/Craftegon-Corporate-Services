@@ -12,36 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['DM Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              white: '#FFFFFF',
-              sky: '#0284C7',
-              skyLight: '#E0F2FE',
-              skyHover: '#0369A1',
-              slate: '#F1F5F9',
-              silver: '#94A3B8',
-              gold: '#D97706',
-              goldLight: '#FEF3C7',
-              dark: '#0F172A',
-              darkAlt: '#1E293B',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Production Compiled Stylesheet -->
   <link rel="stylesheet" href="/assets/css/theme.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
   
   <script type="application/ld+json">
   {
@@ -129,8 +101,10 @@
       <a href="#inquiry" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
         Get Started
       </a>
-      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle Menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
+      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
     </div>
   </div>
@@ -566,7 +540,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-corporate-governance-0">
             <span>What forms are required for annual ROC filing?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-corporate-governance-0" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Every private limited company must file Form AOC-4 (Financial Statements within 30 days of AGM) and Form MGT-7/7A (Annual Return within 60 days of AGM).
@@ -577,7 +551,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-corporate-governance-1">
             <span>What is DIR-3 KYC and when is it due?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-corporate-governance-1" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Mandatory annual director credential verification under Rule 12A, due by September 30 annually. Failure results in DIN deactivation and ₹5,000 reactivation fee.
@@ -588,7 +562,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-corporate-governance-2">
             <span>What happens if annual ROC filings are missed?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-corporate-governance-2" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             A continuing statutory penalty of ₹100 per day per form applies without an upper ceiling since the 2018 amendment.
@@ -599,7 +573,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-corporate-governance-3">
             <span>How to change a company's registered office?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-corporate-governance-3" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Within the same city via Form INC-22; between cities/ROC jurisdictions with Regional Director approval via Form INC-23.
@@ -610,7 +584,7 @@
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           <button class="w-full text-left px-5 py-4 flex items-center justify-between font-bold text-sm text-brand-dark hover:text-brand-sky focus:outline-none faq-btn transition" data-faq-target="faq-corporate-governance-4">
             <span>What is the procedure for director appointment?</span>
-            <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sky transition-transform duration-200"></i>
+            <svg class="w-4 h-4 text-brand-sky transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           <div id="faq-corporate-governance-4" class="hidden px-5 pb-4 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Obtain consent in Form DIR-2, pass board resolution, and file Form DIR-12 with ROC within 30 days.
