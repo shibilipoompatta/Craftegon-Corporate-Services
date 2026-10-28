@@ -1,0 +1,2864 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "total_services": 60,
+  "services": [
+    {
+      "id": "private-limited-company-incorporation",
+      "title": "Private Limited Company Incorporation",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/private-limited-company-incorporation/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 7999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Companies Act, 2013 (SPICe+ MCA V3, e-MOA/e-AOA, AGILE-PRO-S)",
+      "short_description": "Complete SPICe+ Part A & B filing, Name RUN clearance, DIN allocation, e-MOA/e-AOA, PAN/TAN, and bank account setup.",
+      "eligibility": [
+        "Minimum 2 Directors & 2 Shareholders (Can be the same individuals)",
+        "At least 1 Director must be a Resident of India",
+        "Valid Address Proof for Registered Office in India",
+        "Class 3 Digital Signature Certificate (DSC) for each director"
+      ],
+      "documents_required": {
+        "directors": [
+          "PAN Card",
+          "Aadhaar / Passport / Voter ID",
+          "Bank Statement / Utility Bill (< 2 months old)",
+          "Passport Photo"
+        ],
+        "registered_office": [
+          "Electricity / Gas Bill (< 2 months old)",
+          "NOC from Owner",
+          "Rent / Lease Agreement"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "KYC & DSC Class 3 Generation"
+        },
+        {
+          "step": 2,
+          "title": "Name Approval via MCA RUN Web Form"
+        },
+        {
+          "step": 3,
+          "title": "SPICe+ Part B, e-MOA & e-AOA Submission"
+        },
+        {
+          "step": 4,
+          "title": "COI, PAN, TAN & EPFO/ESIC Issuance"
+        },
+        {
+          "step": 5,
+          "title": "First Board Meeting & Bank Account Setup"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "First 30 Days",
+          "action": "First Board Meeting & Auditor Appointment (ADT-1)"
+        },
+        {
+          "timeline": "First 180 Days",
+          "action": "Commencement of Business Filing (Form INC-20A)"
+        },
+        {
+          "timeline": "Annual",
+          "action": "AOC-4 (Financials) and MGT-7A (Annual Return)"
+        }
+      ],
+      "icon": "building-2",
+      "whatsapp_message_template": "Hi CraftEgon! I am interested in Private Limited Company Incorporation."
+    },
+    {
+      "id": "llp-registration",
+      "title": "LLP Registration",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/llp-registration/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 6999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Limited Liability Partnership Act, 2008 & LLP (Amendment) Act, 2021 (FiLLiP, Form 3)",
+      "short_description": "Comprehensive LLP setup via FiLLiP, RUN-LLP name reservation, DPIN allocation, and LLP Agreement drafting & filing in Form 3.",
+      "eligibility": [
+        "Minimum 2 Designated Partners",
+        "At least 1 Designated Partner must be an Indian Resident",
+        "No minimum capital requirement",
+        "Digital Signature Certificate (DSC) for designated partners"
+      ],
+      "documents_required": {
+        "partners": [
+          "PAN Card",
+          "Aadhaar Card / Passport",
+          "Bank Statement / Electricity Bill (< 2 months old)",
+          "Passport Photo"
+        ],
+        "registered_office": [
+          "Electricity / Utility Bill (< 2 months old)",
+          "NOC from Property Owner",
+          "Rent Agreement"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Partner KYC & DSC Class 3 Issuance"
+        },
+        {
+          "step": 2,
+          "title": "LLP Name Reservation via RUN-LLP"
+        },
+        {
+          "step": 3,
+          "title": "FiLLiP Incorporation Form Submission"
+        },
+        {
+          "step": 4,
+          "title": "LLPIN, PAN & TAN Allocation"
+        },
+        {
+          "step": 5,
+          "title": "LLP Agreement Drafting & Form 3 Filing"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Within 30 Days",
+          "action": "Filing of LLP Agreement in Form 3 with MCA"
+        },
+        {
+          "timeline": "By May 30 Annually",
+          "action": "Filing of Annual Return in Form 11"
+        },
+        {
+          "timeline": "By October 30 Annually",
+          "action": "Statement of Account & Solvency in Form 8"
+        }
+      ],
+      "icon": "briefcase",
+      "whatsapp_message_template": "Hi CraftEgon! I want to register a Limited Liability Partnership (LLP)."
+    },
+    {
+      "id": "gst-registration",
+      "title": "GST Registration",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/gst-registration/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 2499,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "Central Goods and Services Tax Act, 2017 (Section 22-25, Form GST REG-01)",
+      "short_description": "End-to-end GST registration filing on GST Common Portal, TRN generation, Aadhaar authentication, and GSTIN allocation.",
+      "eligibility": [
+        "Aggregate turnover > ₹40L for goods (₹20L for special states) or > ₹20L for services",
+        "Inter-state taxable supply of goods/services",
+        "E-commerce sellers and marketplace aggregators",
+        "Voluntary registration for input tax credit eligibility"
+      ],
+      "documents_required": {
+        "promoter": [
+          "PAN Card",
+          "Aadhaar Card",
+          "Photograph",
+          "Bank Account Details (Cancelled Cheque / Passbook)"
+        ],
+        "business": [
+          "Certificate of Incorporation / Partnership Deed",
+          "Electricity Bill / Municipal Khata Copy",
+          "NOC / Rent Agreement"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Document Verification & Classification (HSN/SAC)"
+        },
+        {
+          "step": 2,
+          "title": "Part-A Generation & TRN Allotment"
+        },
+        {
+          "step": 3,
+          "title": "Form GST REG-01 Filing with DSC/EVC"
+        },
+        {
+          "step": 4,
+          "title": "Aadhaar Authentication / Biometric Verification"
+        },
+        {
+          "step": 5,
+          "title": "GSTIN & Registration Certificate (Form REG-06)"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Monthly (by 11th)",
+          "action": "Filing of Outward Supplies in Form GSTR-1"
+        },
+        {
+          "timeline": "Monthly (by 20th)",
+          "action": "Summary Return & Tax Settlement in Form GSTR-3B"
+        }
+      ],
+      "icon": "receipt",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance with new GST Registration."
+    },
+    {
+      "id": "monthly-quarterly-gst-return-filing",
+      "title": "Monthly & Quarterly GST Return Filing",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/monthly-quarterly-gst-return-filing/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 2999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "Recurring Monthly / Quarterly",
+      "statutory_framework": "CGST/SGST Act, 2017 (Sections 37, 39, Rule 59-61, QRMP Scheme)",
+      "short_description": "Comprehensive monthly/quarterly GSTR-1 outward filing, GSTR-2B input tax reconciliation, and GSTR-3B tax computation.",
+      "eligibility": [
+        "All active GSTIN holders (Regular or Composition taxpayers)",
+        "Businesses under Monthly filing or Quarterly QRMP scheme",
+        "Mandatory nil filing even if zero transactions occur"
+      ],
+      "documents_required": {
+        "taxpayer": [
+          "Sales Register with HSN and tax slabs",
+          "Purchase Register & Vendor Invoices",
+          "GSTR-2B JSON download",
+          "Challan payments records"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Sales & Purchase Data Ingestion and Validation"
+        },
+        {
+          "step": 2,
+          "title": "GSTR-2B Auto-Drafted ITC Reconciliation"
+        },
+        {
+          "step": 3,
+          "title": "GSTR-1 Statement Upload & E-Verification"
+        },
+        {
+          "step": 4,
+          "title": "Net Tax Calculation & PMT-06 Challan Generation"
+        },
+        {
+          "step": 5,
+          "title": "GSTR-3B Filing with DSC / OTP Verification"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "11th of every month",
+          "action": "GSTR-1 Monthly Outward Supply Return"
+        },
+        {
+          "timeline": "20th of every month",
+          "action": "GSTR-3B Monthly Summary & Tax Payment"
+        },
+        {
+          "timeline": "December 31 Annually",
+          "action": "GSTR-9 Annual Return"
+        }
+      ],
+      "icon": "calendar",
+      "whatsapp_message_template": "Hi CraftEgon! I want to set up recurring GST return filing."
+    },
+    {
+      "id": "annual-mca-roc-filings",
+      "title": "Annual MCA / ROC Filings",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/annual-mca-roc-filings/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 9999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 92, 137, Forms AOC-4 & MGT-7/7A)",
+      "short_description": "Annual secretarial compliance including drafting AGM documents, Directors' Report, filing Form AOC-4 and Form MGT-7/7A on MCA V3.",
+      "eligibility": [
+        "All Private Limited, Public Limited, OPCs, and Section 8 companies",
+        "Entities with completed financial year (ending March 31)"
+      ],
+      "documents_required": {
+        "company": [
+          "Audited Balance Sheet & Profit/Loss Account",
+          "Auditor's Report (from independent CA)",
+          "Directors' Report & Notices",
+          "Shareholding Pattern",
+          "List of Board Meetings"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Compilation of Audited Financials & Notes to Accounts"
+        },
+        {
+          "step": 2,
+          "title": "Drafting of Directors' Report & AGM Documentation"
+        },
+        {
+          "step": 3,
+          "title": "Preparation & XBRL/PDF Formatting of Form AOC-4"
+        },
+        {
+          "step": 4,
+          "title": "Preparation & Attachment Verification for Form MGT-7/7A"
+        },
+        {
+          "step": 5,
+          "title": "DSC Affixation, MCA V3 Upload & SRN Generation"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Within 30 Days of AGM",
+          "action": "Form AOC-4 Financial Statements Filing"
+        },
+        {
+          "timeline": "Within 60 Days of AGM",
+          "action": "Form MGT-7/7A Annual Return Filing"
+        },
+        {
+          "timeline": "By September 30",
+          "action": "DIR-3 KYC for all active directors"
+        }
+      ],
+      "icon": "landmark",
+      "whatsapp_message_template": "Hi CraftEgon! I need to complete our company's Annual MCA ROC Filings."
+    },
+    {
+      "id": "director-kyc-appointment-resignation",
+      "title": "Director KYC, Appointment & Resignation",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/director-kyc-appointment-resignation/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 1999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Sections 149, 152, 168, Rule 12A, Forms DIR-3 KYC, DIR-11, DIR-12)",
+      "short_description": "Filing of DIR-3 KYC (Web/e-form), DIN reactivation, Director onboarding (DIR-2, DIR-12) and formal cessation/resignation filings.",
+      "eligibility": [
+        "Individuals holding Director Identification Number (DIN)",
+        "Companies appointing or taking note of resigning directors",
+        "Compliant board composition (minimum 2 directors for Pvt Ltd)"
+      ],
+      "documents_required": {
+        "director": [
+          "PAN Card",
+          "Aadhaar / Passport (certified)",
+          "Personal Mobile & Email OTP",
+          "DSC Class 3",
+          "Resignation Letter / Consent DIR-2"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "DIN Status Verification on MCA Master Data"
+        },
+        {
+          "step": 2,
+          "title": "DIR-3 KYC Web/E-Form Preparation with OTP"
+        },
+        {
+          "step": 3,
+          "title": "Board Resolution & Consent DIR-2 Documentation"
+        },
+        {
+          "step": 4,
+          "title": "Form DIR-12 / DIR-11 Filing on MCA V3"
+        },
+        {
+          "step": 5,
+          "title": "MCA Approval & Updated Company Master Data"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "September 30 Annually",
+          "action": "Mandatory Annual DIR-3 KYC filing"
+        },
+        {
+          "timeline": "Within 30 Days of event",
+          "action": "Form DIR-12 for Appointment or Resignation"
+        }
+      ],
+      "icon": "user-check",
+      "whatsapp_message_template": "Hi CraftEgon! I need help with Director KYC or Appointment/Resignation."
+    },
+    {
+      "id": "corporate-income-tax-return-filing",
+      "title": "Corporate Income Tax Return Filing (ITR-6)",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/corporate-income-tax-return-filing/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 7999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-15 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Section 139(1), 115BAA/115BAB, Form ITR-6)",
+      "short_description": "Comprehensive corporate tax computation, book profit MAT calculations, deduction optimization, and electronic filing of Form ITR-6.",
+      "eligibility": [
+        "All companies incorporated in India (Private, Public, OPC)",
+        "Foreign companies with Indian permanent establishment/income",
+        "Mandatory filing irrespective of profit or loss"
+      ],
+      "documents_required": {
+        "corporate": [
+          "Audited Financial Statements (Balance Sheet, P&L)",
+          "Tax Audit Report (Form 3CA/3CD) if applicable",
+          "Form 26AS, AIS, and TIS statements",
+          "Advance Tax & Self-Assessment Challans (ITNS 280)"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Financial Statement Analysis & Disallowance Review"
+        },
+        {
+          "step": 2,
+          "title": "Reconciliation with 26AS, AIS, and GST Turnover"
+        },
+        {
+          "step": 3,
+          "title": "Tax Computation under Normal & Concessional Regimes (115BAA)"
+        },
+        {
+          "step": 4,
+          "title": "XML/JSON Schema Generation for ITR-6"
+        },
+        {
+          "step": 5,
+          "title": "Filing with Class 3 DSC on Income Tax Portal"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "October 31 of AY",
+          "action": "Filing deadline for corporate taxpayers subject to audit"
+        },
+        {
+          "timeline": "Quarterly (15th Jun/Sep/Dec/Mar)",
+          "action": "Advance Tax Installments (15%, 45%, 75%, 100%)"
+        }
+      ],
+      "icon": "file-text",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance with Corporate ITR-6 filing."
+    },
+    {
+      "id": "tds-registration-quarterly-returns",
+      "title": "TDS Registration & Quarterly Returns",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/tds-registration-quarterly-returns/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 3499,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "Quarterly Recurring",
+      "statutory_framework": "Income Tax Act, 1961 (Chapter XVII-B, Sections 192-195, Forms 24Q, 26Q, 27Q)",
+      "short_description": "TAN registration, periodic TDS deduction computation, challan verification (ITNS 281), and quarterly filing of Forms 24Q and 26Q.",
+      "eligibility": [
+        "Any entity making salary, contract, commission, professional fee, or rent payments",
+        "Entities with valid Tax Deduction Account Number (TAN)"
+      ],
+      "documents_required": {
+        "deductor": [
+          "TAN Certificate",
+          "Deductor PAN",
+          "Challan payment details (BSR Code, Challan No, Date)",
+          "Deductee PAN master and payment records"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Deduction Verification against Relevant Sections (194C, 194J, 194I)"
+        },
+        {
+          "step": 2,
+          "title": "Deposit Verification against OLTAS Challans"
+        },
+        {
+          "step": 3,
+          "title": "Deductee PAN Validation via TRACES Utility"
+        },
+        {
+          "step": 4,
+          "title": "e-TDS Return File Preparation (.fvuo)"
+        },
+        {
+          "step": 5,
+          "title": "Filing on Income Tax Portal & Form 16/16A Generation"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "7th of each month",
+          "action": "TDS Deposit for preceding month (30th April for March)"
+        },
+        {
+          "timeline": "Quarterly (31st Jul, 31st Oct, 31st Jan, 31st May)",
+          "action": "Quarterly TDS Return Filing (Form 24Q/26Q)"
+        }
+      ],
+      "icon": "calculator",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance with TDS compliance and quarterly returns."
+    },
+    {
+      "id": "trademark-registration-filing",
+      "title": "Trademark Registration & Filing",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/trademark-registration-filing/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 6999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "2-3 Days Filing / 12-18 Mos Registration",
+      "statutory_framework": "Trade Marks Act, 1999 & Trade Marks Rules, 2017 (Nice Classification, Form TM-A)",
+      "short_description": "Comprehensive trademark search across 45 classes, drafting distinctiveness brief, Form TM-A filing on IP India, and TM monitor setup.",
+      "eligibility": [
+        "Individuals, Proprietors, Startups, LLPs, Companies, and Trusts",
+        "Holders of unique brand names, logos, catchphrases, or sound marks",
+        "Eligible for 50% govt fee concession with MSME / DPIIT certificate"
+      ],
+      "documents_required": {
+        "applicant": [
+          "PAN & Aadhaar / Incorporation Certificate",
+          "High-Resolution Brand Logo / Wordmark",
+          "Udyam / Startup India Certificate (for fee concession)",
+          "Power of Attorney (Form TM-48) signed",
+          "User Affidavit (if prior use claimed)"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Comprehensive Conflict Search on IP India Database"
+        },
+        {
+          "step": 2,
+          "title": "Nice Classification Class Identification (1 to 45)"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Description of Goods/Services & User Affidavit"
+        },
+        {
+          "step": 4,
+          "title": "Form TM-A Filing via Digital Signature on IP India Portal"
+        },
+        {
+          "step": 5,
+          "title": "Application Number Issuance & TM Symbol Authorization"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Within 30 Days of Examination",
+          "action": "File response to Examination Report if objection raised"
+        },
+        {
+          "timeline": "Every 10 Years",
+          "action": "Trademark Renewal in Form TM-R"
+        }
+      ],
+      "icon": "shield-check",
+      "whatsapp_message_template": "Hi CraftEgon! I want to file a Trademark registration for my brand."
+    },
+    {
+      "id": "trademark-examination-reply-objection",
+      "title": "Trademark Examination Reply & Objection Response",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/trademark-examination-reply-objection/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 4999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days Drafting",
+      "statutory_framework": "Trade Marks Act, 1999 (Sections 9 & 11 Objections, Form TM-MISC)",
+      "short_description": "Formulating detailed legal response countering Section 9 (distinctiveness) or Section 11 (conflict) examination objections with case law citations.",
+      "eligibility": [
+        "Trademark applicants issued with an Examination Report with 'Objected' status",
+        "Application within 30 days of examination report dispatch"
+      ],
+      "documents_required": {
+        "applicant": [
+          "Examination Report issued by Trade Marks Registry",
+          "Proof of continuous commercial use (invoices, marketing collateral, turnover CA certificate)",
+          "Form TM-A copy"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Analysis of Cited Marks & Grounds of Refusal"
+        },
+        {
+          "step": 2,
+          "title": "Evidence Compilation (Acquired Distinctiveness & Prior Use)"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Legal Rebuttal citing Landmark High Court Precedents"
+        },
+        {
+          "step": 4,
+          "title": "Submission of Written Reply via IP India Portal"
+        },
+        {
+          "step": 5,
+          "title": "Registry Tracking for Acceptance or Hearing Scheduling"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Within 30 Days of Notice",
+          "action": "Mandatory written reply submission to avoid abandonment"
+        }
+      ],
+      "icon": "file-check",
+      "whatsapp_message_template": "Hi CraftEgon! I received a Trademark Examination Objection and need to file a reply."
+    },
+    {
+      "id": "employment-agreements-ndas-noncompete",
+      "title": "Employment Agreements, NDAs & Non-Compete",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/employment-agreements-ndas-noncompete/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 4999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days",
+      "statutory_framework": "Indian Contract Act, 1872 (Section 27), Specific Relief Act, 1963, IT Act, 2000",
+      "short_description": "Custom drafting of comprehensive employment contracts, proprietary information & invention assignment (PIIA), NDAs, and restrictive covenants.",
+      "eligibility": [
+        "Startups, SMEs, and enterprises hiring executives, developers, or contractors",
+        "Organizations protecting proprietary source code, customer databases, or trade secrets"
+      ],
+      "documents_required": {
+        "employer": [
+          "Company Details & Designation Matrix",
+          "Compensation / CTC Breakup Structure",
+          "Non-solicitation & Notice Period Requirements"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Role & Risk Analysis (IP Sensitivity & Restrictive Covenants)"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Principal Employment Contract & Notice Provisions"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Mutual/Unilateral NDA & IP Assignment Schedule"
+        },
+        {
+          "step": 4,
+          "title": "Review of Non-Solicitation & Confidentiality under Contract Act"
+        },
+        {
+          "step": 5,
+          "title": "Finalization, Stamp Duty Guidance & E-Signature Templates"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Prior to joining",
+          "action": "Execution of employment agreements and IP assignment"
+        }
+      ],
+      "icon": "file-signature",
+      "whatsapp_message_template": "Hi CraftEgon! I need custom employment agreements and NDAs drafted."
+    },
+    {
+      "id": "dpdp-act-data-privacy-readiness",
+      "title": "DPDP Act 2023 Data Privacy Readiness",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/dpdp-act-data-privacy-readiness/",
+      "phase": 1,
+      "pricing": {
+        "base_professional_fee": 14999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "Digital Personal Data Protection Act, 2023 (DPDP Act) & IT Act, 2000",
+      "short_description": "Enterprise readiness audit, data mapping, consent notice drafting, data principal grievance workflows, and DPO governance structure.",
+      "eligibility": [
+        "Digital platforms, mobile apps, SaaS, FinTech, and e-commerce companies processing personal data in India",
+        "Entities designated as Data Fiduciaries or Significant Data Fiduciaries"
+      ],
+      "documents_required": {
+        "enterprise": [
+          "Data Flow Diagrams & System Architecture",
+          "Current Privacy Policy & Terms of Service",
+          "List of Third-Party Processors & Cloud Infrastructure Providers"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Data Flow Inventory & Principal Touchpoint Mapping"
+        },
+        {
+          "step": 2,
+          "title": "Gap Analysis against DPDP 2023 Statutory Obligations"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Multilingual Consent Architecture & Privacy Notice"
+        },
+        {
+          "step": 4,
+          "title": "Formulation of Data Principal Rights & Redressal Framework"
+        },
+        {
+          "step": 5,
+          "title": "Data Breach Escalation Protocol & Employee Privacy Handbook"
+        }
+      ],
+      "post_registration_deadlines": [
+        {
+          "timeline": "Continuous",
+          "action": "Maintenance of consent logs and 72-hour breach reporting readiness"
+        }
+      ],
+      "icon": "lock",
+      "whatsapp_message_template": "Hi CraftEgon! We need a DPDP Act 2023 Compliance & Readiness Audit."
+    },
+    {
+      "id": "one-person-company-registration",
+      "title": "One Person Company (OPC) Registration",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/one-person-company-registration/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 5999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 2(62), SPICe+ MCA V3)",
+      "short_description": "Sole entrepreneur incorporation combining corporate limited liability with single-owner equity control and nominee declaration in Form INC-3.",
+      "eligibility": [
+        "Single natural person who is an Indian Citizen",
+        "Nominee consent in Form INC-3"
+      ],
+      "documents_required": {
+        "promoter": [
+          "PAN",
+          "Aadhaar",
+          "Bank Statement",
+          "Photo"
+        ],
+        "nominee": [
+          "PAN",
+          "Aadhaar",
+          "Consent Form INC-3"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "DSC & Nominee KYC"
+        },
+        {
+          "step": 2,
+          "title": "Name Approval via RUN"
+        },
+        {
+          "step": 3,
+          "title": "SPICe+ Part B & e-MOA/AOA"
+        },
+        {
+          "step": 4,
+          "title": "COI Issuance"
+        }
+      ],
+      "icon": "user",
+      "whatsapp_message_template": "Hi CraftEgon! I want to register a One Person Company (OPC)."
+    },
+    {
+      "id": "public-limited-company-incorporation",
+      "title": "Public Limited Company Incorporation",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/public-limited-company-incorporation/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 14999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-15 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 2(71), SPICe+ MCA V3)",
+      "short_description": "Incorporation of public corporate entity eligible for widespread equity participation, capital expansion, and debenture issuance.",
+      "eligibility": [
+        "Minimum 7 Shareholders & 3 Directors",
+        "At least 1 Resident Director"
+      ],
+      "documents_required": {
+        "directors": [
+          "PAN",
+          "Aadhaar",
+          "Bank Statement",
+          "Photo"
+        ],
+        "registered_office": [
+          "Utility Bill",
+          "NOC"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "DSC for Directors"
+        },
+        {
+          "step": 2,
+          "title": "Name Approval"
+        },
+        {
+          "step": 3,
+          "title": "SPICe+ Filing"
+        },
+        {
+          "step": 4,
+          "title": "COI & AGILE Allotments"
+        }
+      ],
+      "icon": "building",
+      "whatsapp_message_template": "Hi CraftEgon! I want to incorporate a Public Limited Company."
+    },
+    {
+      "id": "nidhi-company-registration",
+      "title": "Nidhi Company Registration",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/nidhi-company-registration/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 12999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "12-15 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 406) & Nidhi Rules, 2014 / NDH-4 compliance",
+      "short_description": "Registration of non-banking mutual benefit finance company cultivating savings among members under strict MCA Nidhi regulatory guidelines.",
+      "eligibility": [
+        "Minimum 7 members & 3 directors",
+        "Minimum ₹10L paid-up equity capital"
+      ],
+      "documents_required": {
+        "members": [
+          "PAN",
+          "Aadhaar",
+          "Bank Statement"
+        ],
+        "office": [
+          "Utility Bill",
+          "NOC"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "DSC & Name Reservation"
+        },
+        {
+          "step": 2,
+          "title": "SPICe+ Incorporation"
+        },
+        {
+          "step": 3,
+          "title": "Form NDH-4 Declaration Filing"
+        }
+      ],
+      "icon": "coins",
+      "whatsapp_message_template": "Hi CraftEgon! I want to register a Nidhi Company."
+    },
+    {
+      "id": "section-8-ngo-company",
+      "title": "Section 8 NGO Company",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/section-8-ngo-company/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 11999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-14 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 8, Form INC-12 Licence)",
+      "short_description": "Non-profit corporate structure with MCA Section 8 licence for charitable objectives, research, art, education, and CSR grant eligibility.",
+      "eligibility": [
+        "Charitable, social, or environmental non-profit objectives",
+        "No dividend distribution to members"
+      ],
+      "documents_required": {
+        "founders": [
+          "PAN",
+          "Aadhaar",
+          "Photos"
+        ],
+        "charter": [
+          "Objectives Charter",
+          "Projected 3-Year Income/Expense Budget"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "RUN Name Approval"
+        },
+        {
+          "step": 2,
+          "title": "Form INC-12 Licence Application"
+        },
+        {
+          "step": 3,
+          "title": "SPICe+ Incorporation Filing"
+        }
+      ],
+      "icon": "heart-handshake",
+      "whatsapp_message_template": "Hi CraftEgon! I want to incorporate a Section 8 NGO Company."
+    },
+    {
+      "id": "startup-india-dpiit-recognition",
+      "title": "Startup India DPIIT Recognition",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/startup-india-dpiit-recognition/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 4999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "DPIIT Guidelines, Ministry of Commerce & Section 80-IAC / 56(2)(viib) Exemption",
+      "short_description": "Official DPIIT recognition unlocking 3-year Section 80-IAC tax holiday, Angel Tax exemption, fast-track patent review, and govt tender advantages.",
+      "eligibility": [
+        "Entity incorporated < 10 years ago",
+        "Annual turnover < ₹100 Crore",
+        "Innovative product/service with scalable potential"
+      ],
+      "documents_required": {
+        "startup": [
+          "COI",
+          "Pitch Deck / Writeup on Innovation",
+          "Website URL",
+          "Director Details"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Innovation Brief & Pitch Deck Preparation"
+        },
+        {
+          "step": 2,
+          "title": "DPIIT Portal Profile Creation"
+        },
+        {
+          "step": 3,
+          "title": "Application Filing & Recognition Certificate"
+        }
+      ],
+      "icon": "rocket",
+      "whatsapp_message_template": "Hi CraftEgon! I need help securing Startup India DPIIT recognition."
+    },
+    {
+      "id": "foreign-subsidiary-setup-india",
+      "title": "Foreign Subsidiary Setup in India",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/foreign-subsidiary-setup-india/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 24999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "Companies Act, 2013, FEMA 1999 & RBI FDI Regulations (FC-GPR / FIRMS Portal)",
+      "short_description": "FDI-compliant Indian subsidiary incorporation for overseas corporations, RBI FIRMS portal onboarding, and Form FC-GPR equity allotment.",
+      "eligibility": [
+        "Foreign parent corporation board resolution approving India setup",
+        "At least 1 Indian Resident Director"
+      ],
+      "documents_required": {
+        "parent": [
+          "Certificate of Incorporation (Apostilled/Consularized)",
+          "Charter MOA/AOA",
+          "Board Resolution"
+        ],
+        "resident_director": [
+          "PAN",
+          "Aadhaar",
+          "DSC"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Apostille & Consular Legalization of Foreign Parent Documents"
+        },
+        {
+          "step": 2,
+          "title": "RUN Name Approval & SPICe+ Filing"
+        },
+        {
+          "step": 3,
+          "title": "Capital Remittance via Authorized Dealer Bank"
+        },
+        {
+          "step": 4,
+          "title": "RBI FIRMS Portal Reporting in Form FC-GPR"
+        }
+      ],
+      "icon": "globe",
+      "whatsapp_message_template": "Hi CraftEgon! We want to establish an Indian Foreign Subsidiary."
+    },
+    {
+      "id": "gst-annual-return-gstr9",
+      "title": "GST Annual Return (GSTR-9)",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/gst-annual-return-gstr9/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 7999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "CGST Act, 2017 (Section 44, Rule 80, Form GSTR-9)",
+      "short_description": "Annual reconciliation of monthly GSTR-1, GSTR-3B, audited financials, and Table 8A ITC matching for total annual indirect tax settlement.",
+      "eligibility": [
+        "All registered taxpayers with regular GSTIN status",
+        "Turnover > ₹2 Cr mandatory filing"
+      ],
+      "documents_required": {
+        "accounts": [
+          "Audited Financial Statements",
+          "Filed GSTR-1 & GSTR-3B JSON data",
+          "Tax payment challans"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Cross-Reconciliation (Books vs GSTR-1 vs GSTR-3B)"
+        },
+        {
+          "step": 2,
+          "title": "Table 8 ITC Analysis & Spillover Adjustment"
+        },
+        {
+          "step": 3,
+          "title": "Form GSTR-9 Preparation & Portal Upload"
+        }
+      ],
+      "icon": "file-check",
+      "whatsapp_message_template": "Hi CraftEgon! I need to file our GST Annual Return (GSTR-9)."
+    },
+    {
+      "id": "gst-notice-reply-assessment",
+      "title": "GST Notice Reply & Assessment",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/gst-notice-reply-assessment/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 5999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days Drafting",
+      "statutory_framework": "CGST Act, 2017 (Sections 61, 73, 74, Forms DRC-01, ASMT-10)",
+      "short_description": "Drafting technical legal responses to scrutiny notices, ITC mismatches (Rule 36(4)), E-way bill detentions, and DRC-01 show-cause notices.",
+      "eligibility": [
+        "Taxpayers served with ASMT-10, DRC-01A, DRC-01 or summons"
+      ],
+      "documents_required": {
+        "notices": [
+          "GST Notice Copy",
+          "Relevant Invoices",
+          "Reconciliation Sheets",
+          "E-Way Bills"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Statutory Ground Analysis & Limitation Verification"
+        },
+        {
+          "step": 2,
+          "title": "Invoice-Level ITC/Turnover Reconciliation"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Legal Rebuttal & DRC-06 / ASMT-11 Filing"
+        }
+      ],
+      "icon": "alert-circle",
+      "whatsapp_message_template": "Hi CraftEgon! I received a GST Notice and need a professional reply."
+    },
+    {
+      "id": "e-invoicing-setup-compliance",
+      "title": "E-Invoicing Setup & Compliance",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/e-invoicing-setup-compliance/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 3999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days",
+      "statutory_framework": "CGST Rules, 2017 (Rule 48(4), Notification No. 10/2023-CT, IRP Integration)",
+      "short_description": "IRP portal registration, API/ERP integration guidance, IRN generation, and dynamic QR code compliance for B2B transactions.",
+      "eligibility": [
+        "Businesses with aggregate turnover > ₹5 Crore in any preceding FY"
+      ],
+      "documents_required": {
+        "entity": [
+          "GSTIN Credentials",
+          "ERP / Billing Software Specs",
+          "Sample Invoice Format"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "IRP Portal Registration & Credential Allotment"
+        },
+        {
+          "step": 2,
+          "title": "Schema Mapping (INV-01 Format)"
+        },
+        {
+          "step": 3,
+          "title": "Sandbox Testing & Production IRN Generation"
+        }
+      ],
+      "icon": "qr-code",
+      "whatsapp_message_template": "Hi CraftEgon! I need to implement E-Invoicing for my business."
+    },
+    {
+      "id": "director-din-allotment",
+      "title": "Director DIN Allotment",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/director-din-allotment/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 1499,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "2-3 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 153, 154, Form DIR-3)",
+      "short_description": "Procurement of Director Identification Number (DIN) via Form DIR-3 for onboarding existing corporate boards.",
+      "eligibility": [
+        "Individual intending to become director in existing company",
+        "Holding valid PAN & identity proofs"
+      ],
+      "documents_required": {
+        "applicant": [
+          "PAN Card",
+          "Aadhaar Card / Passport",
+          "Passport Photo",
+          "Board Resolution from proposing company"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "DSC Class 3 Generation"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Form DIR-3 & Board Resolution"
+        },
+        {
+          "step": 3,
+          "title": "MCA Submission & DIN Allotment"
+        }
+      ],
+      "icon": "id-card",
+      "whatsapp_message_template": "Hi CraftEgon! I need to obtain a Director Identification Number (DIN)."
+    },
+    {
+      "id": "company-name-change",
+      "title": "Company Name Change",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/company-name-change/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 8999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-12 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 13, Forms RUN, MGT-14, INC-24)",
+      "short_description": "Complete corporate name change including RUN name clearance, drafting EGM special resolution, filing Form MGT-14, and obtaining new COI in INC-24.",
+      "eligibility": [
+        "Compliant company with up-to-date ROC filings (AOC-4, MGT-7)"
+      ],
+      "documents_required": {
+        "company": [
+          "Board Resolution",
+          "Notice & Minutes of EGM",
+          "Altered MOA & AOA",
+          "New COI Application INC-24"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "RUN Name Approval on MCA V3"
+        },
+        {
+          "step": 2,
+          "title": "EGM Notice & Special Resolution Drafting"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form MGT-14"
+        },
+        {
+          "step": 4,
+          "title": "Filing Form INC-24 & Revised COI Issuance"
+        }
+      ],
+      "icon": "type",
+      "whatsapp_message_template": "Hi CraftEgon! We want to change our company name."
+    },
+    {
+      "id": "registered-office-change",
+      "title": "Registered Office Change",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/registered-office-change/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 5999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days (Local) / 30-45 Days (Inter-State)",
+      "statutory_framework": "Companies Act, 2013 (Section 12, Forms INC-22, INC-23 for RD)",
+      "short_description": "Official relocation of corporate office: local jurisdiction (INC-22), intra-state ROC change, or inter-state transfer with Regional Director petition.",
+      "eligibility": [
+        "Company requiring relocation of official communication domicile"
+      ],
+      "documents_required": {
+        "premises": [
+          "Electricity Bill (< 2 months)",
+          "NOC from Owner",
+          "Rent Agreement",
+          "Board / EGM Resolution"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Board Resolution / EGM Approval"
+        },
+        {
+          "step": 2,
+          "title": "Premises Documentation & Geo-tagging"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form INC-22 on MCA V3"
+        }
+      ],
+      "icon": "map-pin",
+      "whatsapp_message_template": "Hi CraftEgon! We need to change our company's registered office address."
+    },
+    {
+      "id": "share-transfer-transmission",
+      "title": "Share Transfer & Transmission",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/share-transfer-transmission/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 4999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 56, Form SH-4, Indian Stamp Act)",
+      "short_description": "Execution of Form SH-4 share transfer deeds, stamp duty payment via e-stamping, board approval, and updating statutory share registers.",
+      "eligibility": [
+        "Private Limited companies executing equity transfer between parties"
+      ],
+      "documents_required": {
+        "transfer": [
+          "Share Certificates",
+          "Transfer Deed (Form SH-4)",
+          "PAN of Transferor & Transferee",
+          "Board Resolution"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Drafting Form SH-4 Share Transfer Deed"
+        },
+        {
+          "step": 2,
+          "title": "Franking / E-Stamping of Transfer Deed"
+        },
+        {
+          "step": 3,
+          "title": "Board Meeting & Share Register Endorsement"
+        }
+      ],
+      "icon": "shuffle",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance with share transfer documentation."
+    },
+    {
+      "id": "tax-audit-report-3cd",
+      "title": "Tax Audit Report (Form 3CD)",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/tax-audit-report-3cd/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 14999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-15 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Section 44AB, Forms 3CA/3CB and Form 3CD)",
+      "short_description": "Comprehensive audit coordination for business turnover > ₹1 Cr (or ₹10 Cr for digital modes) under Section 44AB with 44-clause Form 3CD review.",
+      "eligibility": [
+        "Business turnover exceeding prescribed thresholds under Section 44AB"
+      ],
+      "documents_required": {
+        "accounts": [
+          "Trial Balance, Balance Sheet & P&L",
+          "Depreciation Schedule",
+          "TDS & GST Reconciliation",
+          "Related Party Disclosure"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Transaction Sampling & Statutory Disallowance Audit"
+        },
+        {
+          "step": 2,
+          "title": "Form 3CD Clause Compilation"
+        },
+        {
+          "step": 3,
+          "title": "Independent CA Certification & e-Filing"
+        }
+      ],
+      "icon": "file-search",
+      "whatsapp_message_template": "Hi CraftEgon! We need coordination for Form 3CD Tax Audit."
+    },
+    {
+      "id": "advance-tax-planning-computation",
+      "title": "Advance Tax Planning & Computation",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/advance-tax-planning-computation/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 4999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Sections 207-211, Interest Sections 234B/234C)",
+      "short_description": "Quarterly income estimation, deduction planning, and advance tax computation to eliminate penal interest under Sections 234B and 234C.",
+      "eligibility": [
+        "Any entity or professional with estimated annual tax liability > ₹10,000"
+      ],
+      "documents_required": {
+        "financials": [
+          "YTD Profit & Loss Statements",
+          "Projected Revenue",
+          "TDS Credit in 26AS",
+          "Capital Gains Statements"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Quarterly P&L Extrapolation & Tax Computation"
+        },
+        {
+          "step": 2,
+          "title": "Available Tax Credit Reconciliation"
+        },
+        {
+          "step": 3,
+          "title": "Payment Challan Generation (ITNS 280)"
+        }
+      ],
+      "icon": "trending-up",
+      "whatsapp_message_template": "Hi CraftEgon! I need advance tax calculation and planning assistance."
+    },
+    {
+      "id": "tax-notice-reply-scrutiny",
+      "title": "Income Tax Notice Reply & Scrutiny",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/tax-notice-reply-scrutiny/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 7999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Sections 142(1), 143(2) Faceless Scrutiny, 148)",
+      "short_description": "Drafting factual and statutory replies to faceless assessment notices, re-assessment queries, and Section 142(1) inquiries with supporting schedules.",
+      "eligibility": [
+        "Assessees served with notices under Section 139(9), 142(1), 143(2), or 148"
+      ],
+      "documents_required": {
+        "taxpayer": [
+          "Notice Copy with DIN",
+          "Filed ITR & Computation",
+          "Bank Statements & Source of Funds Evidence"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Notice Ground Analysis & Portal Tracking"
+        },
+        {
+          "step": 2,
+          "title": "Supporting Ledger & Document Compilation"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Legal Submission & E-Filing on Portal"
+        }
+      ],
+      "icon": "shield-alert",
+      "whatsapp_message_template": "Hi CraftEgon! I received an Income Tax Notice and need help responding."
+    },
+    {
+      "id": "trademark-renewal",
+      "title": "Trademark Renewal",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/trademark-renewal/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 3999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "2-3 Working Days",
+      "statutory_framework": "Trade Marks Act, 1999 (Section 25, Form TM-R)",
+      "short_description": "Preserving brand monopoly by filing Form TM-R for 10-year validity extension with IP India before or within 6 months of expiry.",
+      "eligibility": [
+        "Registered trademark owners nearing or within 10-year renewal deadline"
+      ],
+      "documents_required": {
+        "trademark": [
+          "Registration Certificate",
+          "Form TM-R Draft",
+          "Power of Attorney (TM-48)"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Renewal Status Check on Registry"
+        },
+        {
+          "step": 2,
+          "title": "Form TM-R Preparation"
+        },
+        {
+          "step": 3,
+          "title": "Filing & Renewal Certificate Download"
+        }
+      ],
+      "icon": "refresh-cw",
+      "whatsapp_message_template": "Hi CraftEgon! I need to renew my registered Trademark."
+    },
+    {
+      "id": "copyright-registration",
+      "title": "Copyright Registration",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/copyright-registration/",
+      "phase": 2,
+      "pricing": {
+        "base_professional_fee": 3999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Days Filing / Statutory Discretion",
+      "statutory_framework": "Copyright Act, 1957 & Copyright Rules, 2013 (Form XIV)",
+      "short_description": "Statutory copyright protection for software code, literary works, website content, cinematograph films, and artistic creations.",
+      "eligibility": [
+        "Original authors, software developers, creators, or assignee businesses"
+      ],
+      "documents_required": {
+        "work": [
+          "Copies of Work (Source Code / Literary text)",
+          "Applicant Identity Proof",
+          "NOC from Author / Employer",
+          "Form XIV"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Classification of Work & NOC Execution"
+        },
+        {
+          "step": 2,
+          "title": "Form XIV Online Filing & Diary Number Allotment"
+        },
+        {
+          "step": 3,
+          "title": "30-Day Mandatory Waiting Period & Certificate Issuance"
+        }
+      ],
+      "icon": "copyright",
+      "whatsapp_message_template": "Hi CraftEgon! I want to secure Copyright registration for my work."
+    },
+    {
+      "id": "llp-to-company-conversion",
+      "title": "LLP to Private Limited Conversion",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/llp-to-company-conversion/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 15999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Part I of Chapter XXI, Form URC-1)",
+      "short_description": "Converting existing LLP into Private Limited company under Chapter XXI preserving continuous brand identity and PAN.",
+      "eligibility": [
+        "Active LLP with minimum 2 partners and up-to-date annual filings"
+      ],
+      "documents_required": {
+        "llp": [
+          "LLP Agreement",
+          "Audited Financials",
+          "Partners Consent",
+          "Newspaper Advertisement Proof"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Newspaper Advertisement (Form URC-2)"
+        },
+        {
+          "step": 2,
+          "title": "Filing Form URC-1"
+        },
+        {
+          "step": 3,
+          "title": "SPICe+ Incorporation Filing"
+        }
+      ],
+      "icon": "repeat",
+      "whatsapp_message_template": "Hi CraftEgon! I want to convert our LLP into a Private Limited Company."
+    },
+    {
+      "id": "company-to-llp-conversion",
+      "title": "Company to LLP Conversion",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/company-to-llp-conversion/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 12999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "LLP Act, 2008 (Section 56, Third Schedule, Form 18)",
+      "short_description": "Conversion of unlisted private company into LLP to minimize compliance overhead and eliminate dividend distribution frictions.",
+      "eligibility": [
+        "No security interest or charges pending on company assets",
+        "All shareholders must become partners"
+      ],
+      "documents_required": {
+        "company": [
+          "Audited Financials",
+          "Shareholders Consent",
+          "Creditors NOC",
+          "Statement of Assets & Liabilities"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Name Approval for LLP"
+        },
+        {
+          "step": 2,
+          "title": "Filing Form 18 with ROC"
+        },
+        {
+          "step": 3,
+          "title": "FiLLiP Incorporation & Registration"
+        }
+      ],
+      "icon": "shuffle",
+      "whatsapp_message_template": "Hi CraftEgon! I want to convert our Company into an LLP."
+    },
+    {
+      "id": "proprietorship-to-company",
+      "title": "Proprietorship to Private Limited Conversion",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/proprietorship-to-company/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 8999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-12 Working Days",
+      "statutory_framework": "Companies Act, 2013 & Income Tax Act Section 47(xiv) Capital Gains Exemption",
+      "short_description": "Slump sale or takeover of sole proprietorship assets into a newly incorporated Private Limited company.",
+      "eligibility": [
+        "Proprietor seeking corporate expansion with zero capital gain incidence under Section 47(xiv)"
+      ],
+      "documents_required": {
+        "business": [
+          "Proprietorship Balance Sheet",
+          "Takeover Agreement",
+          "PAN & Identity proofs"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Company Incorporation"
+        },
+        {
+          "step": 2,
+          "title": "Business Transfer Agreement Execution"
+        },
+        {
+          "step": 3,
+          "title": "Bank & GST Migration"
+        }
+      ],
+      "icon": "layers",
+      "whatsapp_message_template": "Hi CraftEgon! I want to convert my Sole Proprietorship to Private Limited."
+    },
+    {
+      "id": "branch-office-liaison-office",
+      "title": "Branch Office / Liaison Office Setup",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/branch-office-liaison-office/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 29999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "30-45 Working Days",
+      "statutory_framework": "FEMA 1999 (Master Direction No. 10/2015-16, Form FNC, Form FC-1)",
+      "short_description": "RBI AD Category-I bank approval and ROC registration (Form FC-1) for foreign corporate liaison and branch entities in India.",
+      "eligibility": [
+        "Foreign entities with profitable track record (3-5 years) and net worth criteria"
+      ],
+      "documents_required": {
+        "parent": [
+          "Certificate of Incorporation (Apostilled)",
+          "Audited Financials",
+          "Banker's Report",
+          "Letter of Comfort"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "FNC Application via AD Bank to RBI"
+        },
+        {
+          "step": 2,
+          "title": "RBI In-Principle Approval"
+        },
+        {
+          "step": 3,
+          "title": "Form FC-1 Filing with MCA"
+        }
+      ],
+      "icon": "building-library",
+      "whatsapp_message_template": "Hi CraftEgon! We want to establish a Liaison or Branch Office in India."
+    },
+    {
+      "id": "producer-company-registration",
+      "title": "Producer Company Registration",
+      "category": "business-setup",
+      "hub_path": "/business-setup/",
+      "product_path": "/business-setup/producer-company-registration/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 16999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Chapter XXIA, SPICe+ MCA V3)",
+      "short_description": "Specialized agricultural and farmer producer organization (FPO) corporate incorporation to access NABARD and SFAC grants.",
+      "eligibility": [
+        "10 or more individual primary producers or 2 or more producer institutions"
+      ],
+      "documents_required": {
+        "farmers": [
+          "Farmer ID Proofs / 7/12 Extract / Land Record",
+          "PAN & Aadhaar",
+          "Address Proofs"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Producer Verification & DSC"
+        },
+        {
+          "step": 2,
+          "title": "RUN Name Approval"
+        },
+        {
+          "step": 3,
+          "title": "SPICe+ Incorporation Filing"
+        }
+      ],
+      "icon": "sprout",
+      "whatsapp_message_template": "Hi CraftEgon! I need to incorporate a Farmer Producer Company."
+    },
+    {
+      "id": "gst-refund-export-inverted-duty",
+      "title": "GST Refund (Export & Inverted Duty)",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/gst-refund-export-inverted-duty/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 5999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-15 Working Days",
+      "statutory_framework": "CGST Act, 2017 (Section 54, Rules 89-96, Form GST RFD-01)",
+      "short_description": "Claiming accumulated input tax credit refunds for zero-rated exports (LUT/IGST) or inverted duty tax rate structures.",
+      "eligibility": [
+        "Exporters of goods/services or manufacturers with input tax rate higher than output rate"
+      ],
+      "documents_required": {
+        "refund": [
+          "Shipping Bills / FIRC statements",
+          "GSTR-2B vs Books Reconciliation",
+          "Refund Statement Annexure 1"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Formula Calculation under Rule 89(4) or 89(5)"
+        },
+        {
+          "step": 2,
+          "title": "Form RFD-01 Preparation"
+        },
+        {
+          "step": 3,
+          "title": "Tracking RFD-02 Acknowledgment & Sanction"
+        }
+      ],
+      "icon": "badge-percent",
+      "whatsapp_message_template": "Hi CraftEgon! I need help filing a GST Refund claim."
+    },
+    {
+      "id": "gst-audit-form-gstr9c",
+      "title": "GST Reconciliation & Audit (GSTR-9C)",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/gst-audit-form-gstr9c/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 11999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-12 Working Days",
+      "statutory_framework": "CGST Act, 2017 (Section 35(5), Section 44, Form GSTR-9C)",
+      "short_description": "Annual reconciliation statement between audited annual balance sheet and aggregate GST turnover reported across all returns.",
+      "eligibility": [
+        "Registered taxpayers with aggregate annual turnover > ₹5 Crore"
+      ],
+      "documents_required": {
+        "audit": [
+          "Audited Financial Statements",
+          "GSTR-9 Filed Copy",
+          "State-wise turnover breakup"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Turnover & Expense Reconciliation"
+        },
+        {
+          "step": 2,
+          "title": "Form GSTR-9C Preparation"
+        },
+        {
+          "step": 3,
+          "title": "Portal Upload with Digital Signature"
+        }
+      ],
+      "icon": "clipboard-check",
+      "whatsapp_message_template": "Hi CraftEgon! We need assistance with Form GSTR-9C reconciliation."
+    },
+    {
+      "id": "input-tax-credit-reconciliation",
+      "title": "Input Tax Credit (ITC) Reconciliation",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/input-tax-credit-reconciliation/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 4999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days",
+      "statutory_framework": "CGST Act, 2017 (Section 16, Rule 36(4), GSTR-2B Matching)",
+      "short_description": "Automated invoice-level matching between purchase ledger and auto-drafted GSTR-2B to maximize legal tax credits.",
+      "eligibility": [
+        "Businesses with high volume vendor invoices seeking to avoid Rule 36(4) disallowance"
+      ],
+      "documents_required": {
+        "data": [
+          "Purchase Register in Excel",
+          "GSTR-2B JSON Files",
+          "Vendor Master"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Automated Matching Algorithm Run"
+        },
+        {
+          "step": 2,
+          "title": "Defaulter Vendor Identification"
+        },
+        {
+          "step": 3,
+          "title": "Vendor Follow-Up Communication"
+        }
+      ],
+      "icon": "git-compare",
+      "whatsapp_message_template": "Hi CraftEgon! I need help with ITC matching and GSTR-2B reconciliation."
+    },
+    {
+      "id": "gst-litigation-appeal",
+      "title": "GST Litigation & Appellate Representation",
+      "category": "gst-advisory",
+      "hub_path": "/gst-advisory/",
+      "product_path": "/gst-advisory/gst-litigation-appeal/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 9999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "Case Specific",
+      "statutory_framework": "CGST Act, 2017 (Section 107, Form GST APL-01)",
+      "short_description": "Preparation of appeal memorandums, statements of facts, and grounds of appeal before the Joint/Additional Commissioner (Appeals).",
+      "eligibility": [
+        "Taxpayers aggrieved by adjudication orders in Form DRC-07"
+      ],
+      "documents_required": {
+        "appeal": [
+          "Adjudication Order Copy",
+          "Show Cause Notice DRC-01",
+          "Pre-deposit payment challan (10%)"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Statutory Ground Review & Limitation Assessment"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Appeal in Form GST APL-01"
+        },
+        {
+          "step": 3,
+          "title": "Filing & Hearing Coordination"
+        }
+      ],
+      "icon": "scale",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance preparing a GST Appeal."
+    },
+    {
+      "id": "board-resolution-drafting",
+      "title": "Board Resolution & Secretarial Drafting",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/board-resolution-drafting/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 2999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "2-3 Working Days",
+      "statutory_framework": "Companies Act, 2013 & ICSI Secretarial Standards (SS-1, SS-2)",
+      "short_description": "Precision drafting of certified true copies of board and shareholder resolutions for bank accounts, loan sanctions, investments, and agreements.",
+      "eligibility": [
+        "Corporate entities executing formal business decisions"
+      ],
+      "documents_required": {
+        "company": [
+          "Board Minutes / Intent Notice",
+          "Director Details",
+          "Transaction Particulars"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Statutory Clause Identification"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Resolution & Explanatory Statement"
+        },
+        {
+          "step": 3,
+          "title": "Delivery in Certified Secretarial Format"
+        }
+      ],
+      "icon": "pen-tool",
+      "whatsapp_message_template": "Hi CraftEgon! I need customized Board Resolutions drafted."
+    },
+    {
+      "id": "moa-aoa-amendment",
+      "title": "MOA & AOA Amendment",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/moa-aoa-amendment/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 9999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Sections 13, 14, Form MGT-14)",
+      "short_description": "Altering Main Object clauses, capital clauses, or internal governance articles in AOA to reflect business pivot or investor terms.",
+      "eligibility": [
+        "Companies expanding business scope or adopting SHA/investor provisions"
+      ],
+      "documents_required": {
+        "charter": [
+          "Existing MOA/AOA",
+          "Proposed Changes",
+          "EGM Notice & Special Resolution"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Drafting Altered Clauses"
+        },
+        {
+          "step": 2,
+          "title": "EGM Approval"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form MGT-14 with MCA"
+        }
+      ],
+      "icon": "file-code",
+      "whatsapp_message_template": "Hi CraftEgon! We need to alter our company's MOA and AOA."
+    },
+    {
+      "id": "increase-authorized-capital",
+      "title": "Increase in Authorized Share Capital",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/increase-authorized-capital/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 6999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Sections 61, 64, Form SH-7)",
+      "short_description": "Enhancing authorized capital ceiling to enable new funding rounds, equity allotment, or ESOP pool creation with Form SH-7 filing.",
+      "eligibility": [
+        "Companies planning equity expansion beyond existing capital threshold"
+      ],
+      "documents_required": {
+        "company": [
+          "Existing MOA Capital Clause",
+          "EGM Resolution",
+          "Notice of Meeting"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Board & Shareholder Approval"
+        },
+        {
+          "step": 2,
+          "title": "Altered MOA Drafting"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form SH-7 with Stamp Duty Payment"
+        }
+      ],
+      "icon": "dollar-sign",
+      "whatsapp_message_template": "Hi CraftEgon! We want to increase our company's Authorized Share Capital."
+    },
+    {
+      "id": "company-winding-up-strike-off",
+      "title": "Company Strike Off & Closure (STK-2)",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/company-winding-up-strike-off/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 19999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "30-60 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 248, Form STK-2, STK-3 Indemnity)",
+      "short_description": "Fast-track legal closure and strike-off of defunct companies with zero assets/liabilities under MCA Section 248.",
+      "eligibility": [
+        "Inoperative companies for 2 preceding financial years with no active bank accounts or liabilities"
+      ],
+      "documents_required": {
+        "closure": [
+          "Nil Statement of Accounts by CA",
+          "Indemnity Bond STK-3",
+          "Affidavit STK-4",
+          "Bank Closure Letter"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Closure of Bank Accounts & Tax Registrations"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Affidavits & Indemnity Bonds"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form STK-2 on MCA V3"
+        }
+      ],
+      "icon": "x-circle",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance with Company Strike Off (Form STK-2)."
+    },
+    {
+      "id": "merger-amalgamation-advisory",
+      "title": "Merger & Amalgamation Advisory (Fast-Track Section 233)",
+      "category": "corporate-governance",
+      "hub_path": "/corporate-governance/",
+      "product_path": "/corporate-governance/merger-amalgamation-advisory/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 49999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "90-120 Working Days",
+      "statutory_framework": "Companies Act, 2013 (Section 233 Fast-Track Scheme for Small Companies/Holding-Subsidiary)",
+      "short_description": "Corporate amalgamation without NCLT intervention under Section 233 between two small companies or holding and wholly-owned subsidiary.",
+      "eligibility": [
+        "Holding & wholly-owned subsidiary companies or 2 or more small companies"
+      ],
+      "documents_required": {
+        "scheme": [
+          "Draft Scheme of Amalgamation",
+          "Valuation Report by Registered Valuer",
+          "Solvency Declaration CAA-10"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Draft Scheme & Board Sanctions"
+        },
+        {
+          "step": 2,
+          "title": "ROC & Official Liquidator Objections Notice"
+        },
+        {
+          "step": 3,
+          "title": "Regional Director Confirmation"
+        }
+      ],
+      "icon": "git-merge",
+      "whatsapp_message_template": "Hi CraftEgon! We need advisory on Fast-Track Mergers under Section 233."
+    },
+    {
+      "id": "transfer-pricing-documentation",
+      "title": "Transfer Pricing Documentation (Form 3CEB)",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/transfer-pricing-documentation/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 34999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Section 92E, Rule 10D, Form 3CEB)",
+      "short_description": "Benchmarking international transactions with Associated Enterprises (AE) using CUP/TNMM methods and compiling Form 3CEB report.",
+      "eligibility": [
+        "Entities with international transactions or specified domestic transactions > ₹20 Cr with related entities"
+      ],
+      "documents_required": {
+        "transfer_pricing": [
+          "Inter-company Agreements",
+          "Invoices & Cost Allocations",
+          "Functional, Asset & Risk (FAR) Analysis"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "FAR Analysis & Method Selection"
+        },
+        {
+          "step": 2,
+          "title": "Database Benchmarking on Prowess / Capitaline"
+        },
+        {
+          "step": 3,
+          "title": "Form 3CEB Certification & Local File Compilation"
+        }
+      ],
+      "icon": "network",
+      "whatsapp_message_template": "Hi CraftEgon! We need Transfer Pricing Study and Form 3CEB documentation."
+    },
+    {
+      "id": "international-tax-treaty-advisory",
+      "title": "International Tax & DTAA Advisory",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/international-tax-treaty-advisory/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 24999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Section 90, 90A, Double Tax Avoidance Agreements)",
+      "short_description": "Treaty relief optimization under DTAA, Permanent Establishment (PE) risk assessment, and beneficial tax rate certifications.",
+      "eligibility": [
+        "Cross-border enterprises, non-residents with Indian income, or software exporters"
+      ],
+      "documents_required": {
+        "treaty": [
+          "Tax Residency Certificate (TRC)",
+          "Form 10F",
+          "No-PE Declaration",
+          "Contracts"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Treaty Article Analysis (Royalty, FTS, Business Profits)"
+        },
+        {
+          "step": 2,
+          "title": "Withholding Rate Determination"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form 10F & TRC Verification"
+        }
+      ],
+      "icon": "globe-2",
+      "whatsapp_message_template": "Hi CraftEgon! I need Cross-Border International Tax & DTAA Advisory."
+    },
+    {
+      "id": "belated-revised-itr-filing",
+      "title": "Belated & Revised ITR Filing",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/belated-revised-itr-filing/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 2999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "2-3 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Sections 139(4) Belated, 139(5) Revised, 234F Penalty)",
+      "short_description": "Filing missed tax returns before December 31 deadline or rectifying omitted deductions in previously filed returns.",
+      "eligibility": [
+        "Taxpayers who missed July/October statutory deadlines or discovered errors in original filing"
+      ],
+      "documents_required": {
+        "tax": [
+          "Original ITR Ack",
+          "Revised Financials / Investment Proofs",
+          "Challans"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Omission Audit & Penalty Computation"
+        },
+        {
+          "step": 2,
+          "title": "Revised Computation Preparation"
+        },
+        {
+          "step": 3,
+          "title": "E-filing on IT Portal"
+        }
+      ],
+      "icon": "history",
+      "whatsapp_message_template": "Hi CraftEgon! I need to file a Belated or Revised Income Tax Return."
+    },
+    {
+      "id": "form-15ca-15cb-foreign-remittance",
+      "title": "Form 15CA & 15CB Foreign Remittance Certification",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/form-15ca-15cb-foreign-remittance/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 3999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "2-3 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Section 195, Rule 37BB, Forms 15CA & 15CB)",
+      "short_description": "CA certification in Form 15CB and electronic filing of Form 15CA on Income Tax portal for overseas wire transfers.",
+      "eligibility": [
+        "Entities or individuals remitting funds abroad to foreign vendors, employees, or associates"
+      ],
+      "documents_required": {
+        "remittance": [
+          "Overseas Vendor Invoice",
+          "TRC & Form 10F of payee",
+          "Remittance Agreement",
+          "Bank details"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Taxability Analysis under Domestic Law & DTAA"
+        },
+        {
+          "step": 2,
+          "title": "Form 15CB CA Certification"
+        },
+        {
+          "step": 3,
+          "title": "Form 15CA Part C Submission & Ack Generation"
+        }
+      ],
+      "icon": "send",
+      "whatsapp_message_template": "Hi CraftEgon! I need Form 15CA and 15CB certification for foreign remittance."
+    },
+    {
+      "id": "capital-gains-computation",
+      "title": "Capital Gains Tax Computation & Advisory",
+      "category": "direct-tax",
+      "hub_path": "/direct-tax/",
+      "product_path": "/direct-tax/capital-gains-computation/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 5999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "3-5 Working Days",
+      "statutory_framework": "Income Tax Act, 1961 (Sections 45-55, Sections 54, 54EC, 54F Exemption)",
+      "short_description": "Tax structuring for sale of immovable property, unlisted equity, ESOP liquidation, and Section 54/54EC reinvestment planning.",
+      "eligibility": [
+        "Individuals or entities executing significant property or share transactions"
+      ],
+      "documents_required": {
+        "asset": [
+          "Purchase & Sale Deeds",
+          "Cost of Improvement Invoices",
+          "Valuation Reports",
+          "ESOP Statements"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Indexation & Fair Market Value Computation"
+        },
+        {
+          "step": 2,
+          "title": "Section 54/54F Investment Roadmap"
+        },
+        {
+          "step": 3,
+          "title": "Advance Tax & Return Integration"
+        }
+      ],
+      "icon": "line-chart",
+      "whatsapp_message_template": "Hi CraftEgon! I need assistance computing Capital Gains Tax."
+    },
+    {
+      "id": "patent-filing-advisory",
+      "title": "Patent Search & Filing Advisory",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/patent-filing-advisory/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 24999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "Patents Act, 1970 & Patent Rules, 2003 (Form 1, Form 2 Specification)",
+      "short_description": "Prior art patentability search, provisional/complete specification drafting with patent claims, and Form 1 filing on IP India.",
+      "eligibility": [
+        "Inventors, tech startups, and research institutions with novel technological inventions"
+      ],
+      "documents_required": {
+        "invention": [
+          "Invention Disclosure Form (IDF)",
+          "Drawings & Schematics",
+          "Applicant Details",
+          "Form 1"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Global Prior Art Search (Google Patents, WIPO, USPTO)"
+        },
+        {
+          "step": 2,
+          "title": "Patent Drafting (Claims & Specifications)"
+        },
+        {
+          "step": 3,
+          "title": "Electronic Filing of Form 1 & Form 2"
+        }
+      ],
+      "icon": "lightbulb",
+      "whatsapp_message_template": "Hi CraftEgon! I want to file a Patent Application for our invention."
+    },
+    {
+      "id": "trademark-assignment-licensing",
+      "title": "Trademark Assignment & Licensing",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/trademark-assignment-licensing/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 6999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Trade Marks Act, 1999 (Sections 37-45, Form TM-P)",
+      "short_description": "Drafting commercial trademark assignment deeds (with/without goodwill) and recording title changes on Form TM-P with IP India.",
+      "eligibility": [
+        "Brand owners transferring or licensing trademark rights to third parties or subsidiaries"
+      ],
+      "documents_required": {
+        "assignment": [
+          "Assignment Deed",
+          "NOC",
+          "Registration Certificate",
+          "Form TM-P Draft"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Drafting Assignment / License Deed"
+        },
+        {
+          "step": 2,
+          "title": "Stamp Duty Payment"
+        },
+        {
+          "step": 3,
+          "title": "Filing Form TM-P on IP India"
+        }
+      ],
+      "icon": "award",
+      "whatsapp_message_template": "Hi CraftEgon! I need help with Trademark Assignment or Licensing."
+    },
+    {
+      "id": "design-registration",
+      "title": "Industrial Design Registration",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/design-registration/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 8999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Days Filing",
+      "statutory_framework": "Designs Act, 2000 & Design Rules, 2001 (Form 1)",
+      "short_description": "Protecting aesthetic, ornamental, and ergonomic shapes/configurations of industrial products with the Patent Office Kolkata.",
+      "eligibility": [
+        "Manufacturers and hardware designers with novel product aesthetics"
+      ],
+      "documents_required": {
+        "design": [
+          "Photographs / CAD Renderings from 7 Angles",
+          "Brief Statement of Novelty",
+          "Applicant Proofs"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Design Novelty Clearance Search"
+        },
+        {
+          "step": 2,
+          "title": "Representation Sheet Compilation"
+        },
+        {
+          "step": 3,
+          "title": "Form 1 Filing with Controller of Designs"
+        }
+      ],
+      "icon": "pen-tool",
+      "whatsapp_message_template": "Hi CraftEgon! I want to register an Industrial Design for my product."
+    },
+    {
+      "id": "geographical-indication-advisory",
+      "title": "Geographical Indication (GI) Advisory",
+      "category": "brand-protection",
+      "hub_path": "/brand-protection/",
+      "product_path": "/brand-protection/geographical-indication-advisory/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 14999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "Case Specific",
+      "statutory_framework": "Geographical Indications of Goods Act, 1999 (Form GI-1)",
+      "short_description": "Advisory for producer collectives and artisan associations to register GI tags or obtain Authorized User certification.",
+      "eligibility": [
+        "Producer associations or cooperatives representing geographical agricultural/craft goods"
+      ],
+      "documents_required": {
+        "collective": [
+          "Association Charter",
+          "Historical Evidence of Origin",
+          "Map of Production Region"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Historical & Technical Documentation"
+        },
+        {
+          "step": 2,
+          "title": "Filing Form GI-1"
+        },
+        {
+          "step": 3,
+          "title": "Consultative Committee Examination"
+        }
+      ],
+      "icon": "map",
+      "whatsapp_message_template": "Hi CraftEgon! I need advisory regarding Geographical Indication (GI) registration."
+    },
+    {
+      "id": "posh-policy-icc-setup",
+      "title": "POSH Policy & Internal Committee Setup",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/posh-policy-icc-setup/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 12999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+      "short_description": "Mandatory workplace POSH policy formulation, external member appointment facilitation, and annual report filing with District Officer.",
+      "eligibility": [
+        "Any workplace employing 10 or more employees (statutory obligation under Section 4)"
+      ],
+      "documents_required": {
+        "workplace": [
+          "Employee Count & Gender Ratio",
+          "Workplace Locations List",
+          "Nominated Presiding Officer"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Drafting Tailored POSH Policy"
+        },
+        {
+          "step": 2,
+          "title": "Internal Committee (IC) Constitution Order"
+        },
+        {
+          "step": 3,
+          "title": "Employee Awareness Material & Annual Filing Protocol"
+        }
+      ],
+      "icon": "users",
+      "whatsapp_message_template": "Hi CraftEgon! We need to implement POSH Policy and setup our Internal Committee."
+    },
+    {
+      "id": "hr-policy-employee-handbook",
+      "title": "HR Policy & Employee Handbook",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/hr-policy-employee-handbook/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 9999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "7-10 Working Days",
+      "statutory_framework": "Industrial Employment (Standing Orders) Act, 1946 & State Shop Acts",
+      "short_description": "Comprehensive corporate employee handbook covering leave policies, remote work, code of conduct, performance management, and grievance escalation.",
+      "eligibility": [
+        "Growing startups and established companies standardizing human resource governance"
+      ],
+      "documents_required": {
+        "organization": [
+          "Current Organogram",
+          "Leave / Work Hours Preferences",
+          "Industry Norms"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Culture & Statutory Rule Alignments"
+        },
+        {
+          "step": 2,
+          "title": "Drafting 18 Key Policy Modules"
+        },
+        {
+          "step": 3,
+          "title": "Executive Review & Final Publication"
+        }
+      ],
+      "icon": "book-open",
+      "whatsapp_message_template": "Hi CraftEgon! We need a comprehensive HR Policy and Employee Handbook."
+    },
+    {
+      "id": "esic-epfo-registration-compliance",
+      "title": "ESIC & EPFO Registration & Monthly Compliance",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/esic-epfo-registration-compliance/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 3999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "Employees' Provident Funds Act, 1952 & ESI Act, 1948",
+      "short_description": "EPF and ESIC establishment registration, UAN generation, monthly ECR filing, and contribution challan settlement.",
+      "eligibility": [
+        "Establishments employing 20+ workers (EPF) or 10+ workers in notified areas (ESIC)"
+      ],
+      "documents_required": {
+        "establishment": [
+          "Incorporation Certificate",
+          "PAN & Bank Details",
+          "Employee Master with Aadhaar"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Shram Suvidha Portal Registration"
+        },
+        {
+          "step": 2,
+          "title": "EPFO & ESIC Code Allotment"
+        },
+        {
+          "step": 3,
+          "title": "Monthly ECR Generation & Submission"
+        }
+      ],
+      "icon": "user-plus",
+      "whatsapp_message_template": "Hi CraftEgon! We need ESIC and EPFO registration and compliance setup."
+    },
+    {
+      "id": "shop-establishment-trade-license",
+      "title": "Shop & Establishment / Trade License",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/shop-establishment-trade-license/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 2999,
+        "is_govt_fee_variable": true,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "State Shops and Commercial Establishments Act & Municipal Corporation Acts",
+      "short_description": "State labour department shop registration (Gumasta) and municipal trade license for commercial office premises.",
+      "eligibility": [
+        "Commercial offices, retail units, tech development centres in municipal limits"
+      ],
+      "documents_required": {
+        "premises": [
+          "Electricity Bill",
+          "Rent Agreement",
+          "Owner NOC",
+          "Partner/Director Aadhaar"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "State Labour Portal Application"
+        },
+        {
+          "step": 2,
+          "title": "Municipal Fee Payment"
+        },
+        {
+          "step": 3,
+          "title": "License Certificate Download"
+        }
+      ],
+      "icon": "store",
+      "whatsapp_message_template": "Hi CraftEgon! I need a Shop & Establishment / Trade License."
+    },
+    {
+      "id": "ai-governance-policy-framework",
+      "title": "AI Governance Policy Framework",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/ai-governance-policy-framework/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 19999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "10-15 Working Days",
+      "statutory_framework": "MeitY Advisory on Generative AI, IT Act 2000 & DPDP Act 2023",
+      "short_description": "Enterprise guidelines for workplace AI adoption, proprietary source code leakage protection, model bias mitigation, and compliance.",
+      "eligibility": [
+        "Tech companies, SaaS platforms, and enterprises using GenAI / LLMs in daily operations"
+      ],
+      "documents_required": {
+        "tech": [
+          "List of AI Tools Used (ChatGPT, Copilot, etc.)",
+          "Employee Workflows",
+          "Data Sensitivity Tiers"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "GenAI Use-Case Risk Categorization"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Employee AI Acceptable Use Policy"
+        },
+        {
+          "step": 3,
+          "title": "Training & Governance Review"
+        }
+      ],
+      "icon": "cpu",
+      "whatsapp_message_template": "Hi CraftEgon! We need an Enterprise AI Governance & Acceptable Use Policy."
+    },
+    {
+      "id": "esg-sustainability-framework",
+      "title": "ESG & Sustainability Framework",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/esg-sustainability-framework/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 29999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "15-20 Working Days",
+      "statutory_framework": "SEBI BRSR Guidelines, Companies Act 2013 (Section 135 CSR)",
+      "short_description": "Environmental, Social, and Governance compliance blueprint, carbon accounting policies, and Business Responsibility reporting (BRSR).",
+      "eligibility": [
+        "Corporations seeking ESG certifications, institutional investment, or global supply chain integration"
+      ],
+      "documents_required": {
+        "corporate": [
+          "CSR Expenditure Records",
+          "Energy Consumption Data",
+          "Governance Charter"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Materiality Assessment"
+        },
+        {
+          "step": 2,
+          "title": "ESG Metric Tracking Setup"
+        },
+        {
+          "step": 3,
+          "title": "Drafting Sustainability Charter & BRSR Report"
+        }
+      ],
+      "icon": "leaf",
+      "whatsapp_message_template": "Hi CraftEgon! We need an ESG Governance & Sustainability Framework."
+    },
+    {
+      "id": "co-founder-agreement-sha",
+      "title": "Co-Founder Agreement & Shareholders' Agreement (SHA)",
+      "category": "workforce-digital",
+      "hub_path": "/workforce-digital/",
+      "product_path": "/workforce-digital/co-founder-agreement-sha/",
+      "phase": 3,
+      "pricing": {
+        "base_professional_fee": 7999,
+        "is_govt_fee_variable": false,
+        "gst_rate": 0.18
+      },
+      "turnaround_time": "5-7 Working Days",
+      "statutory_framework": "Companies Act, 2013 & Indian Contract Act, 1872",
+      "short_description": "Structuring founder equity split, reverse vesting schedules, drag-along/tag-along rights, IP assignment, and deadlock resolution.",
+      "eligibility": [
+        "Startup co-founders, seed stage companies, and angel funded entities"
+      ],
+      "documents_required": {
+        "founders": [
+          "Founder Equity Distribution Plan",
+          "Vesting Cliff/Period Preferences",
+          "Decision Voting Thresholds"
+        ]
+      },
+      "execution_steps": [
+        {
+          "step": 1,
+          "title": "Founding Term Sheet Analysis"
+        },
+        {
+          "step": 2,
+          "title": "Drafting Equity Vesting & Good/Bad Leaver Clauses"
+        },
+        {
+          "step": 3,
+          "title": "Execution Guidance & AOA Alteration Alignment"
+        }
+      ],
+      "icon": "shield",
+      "whatsapp_message_template": "Hi CraftEgon! I need a customized Co-Founder Agreement and SHA drafted."
+    }
+  ]
+}
