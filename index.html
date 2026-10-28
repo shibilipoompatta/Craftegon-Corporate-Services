@@ -109,15 +109,19 @@
                     Fastest Company Incorporation, GST Registration, Trademark Filing &amp; MCA Compliance handled by expert Chartered Accountants and Legal Consultants.
                 </p>
 
-                <!-- Search Bar (Quick Direct Routing) -->
-                <div class="relative max-w-xl mx-auto md:mx-0 pt-2">
-                    <form onsubmit="handleQuickSearch(event)" class="flex items-center bg-white rounded-xl shadow-lg border border-slate-200 p-2">
+                <!-- Search Bar (Quick Direct Routing with Live Autocomplete) -->
+                <div class="relative max-w-xl mx-auto md:mx-0 pt-2" id="searchContainer">
+                    <form onsubmit="handleQuickSearch(event)" class="flex items-center bg-white rounded-xl shadow-lg border border-slate-200 p-2 relative z-20">
                         <span class="pl-3 text-slate-400">🔍</span>
-                        <input id="searchInput" type="text" placeholder="Search service e.g. Private Limited, GST, Trademark, MCA..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
+                        <input id="searchInput" type="text" autocomplete="off" placeholder="Search service e.g. Private Limited, GST, Trademark, MCA..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
                         <button type="submit" class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition shrink-0">
                             Search
                         </button>
                     </form>
+
+                    <!-- Instant Search Results Dropdown -->
+                    <div id="searchResultsDropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-30 max-h-80 overflow-y-auto divide-y divide-slate-100">
+                    </div>
                 </div>
 
                 <!-- Trust Metrics -->
@@ -401,15 +405,166 @@
             mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         }
 
+        // ── Client-side Real-time Search Engine across 60 Services ──
+        let servicesData = [];
+        const searchInput = document.getElementById('searchInput');
+        const searchResultsDropdown = document.getElementById('searchResultsDropdown');
+        const searchContainer = document.getElementById('searchContainer');
+
+        const categoryNames = {
+            'business-setup': 'Business Setup',
+            'gst-advisory': 'GST Advisory',
+            'corporate-governance': 'Corporate Governance',
+            'direct-tax': 'Direct Tax',
+            'brand-protection': 'Brand & IP',
+            'workforce-digital': 'Workforce & Digital'
+        };
+
+        // Preload services catalog on page load
+        fetch('/data/services.json')
+            .then(res => res.json())
+            .then(data => {
+                servicesData = data.services || [];
+            })
+            .catch(err => console.warn('Could not load services for search:', err));
+
+        function escapeHTML(str) {
+            return String(str).replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag] || tag));
+        }
+
+        function renderSearchResults(query) {
+            if (!query || query.trim().length < 2) {
+                searchResultsDropdown.classList.add('hidden');
+                searchResultsDropdown.innerHTML = '';
+                return;
+            }
+
+            const q = query.toLowerCase().trim();
+            const words = q.split(/\s+/).filter(w => w.length > 0);
+
+            // Filter and rank matches
+            const matches = servicesData.map(s => {
+                const title = s.title.toLowerCase();
+                const desc = (s.short_description || '').toLowerCase();
+                const cat = (s.category || '').toLowerCase();
+                let score = 0;
+
+                if (title === q) score += 100;
+                else if (title.startsWith(q)) score += 50;
+                else if (title.includes(q)) score += 30;
+
+                words.forEach(w => {
+                    if (title.includes(w)) score += 15;
+                    if (cat.includes(w)) score += 10;
+                    if (desc.includes(w)) score += 5;
+                });
+
+                return { service: s, score };
+            })
+            .filter(item => item.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 6);
+
+            if (matches.length === 0) {
+                searchResultsDropdown.innerHTML = `
+                    <div class="p-4 text-center text-xs text-slate-500">
+                        No specific services found for "<strong>${escapeHTML(query)}</strong>".<br>
+                        <span class="text-[11px] text-brand-sky font-semibold mt-1.5 block cursor-pointer" onclick="handleQuickSearch(event)">Click Search to browse Practice Hubs &rarr;</span>
+                    </div>
+                `;
+                searchResultsDropdown.classList.remove('hidden');
+                return;
+            }
+
+            let html = '';
+            matches.forEach(({ service }) => {
+                const catLabel = categoryNames[service.category] || service.category;
+                const link = service.product_path || service.hub_path;
+                const fee = service.pricing ? '₹' + service.pricing.base_professional_fee.toLocaleString('en-IN') : 'Starting @ ₹999';
+
+                html += `
+                    <a href="${link}" class="flex items-center justify-between p-3.5 hover:bg-slate-50 transition group">
+                        <div class="flex items-center gap-3 pr-2">
+                            <div class="w-8 h-8 rounded-lg bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-brand-sky group-hover:text-white transition">
+                                📄
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-brand-dark group-hover:text-brand-sky transition line-clamp-1">${escapeHTML(service.title)}</div>
+                                <div class="text-[10px] text-slate-500 flex items-center gap-1.5 mt-0.5">
+                                    <span class="px-1.5 py-0.5 rounded bg-slate-100 font-semibold text-slate-600">${escapeHTML(catLabel)}</span>
+                                    <span>·</span>
+                                    <span>${escapeHTML(service.turnaround_time || 'Statutory Timeline')}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <span class="text-xs font-bold text-brand-gold">${fee}</span>
+                            <span class="text-[9px] text-slate-400 block">+ govt fee</span>
+                        </div>
+                    </a>
+                `;
+            });
+
+            searchResultsDropdown.innerHTML = html;
+            searchResultsDropdown.classList.remove('hidden');
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                renderSearchResults(e.target.value);
+            });
+            searchInput.addEventListener('focus', (e) => {
+                if (e.target.value.trim().length >= 2) {
+                    renderSearchResults(e.target.value);
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (searchContainer && !searchContainer.contains(e.target) && searchResultsDropdown) {
+                searchResultsDropdown.classList.add('hidden');
+            }
+        });
+
+        // Close dropdown on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchResultsDropdown) {
+                searchResultsDropdown.classList.add('hidden');
+            }
+        });
+
         function handleQuickSearch(e) {
-            e.preventDefault();
-            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (e) e.preventDefault();
+            const q = searchInput.value.toLowerCase().trim();
             if (!q) return;
+
+            // Direct match from loaded service catalog
+            if (servicesData.length > 0) {
+                const exact = servicesData.find(s => s.title.toLowerCase() === q || s.title.toLowerCase().startsWith(q));
+                if (exact) {
+                    window.location.href = exact.product_path || exact.hub_path;
+                    return;
+                }
+                const partial = servicesData.find(s => s.title.toLowerCase().includes(q));
+                if (partial) {
+                    window.location.href = partial.product_path || partial.hub_path;
+                    return;
+                }
+            }
+
+            // Category routing fallback
             if (q.includes('gst')) window.location.href = '/gst-advisory/';
-            else if (q.includes('trade') || q.includes('ip') || q.includes('brand')) window.location.href = '/brand-protection/';
-            else if (q.includes('mca') || q.includes('roc') || q.includes('director')) window.location.href = '/corporate-governance/';
-            else if (q.includes('tax') || q.includes('tds') || q.includes('itr')) window.location.href = '/direct-tax/';
-            else if (q.includes('dpdp') || q.includes('posh') || q.includes('employ') || q.includes('hr')) window.location.href = '/workforce-digital/';
+            else if (q.includes('trade') || q.includes('ip') || q.includes('brand') || q.includes('logo') || q.includes('patent')) window.location.href = '/brand-protection/';
+            else if (q.includes('mca') || q.includes('roc') || q.includes('director') || q.includes('kyc') || q.includes('secretarial')) window.location.href = '/corporate-governance/';
+            else if (q.includes('tax') || q.includes('tds') || q.includes('itr') || q.includes('income')) window.location.href = '/direct-tax/';
+            else if (q.includes('dpdp') || q.includes('posh') || q.includes('employ') || q.includes('hr') || q.includes('nda')) window.location.href = '/workforce-digital/';
             else window.location.href = '/business-setup/';
         }
 

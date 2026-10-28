@@ -532,16 +532,20 @@
             <option value="Telangana">Telangana</option>
             <option value="Uttar Pradesh">Uttar Pradesh</option>
             <option value="West Bengal">West Bengal</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Punjab">Punjab</option>
           </select>
         </div>
         <div>
           <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Authorized Capital</label>
           <select id="calc-capital-select" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none">
-            <option value="100000">₹1,00,000</option>
-            <option value="1000000" selected>₹10,00,000 (Standard)</option>
-            <option value="2500000">₹25,00,000</option>
-            <option value="5000000">₹50,00,000</option>
-            <option value="10000000">₹1,00,00,000</option>
+            <option value="100000">₹1 Lakh (Minimum)</option>
+            <option value="500000">₹5 Lakhs</option>
+            <option value="1000000" selected>₹10 Lakhs (Standard)</option>
+            <option value="2500000">₹25 Lakhs</option>
+            <option value="5000000">₹50 Lakhs</option>
+            <option value="10000000">₹1 Crore</option>
           </select>
         </div>
       </div>
@@ -553,7 +557,7 @@
         </div>
         <div class="p-3 bg-white rounded-xl border border-slate-200">
           <span class="block text-[10px] uppercase font-bold text-slate-500">State Stamp Duty</span>
-          <span id="calc-stamp-duty" class="font-black text-sm text-brand-gold mt-1 block">₹2,000</span>
+          <span id="calc-stamp-duty" class="font-black text-sm text-brand-gold mt-1 block">₹5,000</span>
         </div>
         <div class="p-3 bg-white rounded-xl border border-slate-200">
           <span class="block text-[10px] uppercase font-bold text-slate-500">GST (18%)</span>
@@ -561,8 +565,13 @@
         </div>
         <div class="p-3 bg-brand-skyLight rounded-xl border border-brand-sky/30">
           <span class="block text-[10px] uppercase font-bold text-brand-sky">Total Investment</span>
-          <span id="calc-total" class="font-black text-sm text-brand-dark mt-1 block">₹11,439</span>
+          <span id="calc-total" class="font-black text-sm text-brand-dark mt-1 block">₹14,439</span>
         </div>
+      </div>
+
+      <div id="hub-calc-note" class="mt-4 p-3 bg-white rounded-xl border border-slate-200 text-xs text-slate-600 leading-relaxed">
+        <span class="font-semibold text-brand-dark">Statutory Formula (Kerala · ₹10 Lakhs Capital):</span>
+        <span class="font-mono text-slate-700 ml-1">₹7,999 (Prof) + ₹5,000 (Stamp Duty) + ₹1,440 (GST) = <strong>₹14,439</strong></span>
       </div>
     </div>
   </div>
@@ -795,18 +804,25 @@
 
   const sSel = document.getElementById('calc-state-select');
   const cSel = document.getElementById('calc-capital-select');
+  const hNote = document.getElementById('hub-calc-note');
   function runCalc() {
-    if (window.CCSCalculator && window.CCSCalculator.calculateTotalFee) {
-      const res = window.CCSCalculator.calculateTotalFee(7999, sSel.value, parseInt(cSel.value));
+    if (window.CCSCalculator && window.CCSCalculator.calculateTotalFee && sSel && cSel) {
+      const state = sSel.value;
+      const capital = parseInt(cSel.value, 10);
+      const res = window.CCSCalculator.calculateTotalFee(7999, state, capital);
       document.getElementById('calc-prof-fee').textContent = '₹' + res.professional_fee.toLocaleString('en-IN');
       document.getElementById('calc-stamp-duty').textContent = '₹' + res.stamp_duty.toLocaleString('en-IN');
       document.getElementById('calc-gst').textContent = '₹' + res.gst_amount.toLocaleString('en-IN');
       document.getElementById('calc-total').textContent = '₹' + res.total.toLocaleString('en-IN');
+      if (hNote) {
+        hNote.innerHTML = '<span class="font-semibold text-brand-dark">Statutory Formula (' + state + ' · ₹' + capital.toLocaleString('en-IN') + ' Capital):</span> <span class="font-mono text-slate-700 ml-1">₹7,999 (Prof) + ₹' + res.stamp_duty.toLocaleString('en-IN') + ' (Stamp Duty) + ₹' + res.gst_amount.toLocaleString('en-IN') + ' (GST 18%) = <strong>₹' + res.total.toLocaleString('en-IN') + '</strong></span>';
+      }
     }
   }
   if (sSel && cSel) {
     sSel.addEventListener('change', runCalc);
     cSel.addEventListener('change', runCalc);
+    runCalc();
   }
 </script>
 </body>

@@ -392,81 +392,92 @@ const CCSCalculator = (function () {
     const stateOptions = Object.keys(STAMP_DUTY_RULES)
       .filter(k => k !== '_default')
       .sort()
-      .map(s => `<option value="${s}">${s}</option>`)
+      .map(s => `<option value="${s}" ${s === 'Kerala' ? 'selected' : ''}>${s}</option>`)
       .join('');
 
     // Capital slab options
     const slabOptions = CAPITAL_SLABS
-      .map(s => `<option value="${s.value}">${s.label}</option>`)
+      .map(s => `<option value="${s.value}" ${s.value === 1000000 ? 'selected' : ''}>${s.label}</option>`)
       .join('');
 
     return `
-<div class="calculator-widget" role="region" aria-label="Fee Calculator">
-  <h3 class="calc-title">
-    <span class="text-gold">₹</span> Fee Calculator — ${opts.serviceTitle}
-  </h3>
+<div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm" role="region" aria-label="Fee Calculator">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-10 h-10 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-lg shadow-sm">
+      ₹
+    </div>
+    <div>
+      <h3 class="text-lg font-extrabold text-brand-dark">Statutory Fee Calculator</h3>
+      <p class="text-xs text-slate-500">${opts.serviceTitle}</p>
+    </div>
+  </div>
 
-  <div class="grid-2" style="gap:1rem; margin-bottom:1.5rem;">
-    <div class="form-group">
-      <label class="form-label" for="calc-state">State of Registration</label>
-      <select id="calc-state" class="form-select" name="calc_state" aria-label="Select state">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+    <div>
+      <label class="block text-xs font-bold uppercase text-slate-700 mb-1" for="calc-state">State of Registration</label>
+      <select id="calc-state" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none" name="calc_state" aria-label="Select state">
         <option value="">— Select State —</option>
         ${stateOptions}
       </select>
     </div>
 
-    <div class="form-group">
-      <label class="form-label" for="calc-capital">Authorized Capital</label>
-      <select id="calc-capital" class="form-select" name="calc_capital" aria-label="Select authorized capital">
+    <div>
+      <label class="block text-xs font-bold uppercase text-slate-700 mb-1" for="calc-capital">Authorized Capital</label>
+      <select id="calc-capital" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none" name="calc_capital" aria-label="Select authorized capital">
         ${slabOptions}
       </select>
     </div>
   </div>
 
-  <!-- Base fee display -->
-  <div class="flex items-center gap-4 mb-6 p-4 rounded-lg"
-       style="background:var(--color-gold-muted); border:1px solid rgba(197,160,89,0.25);">
-    <span class="text-sm font-semibold" style="color:var(--color-text);">Professional Fee (excl. GST):</span>
-    <span class="text-mono font-bold text-gold text-lg"
-          id="calc-base-fee">${formatCurrency(opts.baseFee)}</span>
-    <span class="badge badge-gold">Inclusive of Consultation</span>
+  <!-- Dynamic stat cards -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-4 border-t border-slate-200">
+    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+      <span class="block text-[10px] uppercase font-bold text-slate-500">Professional Fee</span>
+      <span id="calc-prof-val" class="font-black text-sm text-brand-dark mt-1 block">${formatCurrency(opts.baseFee)}</span>
+    </div>
+    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+      <span class="block text-[10px] uppercase font-bold text-slate-500">State Stamp Duty</span>
+      <span id="calc-stamp-val" class="font-black text-sm text-brand-gold mt-1 block">₹0</span>
+    </div>
+    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+      <span class="block text-[10px] uppercase font-bold text-slate-500">GST (18%)</span>
+      <span id="calc-gst-val" class="font-black text-sm text-brand-dark mt-1 block">${formatCurrency(Math.round(opts.baseFee * GST_RATE))}</span>
+    </div>
+    <div class="p-3 bg-brand-skyLight rounded-xl border border-brand-sky/30">
+      <span class="block text-[10px] uppercase font-bold text-brand-sky">Estimated Total</span>
+      <span id="calc-total-val" class="font-black text-sm text-brand-dark mt-1 block">${formatCurrency(Math.round(opts.baseFee * (1 + GST_RATE)))}</span>
+    </div>
   </div>
 
-  <!-- Dynamic breakdown -->
-  <div class="calc-result-card" id="calc-result" aria-live="polite" aria-atomic="true">
-    <p class="text-xs text-muted mb-4" style="color:rgba(248,249,246,0.5);">
-      Select your state to see the full fee breakdown.
-    </p>
+  <!-- Detailed formula breakdown -->
+  <div id="calc-result" class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed">
+    Select your state above to compute dynamic statutory stamp duty.
   </div>
 
-  <!-- CTA -->
-  <div class="flex flex-wrap gap-4 mt-6">
+  <!-- CTA Buttons -->
+  <div class="mt-6 flex flex-wrap items-center gap-3">
     <a
-      href="#enquiry-form"
-      class="btn btn-primary"
+      href="#inquiry"
+      class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs px-5 py-2.5 rounded-lg shadow transition"
       id="calc-cta"
       data-service-id="${opts.serviceId}"
-      aria-label="Get a quote for ${opts.serviceTitle}"
     >
-      Get a Free Quote
+      Get a Free Quote &rarr;
     </a>
     <a
       href="https://wa.me/919995204905?text=${encodeURIComponent('Hi CraftEgon! I want a quote for ' + opts.serviceTitle + '.')}"
       target="_blank"
       rel="noopener noreferrer"
-      class="btn btn-whatsapp btn-sm"
+      class="inline-flex items-center gap-2 bg-[#25D366]/10 border border-[#25D366]/40 text-[#128C7E] hover:bg-[#25D366]/20 font-bold text-xs px-4 py-2.5 rounded-lg transition"
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-      Ask on WhatsApp
+      <span>💬 Ask on WhatsApp</span>
     </a>
   </div>
 
-  <!-- Disclaimer -->
-  <div class="disclaimer-badge gold mt-6">
-    <span class="disclaimer-icon">ℹ️</span>
-    <p>
+  <!-- Statutory Disclaimer -->
+  <div class="mt-6 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center gap-2.5">
+    <span class="text-base shrink-0">ℹ️</span>
+    <p class="leading-relaxed">
       Estimates are indicative. Stamp duty rates are subject to change per state government notifications.
       Government fees are charged at actuals. Final invoice will reflect current applicable rates.
     </p>
@@ -509,56 +520,38 @@ const CCSCalculator = (function () {
     const stateEl   = container.querySelector('#calc-state');
     const capitalEl = container.querySelector('#calc-capital');
     const resultEl  = container.querySelector('#calc-result');
+    const stampEl   = container.querySelector('#calc-stamp-val');
+    const gstEl     = container.querySelector('#calc-gst-val');
+    const totalEl   = container.querySelector('#calc-total-val');
 
-    if (!stateEl || !capitalEl || !resultEl) return;
+    if (!stateEl || !capitalEl) return;
 
     const state   = stateEl.value;
     const capital = parseInt(capitalEl.value, 10);
 
     if (!state) {
-      resultEl.innerHTML = `
-        <p class="text-xs" style="color:rgba(248,249,246,0.5);">
-          ← Select your state to calculate stamp duty.
-        </p>`;
+      if (resultEl) resultEl.innerHTML = `<span class="text-slate-500 font-medium">← Please select your state of registration above to calculate stamp duty.</span>`;
+      if (stampEl) stampEl.textContent = '₹0';
+      if (totalEl) totalEl.textContent = formatCurrency(Math.round(baseFee * (1 + GST_RATE)));
       return;
     }
 
     const fee = calculateTotalFee(baseFee, state, capital);
 
-    resultEl.innerHTML = `
-      <p class="text-xs mb-4" style="color:rgba(248,249,246,0.45); letter-spacing:0.08em; text-transform:uppercase; font-family:var(--font-mono);">
-        Fee Breakdown — ${state}
-      </p>
+    if (stampEl) stampEl.textContent = formatCurrency(fee.stamp_duty);
+    if (gstEl) gstEl.textContent = formatCurrency(fee.gst_amount);
+    if (totalEl) totalEl.textContent = formatCurrency(fee.total);
 
-      <div class="calc-breakdown-row">
-        <span class="calc-label">Professional Fee</span>
-        <span class="calc-value">${formatCurrency(fee.professional_fee)}</span>
-      </div>
-
-      <div class="calc-breakdown-row">
-        <span class="calc-label">GST @ 18%</span>
-        <span class="calc-value">${formatCurrency(fee.gst_amount)}</span>
-      </div>
-
-      <div class="calc-breakdown-row">
-        <span class="calc-label">Stamp Duty (${state})</span>
-        <span class="calc-value">${formatCurrency(fee.stamp_duty)}</span>
-      </div>
-
-      <div class="calc-breakdown-row">
-        <span class="calc-label">Govt. Filing Fees (MCA)</span>
-        <span class="calc-value">${formatCurrency(fee.govt_fees)}</span>
-      </div>
-
-      <div class="calc-breakdown-row total-row">
-        <span class="calc-label">Estimated Total</span>
-        <span class="calc-value">${formatCurrency(fee.total)}</span>
-      </div>
-
-      <p class="mt-4 text-xs" style="color:rgba(248,249,246,0.35); line-height:1.6;">
-        Capital: ${_getLabelForValue(capital)} &nbsp;·&nbsp; Stamp duty at ${state} rates.
-      </p>
-    `;
+    if (resultEl) {
+      resultEl.innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div><strong class="text-brand-dark font-semibold">Statutory Formula (${state} · ${_getLabelForValue(capital)}):</strong></div>
+          <div class="font-mono text-slate-700">
+            ${formatCurrency(fee.professional_fee)} (Prof) + ${formatCurrency(fee.stamp_duty)} (Stamp Duty) + ${formatCurrency(fee.gst_amount)} (GST 18%) + ${formatCurrency(fee.govt_fees)} (MCA ROC) = <strong class="text-brand-dark">${formatCurrency(fee.total)}</strong>
+          </div>
+        </div>
+      `;
+    }
 
     console.log('[CCSCalculator] Calculation:', fee.breakdown);
   }
@@ -584,30 +577,22 @@ const CCSCalculator = (function () {
     const elements = document.querySelectorAll('[data-ccs-calculator]');
     if (elements.length === 0) return;
 
-    console.log(`[CCSCalculator] Auto-init — found ${elements.length} calculator element(s).`);
-
-    // Attempt to load service registry
-    try {
-      const res = await fetch('/data/services.json');
-      if (res.ok) {
-        _serviceRegistry = await res.json();
-        console.log('[CCSCalculator] Service registry loaded:', Object.keys(_serviceRegistry).length, 'services.');
-      }
-    } catch (err) {
-      console.warn('[CCSCalculator] Could not load /data/services.json — using defaults.', err.message);
-    }
-
     elements.forEach((el, idx) => {
-      // Ensure the element has an ID
+      // If the container already has pre-rendered inputs, don't destroy it!
+      if (el.querySelector('#prod-calc-state') || el.querySelector('#calc-state-select') || el.dataset.calcReady === 'true') {
+        return;
+      }
+
       if (!el.id) el.id = `ccs-calculator-${idx}`;
 
       const serviceId = el.dataset.ccsCalculator || '';
-      const service   = _serviceRegistry[serviceId] || {};
+      const baseFee = parseInt(el.dataset.baseFee, 10) || 7999;
+      const title = el.dataset.serviceTitle || serviceId || 'Corporate Service';
 
       initCalculator(el.id, {
-        baseFee:      service.base_fee      || el.dataset.baseFee      || 4999,
-        serviceTitle: service.title         || el.dataset.serviceTitle || serviceId || 'Service',
-        serviceId:    serviceId,
+        baseFee: baseFee,
+        serviceTitle: title,
+        serviceId: serviceId,
       });
     });
   }
@@ -625,39 +610,39 @@ const CCSCalculator = (function () {
 
 })();
 
+if (typeof window !== 'undefined') {
+  window.CCSCalculator = CCSCalculator;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = CCSCalculator;
+}
+
 /* ── Auto-init on DOM ready ───────────────────────────────── */
 (function () {
   function _run() {
-    // Re-use the private _autoInit exposed via closure trick
-    // We trigger the same scanning logic by exposing a public init method
     const elements = document.querySelectorAll('[data-ccs-calculator]');
     if (!elements.length) return;
 
-    elements.forEach(async (el, idx) => {
+    elements.forEach((el, idx) => {
+      // If the container already has pre-rendered inputs, do not overwrite it!
+      if (el.querySelector('#prod-calc-state') || el.querySelector('#calc-state-select') || el.dataset.calcReady === 'true') {
+        return;
+      }
+
       if (!el.id) el.id = `ccs-calculator-auto-${idx}`;
       const serviceId = el.dataset.ccsCalculator || '';
-      let baseFee     = parseInt(el.dataset.baseFee, 10) || 4999;
-      let title       = el.dataset.serviceTitle || serviceId || 'Service';
-
-      // Try to hydrate from services.json
-      try {
-        const res = await fetch('/data/services.json');
-        if (res.ok) {
-          const registry = await res.json();
-          if (registry[serviceId]) {
-            baseFee = registry[serviceId].base_fee || baseFee;
-            title   = registry[serviceId].title    || title;
-          }
-        }
-      } catch (_) { /* silent — use defaults */ }
+      let baseFee     = parseInt(el.dataset.baseFee, 10) || 7999;
+      let title       = el.dataset.serviceTitle || serviceId || 'Corporate Service';
 
       CCSCalculator.initCalculator(el.id, { baseFee, serviceTitle: title, serviceId });
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', _run);
-  } else {
-    _run();
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', _run);
+    } else {
+      _run();
+    }
   }
 })();
