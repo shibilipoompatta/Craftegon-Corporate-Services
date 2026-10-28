@@ -3,18 +3,14 @@ module.exports = {
   content: [
     "./index.html",
     "./*.html",
-    "./business-setup/**/*.html",
-    "./gst-advisory/**/*.html",
-    "./corporate-governance/**/*.html",
-    "./direct-tax/**/*.html",
-    "./brand-protection/**/*.html",
-    "./workforce-digital/**/*.html",
-    "./assets/js/**/*.js"
+    "./**/*.html",
+    "./assets/js/**/*.js",
+    "./build_*.py"
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['DM Mono', 'monospace'],
       },
       colors: {
@@ -35,4 +31,3 @@ module.exports = {
   },
   plugins: [],
 };
-

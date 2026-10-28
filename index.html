@@ -111,16 +111,21 @@
 
                 <!-- Search Bar (Quick Direct Routing with Live Autocomplete) -->
                 <div class="relative max-w-xl mx-auto md:mx-0 pt-2" id="searchContainer">
-                    <form onsubmit="handleQuickSearch(event)" class="flex items-center bg-white rounded-xl shadow-lg border border-slate-200 p-2 relative z-20">
-                        <span class="pl-3 text-slate-400">🔍</span>
-                        <input id="searchInput" type="text" autocomplete="off" placeholder="Search service e.g. Private Limited, GST, Trademark, MCA..." class="w-full px-3 py-2 text-sm text-slate-800 focus:outline-none">
-                        <button type="submit" class="bg-brand-sky hover:bg-brand-skyHover text-white text-xs font-bold px-5 py-3 rounded-lg shadow transition shrink-0">
+                    <form onsubmit="handleQuickSearch(event)" class="flex items-center bg-white rounded-2xl shadow-md border border-slate-200 p-2 sm:p-2.5 relative z-20 transition-all focus-within:shadow-lg focus-within:border-brand-sky/40">
+                        <div class="pl-2 pr-1 shrink-0 flex items-center justify-center">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="10.5" cy="10.5" r="6.5" stroke="#0284C7" stroke-width="2.2" fill="#E0F2FE" fill-opacity="0.6"/>
+                                <path d="M15.5 15.5L20.5 20.5" stroke="#9333EA" stroke-width="2.6" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <input id="searchInput" type="text" autocomplete="off" placeholder="Search service e.g. Private Limited, GST, Trademark, MCA..." class="w-full px-3 py-2.5 text-sm sm:text-base text-slate-800 placeholder-slate-400 bg-transparent focus:outline-none">
+                        <button type="submit" class="bg-brand-sky hover:bg-brand-skyHover text-white text-sm font-bold px-6 sm:px-7 py-3 rounded-xl shadow-sm hover:shadow transition shrink-0 min-touch flex items-center justify-center">
                             Search
                         </button>
                     </form>
 
                     <!-- Instant Search Results Dropdown -->
-                    <div id="searchResultsDropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-30 max-h-80 overflow-y-auto divide-y divide-slate-100">
+                    <div id="searchResultsDropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-30 max-h-80 overflow-y-auto divide-y divide-slate-100">
                     </div>
                 </div>
 
@@ -357,13 +362,14 @@
                 </div>
 
                 <div>
-                    <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Popular Filings</h5>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Platform &amp; Legal</h5>
                     <ul class="space-y-2">
-                        <li><a href="/business-setup/private-limited-company-incorporation/" class="hover:text-brand-sky transition">Pvt Ltd Company Incorporation</a></li>
-                        <li><a href="/business-setup/llp-registration/" class="hover:text-brand-sky transition">LLP Registration</a></li>
-                        <li><a href="/gst-advisory/gst-registration/" class="hover:text-brand-sky transition">GST Registration</a></li>
-                        <li><a href="/corporate-governance/annual-mca-roc-filings/" class="hover:text-brand-sky transition">Annual ROC Filings (AOC-4)</a></li>
-                        <li><a href="/brand-protection/trademark-registration-filing/" class="hover:text-brand-sky transition">Trademark Registration (TM-A)</a></li>
+                        <li><a href="/about/" class="hover:text-brand-sky transition">About CraftEgon</a></li>
+                        <li><a href="/terms/" class="hover:text-brand-sky transition">Terms &amp; Conditions</a></li>
+                        <li><a href="/privacy/" class="hover:text-brand-sky transition">Privacy Policy</a></li>
+                        <li><a href="/data-policy/" class="hover:text-brand-sky transition">Data Protection Policy (DPDP)</a></li>
+                        <li><a href="/experts.html" class="hover:text-brand-sky transition">Expert CA/CS Directory</a></li>
+                        <li><a href="/contact.html" class="hover:text-brand-sky transition">Contact &amp; Grievance Desk</a></li>
                     </ul>
                 </div>
 
@@ -380,12 +386,21 @@
             <div class="border-t border-slate-800 pt-8">
                 <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
                     <p class="text-[11px] text-slate-400 leading-relaxed text-justify">
-                        <strong class="text-brand-gold uppercase">Regulatory Notice:</strong> CraftEgon Corporate Services (CCS) is a corporate technology, compliance, and management platform. CCS is not a law firm and does not provide court litigation or judicial representation before courts or tribunals. All court litigation and tribunal appearances are executed exclusively through independent, licensed advocates or associate law firms (such as Everest Law Firm) in accordance with the Advocates Act, 1961. Statutory audits, tax certifications, and regulated professional services are fulfilled by qualified, independent Chartered Accountants, Company Secretaries, and registered professionals in compliance with ICAI, ICSI, and statutory guidelines.
+                        <strong class="text-brand-gold uppercase">Regulatory Notice:</strong> CraftEgon Corporate Services (CCS) is a corporate technology, compliance, and management platform. CCS is not a law firm and does not provide court litigation or judicial representation before courts or tribunals. All court litigation and tribunal appearances are executed exclusively through independent, licensed advocates or associate law firms in accordance with the Advocates Act, 1961. Statutory audits, tax certifications, and regulated professional services are fulfilled by qualified, independent Chartered Accountants, Company Secretaries, and registered professionals in compliance with ICAI, ICSI, and statutory guidelines.
                     </p>
                 </div>
-                <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
+                <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-3">
                     <p>&copy; 2026 CraftEgon Corporate Services. All rights reserved.</p>
-                    <p class="mt-1 sm:mt-0 font-mono">corporateservices.craftegon.com</p>
+                    <div class="flex flex-wrap items-center gap-4 text-[11px] text-slate-400">
+                        <a href="/about/" class="hover:text-white transition">About Us</a>
+                        <span>·</span>
+                        <a href="/terms/" class="hover:text-white transition">Terms &amp; Conditions</a>
+                        <span>·</span>
+                        <a href="/privacy/" class="hover:text-white transition">Privacy Policy</a>
+                        <span>·</span>
+                        <a href="/data-policy/" class="hover:text-white transition">Data Policy</a>
+                    </div>
+                    <p class="font-mono">corporateservices.craftegon.com</p>
                 </div>
             </div>
         </div>
