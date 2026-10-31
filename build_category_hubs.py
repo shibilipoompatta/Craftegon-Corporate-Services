@@ -72,7 +72,7 @@ NAV_HTML = """<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md bord
     <a href="/brand-protection/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Brand Protection &amp; Trademarks</a>
     <a href="/licenses.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Licenses &amp; Certifications</a>
     <a href="/workforce-digital/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Workforce &amp; Digital Infrastructure</a>
-    <a href="/experts.html" class="block text-sm font-semibold text-brand-sky py-2 border-b border-slate-100 flex items-center justify-between">
+    <a href="/experts.html" class="flex text-sm font-semibold text-brand-sky py-2 border-b border-slate-100 items-center justify-between">
       <span>Talk to CA/CS Experts</span>
       <span class="bg-brand-goldLight text-brand-gold text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Live</span>
     </a>
