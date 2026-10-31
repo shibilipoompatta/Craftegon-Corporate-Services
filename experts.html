@@ -616,7 +616,7 @@
         // Knowledge Hub Fetch Script
         async function loadExpertGuides() {
             try {
-                const response = await fetch('indiafilings-knowledge-hub.json');
+                const response = await fetch('/data/craftegon-knowledge-hub.json');
                 const data = await response.json();
                 const blogs = data.blog_pages || data.blogs || [];
                 

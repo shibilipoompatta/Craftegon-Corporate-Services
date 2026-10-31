@@ -170,6 +170,16 @@
                     </form>
 
                     <!-- Instant Search Results Dropdown -->
+                    <!-- Active Category Filter Chips -->
+                    <div class="flex items-center gap-1.5 overflow-x-auto pt-3 pb-1 text-xs font-semibold text-slate-600" id="searchCategoryChips">
+                        <button type="button" data-cat="all" class="search-chip px-3 py-1 rounded-full bg-brand-sky text-white font-bold transition shadow-xs">All Services</button>
+                        <button type="button" data-cat="business-setup" class="search-chip px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Company Setup</button>
+                        <button type="button" data-cat="gst-advisory" class="search-chip px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition">GST &amp; Tax</button>
+                        <button type="button" data-cat="brand-protection" class="search-chip px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Trademark &amp; IP</button>
+                        <button type="button" data-cat="licenses" class="search-chip px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition">Trade Licenses</button>
+                        <button type="button" data-cat="corporate-governance" class="search-chip px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition">MCA Governance</button>
+                    </div>
+
                     <div id="searchResultsDropdown" class="hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-30 max-h-80 overflow-y-auto divide-y divide-slate-100">
                     </div>
                 </div>
@@ -743,7 +753,7 @@
         }
 
         // Preload services catalog on page load
-        fetch('/data/services.json')
+        fetch('/data/craftegon-services.json')
             .then(res => res.json())
             .then(data => {
                 servicesData = data.services || [];
@@ -772,7 +782,16 @@
             const words = q.split(/\s+/).filter(w => w.length > 0);
 
             // Filter and rank matches
-            const matches = servicesData.map(s => {
+            const filteredServices = servicesData.filter(s => {
+                if (activeCategoryFilter === 'all') return true;
+                if (activeCategoryFilter === 'licenses') {
+                    return (s.title || '').toLowerCase().includes('license') || (s.title || '').toLowerCase().includes('fssai') || (s.title || '').toLowerCase().includes('udyam');
+                }
+                return s.category === activeCategoryFilter;
+            });
+
+            // Filter and rank matches
+            const matches = filteredServices.map(s => {
                 const title = s.title.toLowerCase();
                 const desc = (s.short_description || '').toLowerCase();
                 const cat = (s.category || '').toLowerCase();
@@ -809,7 +828,7 @@
             matches.forEach(({ service }) => {
                 const catLabel = categoryNames[service.category] || service.category;
                 const link = service.product_path || service.hub_path;
-                const fee = service.pricing ? '₹' + service.pricing.base_professional_fee.toLocaleString('en-IN') : 'Starting @ ₹999';
+                const fee = service.starting_price ? '₹' + service.starting_price.toLocaleString('en-IN') : (service.pricing ? '₹' + service.pricing.base_professional_fee.toLocaleString('en-IN') : 'Starting @ ₹999');
 
                 html += `
                     <a href="${link}" class="flex items-center justify-between p-3.5 hover:bg-slate-50 transition group">
@@ -836,6 +855,23 @@
 
             searchResultsDropdown.innerHTML = html;
             searchResultsDropdown.classList.remove('hidden');
+        }
+
+                let activeCategoryFilter = 'all';
+        const categoryChips = document.querySelectorAll('.search-chip');
+        if (categoryChips) {
+            categoryChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    categoryChips.forEach(c => {
+                        c.classList.remove('bg-brand-sky', 'text-white', 'shadow-xs');
+                        c.classList.add('bg-slate-100', 'text-slate-700');
+                    });
+                    chip.classList.remove('bg-slate-100', 'text-slate-700');
+                    chip.classList.add('bg-brand-sky', 'text-white', 'shadow-xs');
+                    activeCategoryFilter = chip.dataset.cat || 'all';
+                    renderSearchResults(searchInput.value);
+                });
+            });
         }
 
         if (searchInput) {
