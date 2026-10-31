@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Production Compiled Stylesheet -->
+    <!-- Production Compiled Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/output.css" />
     <link rel="stylesheet" href="/assets/css/theme.css" />
 
     <!-- Schema.org JSON-LD -->
@@ -24,17 +25,24 @@
       "url": "https://corporateservices.craftegon.com/",
       "logo": "https://corporateservices.craftegon.com/assets/images/logo.png",
       "description": "Fastest Company Incorporation, GST Registration, Trademark Filing & MCA Compliance.",
-      "telephone": "+91-9995204905",
-      "email": "support@craftegon.com"
+      "telephone": "+91-8606918247",
+      "email": "support@craftegon.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Markaz Knowledge City",
+        "addressLocality": "Kozhikode",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      }
     }
     </script>
 </head>
 <body class="bg-slate-50 text-brand-dark font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
-        <span>🚀 Special Offer: Get <strong>20% OFF</strong> MCA Filing &amp; Free Expert Consultation this week!</span>
-        <a href="#contact" class="underline hover:text-brand-goldLight font-bold transition">Claim Offer &rarr;</a>
+    <div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
+        <span>🚀 <strong>Special Offer:</strong> Get 20% OFF MCA Filing &amp; Free Expert Consultation this week!</span>
+        <a href="https://wa.me/918606918247?text=Hi%20CraftEgon!%20I%20want%20to%20claim%20the%2020%25%20OFF%20MCA%20Filing%20offer." target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-goldLight font-bold transition ml-2">Claim Offer &rarr;</a>
     </div>
 
     <!-- Header Navigation -->
@@ -51,25 +59,29 @@
                 </div>
             </a>
 
-            <!-- Desktop Nav (6 Practice Verticals) -->
+            <!-- Desktop Nav (6 Practice Verticals & Core Links) -->
             <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-600">
                 <a href="/business-setup/" class="hover:text-brand-sky transition">Business Setup</a>
                 <a href="/gst-advisory/" class="hover:text-brand-sky transition">GST Advisory</a>
                 <a href="/corporate-governance/" class="hover:text-brand-sky transition">Governance &amp; MCA</a>
                 <a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax</a>
                 <a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP</a>
-                <a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a>
+                <a href="/licenses.html" class="hover:text-brand-sky transition">Licenses</a>
+                <a href="/experts.html" class="hover:text-brand-sky transition flex items-center gap-1.5 text-brand-sky">
+                    <span>Talk to Experts</span>
+                    <span class="bg-brand-goldLight text-brand-gold text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Live</span>
+                </a>
             </nav>
 
-            <!-- CTA Buttons -->
+            <!-- CTA Buttons & Mobile Toggle -->
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
-                    <span class="text-emerald-600 font-bold">●</span> Desk: +91 99952 04905
+                <a href="tel:+918606918247" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
+                    <span class="text-emerald-600 font-bold">●</span> +91 86069 18247
                 </a>
                 <a href="#contact" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
                     Get Started
                 </a>
-                <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
+                <button id="mobile-menu-toggle" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -78,27 +90,48 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
             <a href="/business-setup/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Business Setup &amp; Formation</a>
             <a href="/gst-advisory/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">GST Advisory &amp; Filings</a>
             <a href="/corporate-governance/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Corporate Governance &amp; MCA</a>
             <a href="/direct-tax/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Direct Tax &amp; TDS</a>
             <a href="/brand-protection/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Brand Protection &amp; Trademarks</a>
+            <a href="/licenses.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Licenses &amp; Certifications</a>
             <a href="/workforce-digital/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Workforce &amp; Digital Infrastructure</a>
-            <div class="pt-2">
-                <a href="#contact" onclick="toggleMobileMenu()" class="block w-full text-center bg-brand-sky text-white font-bold text-sm py-3 rounded-lg shadow">Get Free Consultation</a>
+            <a href="/experts.html" class="block text-sm font-semibold text-brand-sky py-2 border-b border-slate-100 flex items-center justify-between">
+                <span>Talk to CA/CS Experts</span>
+                <span class="bg-brand-goldLight text-brand-gold text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Live</span>
+            </a>
+            <a href="/about.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">About CraftEgon</a>
+            <a href="/contact.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Contact &amp; Grievance Desk</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:+918606918247" class="block w-full text-center bg-slate-100 text-slate-800 font-bold text-sm py-2.5 rounded-lg border border-slate-200">
+                    📞 Call: +91 86069 18247
+                </a>
+                <a href="#contact" class="block w-full text-center bg-brand-sky text-white font-bold text-sm py-2.5 rounded-lg shadow">
+                    Get Free Consultation
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section with Search & Instant Lead Capture -->
+    <!-- Hero Section with Trust Badges, CTAs, Search & Lead Capture -->
     <section class="relative bg-gradient-to-b from-brand-skyLight/50 via-white to-slate-50 py-12 md:py-20 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center">
             
             <!-- Left Hero Content -->
             <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-goldLight border border-brand-gold/30 text-brand-gold text-xs font-bold">
-                    ⭐ Trusted LegalTech Platform for Indian Entrepreneurs
+                <!-- Trust Badges Bar -->
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-goldLight border border-brand-gold/30 text-brand-gold text-xs font-bold shadow-sm">
+                        <span>📍</span> Markaz Knowledge City HQ
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-bold shadow-sm">
+                        <span>⭐</span> 4.9/5 Rating (1,200+ Reviews)
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold shadow-sm">
+                        <span>🔒</span> 100% Online Process
+                    </span>
                 </div>
                 
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-tight">
@@ -109,9 +142,21 @@
                     Fastest Company Incorporation, GST Registration, Trademark Filing &amp; MCA Compliance handled by expert Chartered Accountants and Legal Consultants.
                 </p>
 
+                <!-- Dual CTA Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 pt-1">
+                    <a href="#core-services" class="w-full sm:w-auto bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                        <span>Explore Services</span>
+                        <span>&darr;</span>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-bold text-sm px-7 py-3.5 rounded-xl shadow-sm hover:shadow transition flex items-center justify-center gap-2">
+                        <span>Request 10-Min Callback</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
                 <!-- Search Bar (Quick Direct Routing with Live Autocomplete) -->
-                <div class="relative max-w-xl mx-auto md:mx-0 pt-2" id="searchContainer">
-                    <form onsubmit="handleQuickSearch(event)" class="flex items-center bg-white rounded-2xl shadow-md border border-slate-200 p-2 sm:p-2.5 relative z-20 transition-all focus-within:shadow-lg focus-within:border-brand-sky/40">
+                <div class="relative max-w-xl mx-auto md:mx-0 pt-3" id="searchContainer">
+                    <form onsubmit="handleQuickSearch(event)" id="searchForm" role="search" class="flex items-center bg-white rounded-2xl shadow-md border border-slate-200 p-2 sm:p-2.5 relative z-20 transition-all focus-within:shadow-lg focus-within:border-brand-sky/40">
                         <div class="pl-2 pr-1 shrink-0 flex items-center justify-center">
                             <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <circle cx="10.5" cy="10.5" r="6.5" stroke="#0284C7" stroke-width="2.2" fill="#E0F2FE" fill-opacity="0.6"/>
@@ -129,7 +174,7 @@
                     </div>
                 </div>
 
-                <!-- Trust Metrics -->
+                <!-- Trust Metrics Counter -->
                 <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200 text-center md:text-left">
                     <div>
                         <div class="text-xl md:text-2xl font-black text-brand-dark">500+</div>
@@ -150,7 +195,7 @@
             <div class="md:col-span-5" id="contact">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-slate-200 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">
-                        Free Call Back
+                        Guaranteed 10-Min Callback
                     </div>
 
                     <h3 class="text-xl font-bold text-brand-dark mb-1">Talk to a Legal Expert</h3>
@@ -158,13 +203,13 @@
 
                     <form id="heroForm" class="space-y-4" data-ccs-form="true" data-service-id="general-consultation" onsubmit="handleHeroSubmit(event)">
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Full Legal Name *</label>
                             <input type="text" name="user_name" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
                         </div>
 
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile / WhatsApp Number *</label>
-                            <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
+                            <input type="tel" name="phone" required placeholder="+91 86069 18247" class="w-full px-4 py-2.5 text-sm rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition">
                         </div>
 
                         <div>
@@ -184,7 +229,7 @@
                         </div>
 
                         <button id="heroSubmitBtn" type="submit" class="w-full bg-gradient-to-r from-brand-sky to-brand-skyHover text-white font-bold text-sm py-3.5 rounded-lg shadow-md hover:shadow-lg transition">
-                            Get Free Consultation &rarr;
+                            Request 10-Min Callback &rarr;
                         </button>
                     </form>
                 </div>
@@ -193,19 +238,258 @@
         </div>
     </section>
 
-    <!-- Core Practice Verticals Showcase (6 Cards) -->
-    <section id="services" class="py-16 md:py-24 bg-white">
+    <!-- Interactive Service Cards & Transparent Pricing Grid -->
+    <section id="core-services" class="py-16 md:py-24 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">High-Demand Practice Verticals</h2>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-brand-dark">6 Core Practice Hubs for Indian Startups</h3>
+                <span class="inline-block px-3 py-1 rounded-full bg-brand-skyLight text-brand-sky text-xs font-bold uppercase tracking-wider mb-2">Featured Core Services</span>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-brand-dark tracking-tight">Transparent Pricing &amp; High-Velocity Execution</h2>
+                <p class="text-sm text-slate-500 mt-2">Zero hidden charges. Dedicated Chartered Accountants, Company Secretaries, and IP Advocates handling end-to-end statutory filings.</p>
+            </div>
+
+            <!-- 4 Core Service Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Service Card 1: GST Registration -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-lg shadow-sm">
+                                📄
+                            </span>
+                            <span class="px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 text-[10px] font-bold tracking-wide">
+                                3-5 Business Days
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark group-hover:text-brand-sky transition">GST Registration</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-4 leading-relaxed">
+                            Fast-track 15-digit GSTIN allocation, SAC/HSN classification, and complimentary return filing setup.
+                        </p>
+                        
+                        <div class="mb-5 pb-4 border-b border-slate-200">
+                            <span class="text-xs text-slate-500 block font-medium">Starting at</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-brand-dark">₹999</span>
+                                <span class="text-[11px] text-slate-400 font-medium">+ GST</span>
+                            </div>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>15-Digit GSTIN Allotment</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>HSN &amp; SAC Code Mapping</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Biometric Authentication Guidance</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Free Invoicing &amp; ITC Tool</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                        <a href="gst.html" class="w-full text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg shadow transition">
+                            Apply Now &rarr;
+                        </a>
+                        <a href="https://wa.me/918606918247?text=Hi%20CraftEgon!%20I%20want%20to%20apply%20for%20GST%20Registration%20(Starting%20@%20₹999)." target="_blank" rel="noopener noreferrer" class="text-center text-[11px] font-bold text-emerald-600 hover:underline">
+                            💬 Ask on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Pvt Ltd Incorporation -->
+                <div class="bg-white rounded-2xl p-6 border-2 border-brand-sky shadow-lg relative flex flex-col justify-between group">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-white text-[10px] font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wider shadow">
+                        Most Popular
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brand-sky text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                                🏛️
+                            </span>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold tracking-wide">
+                                7-10 Business Days
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark group-hover:text-brand-sky transition">Pvt Ltd Incorporation</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-4 leading-relaxed">
+                            Complete SPICe+ MCA V3 incorporation package with digital signatures, DIN allocation, and bank account setup.
+                        </p>
+                        
+                        <div class="mb-5 pb-4 border-b border-slate-200">
+                            <span class="text-xs text-slate-500 block font-medium">Starting at</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-brand-dark">₹6,999</span>
+                                <span class="text-[11px] text-slate-400 font-medium">+ State Stamp Duty</span>
+                            </div>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>2 Class-3 Digital Signatures (DSC)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>2 Director PINs (DIN) Allotment</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>MCA RUN Name Approval</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>e-MOA, e-AOA, COI, PAN &amp; TAN</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                        <a href="pvt-ltd.html" class="w-full text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg shadow transition">
+                            Apply Now &rarr;
+                        </a>
+                        <a href="https://wa.me/918606918247?text=Hi%20CraftEgon!%20I%20want%20to%20incorporate%20a%20Private%20Limited%20Company%20(Starting%20@%20₹6,999)." target="_blank" rel="noopener noreferrer" class="text-center text-[11px] font-bold text-emerald-600 hover:underline">
+                            💬 Ask on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Trademark Filing -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-lg shadow-sm">
+                                🛡️
+                            </span>
+                            <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold tracking-wide">
+                                24-48 Hours
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark group-hover:text-brand-sky transition">Trademark Filing</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-4 leading-relaxed">
+                            Brand name, logo, and slogan protection across 45 Nice classes with immediate ™ symbol usage rights.
+                        </p>
+                        
+                        <div class="mb-5 pb-4 border-b border-slate-200">
+                            <span class="text-xs text-slate-500 block font-medium">Starting at</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-brand-dark">₹1,999</span>
+                                <span class="text-[11px] text-slate-400 font-medium">+ Govt Fee</span>
+                            </div>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Deep Pre-Filing TM Search</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Class Selection (Classes 1–45)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Form TM-A Drafting &amp; Filing</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Instant ™ Symbol Rights</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                        <a href="trademark.html" class="w-full text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg shadow transition">
+                            Apply Now &rarr;
+                        </a>
+                        <a href="https://wa.me/918606918247?text=Hi%20CraftEgon!%20I%20want%20to%20register%20my%20Trademark%20(Starting%20@%20₹1,999)." target="_blank" rel="noopener noreferrer" class="text-center text-[11px] font-bold text-emerald-600 hover:underline">
+                            💬 Ask on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: FSSAI & Trade Licenses -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-sky hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brand-skyLight text-brand-sky flex items-center justify-center font-bold text-lg shadow-sm">
+                                📜
+                            </span>
+                            <span class="px-2.5 py-1 rounded-full bg-purple-100 text-purple-800 text-[10px] font-bold tracking-wide">
+                                3-5 Business Days
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-dark group-hover:text-brand-sky transition">FSSAI &amp; Trade Licenses</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-4 leading-relaxed">
+                            Government trade licenses, FSSAI food permits, MSME registration, and Import-Export codes.
+                        </p>
+                        
+                        <div class="mb-5 pb-4 border-b border-slate-200">
+                            <span class="text-xs text-slate-500 block font-medium">Starting at</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-brand-dark">₹1,499</span>
+                                <span class="text-[11px] text-slate-400 font-medium">+ Govt Fee</span>
+                            </div>
+                        </div>
+
+                        <!-- Features List -->
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>FSSAI Food License / Registration</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>MSME Udyam Certification</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Import Export Code (IEC - DGFT)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Shop &amp; Establishment Act Setup</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                        <a href="licenses.html" class="w-full text-center bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs py-2.5 rounded-lg shadow transition">
+                            Apply Now &rarr;
+                        </a>
+                        <a href="https://wa.me/918606918247?text=Hi%20CraftEgon!%20I%20need%20FSSAI%20/%20Trade%20Licenses%20(Starting%20@%20₹1,499)." target="_blank" rel="noopener noreferrer" class="text-center text-[11px] font-bold text-emerald-600 hover:underline">
+                            💬 Ask on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Practice Verticals Showcase (6 Hub Entrance Cards) -->
+    <section id="services" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Institutional Practice Hubs</h2>
+                <h3 class="text-2xl md:text-4xl font-extrabold text-brand-dark">6 Strategic Practice Verticals for Indian Enterprises</h3>
                 <p class="text-sm text-slate-500 mt-2">Explore our specialized compliance verticals featuring real-time state calculators, transparent fee schedules, and execution blueprints.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Practice Card 1 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">🏛️</div>
                         <h4 class="text-xl font-bold text-brand-dark mb-2">Business Setup &amp; Formation</h4>
@@ -214,13 +498,13 @@
                         </p>
                     </div>
                     <div class="flex items-center justify-between border-t border-slate-200 pt-4">
-                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹5,999 + Govt Fees</span>
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹6,999 + Govt Fees</span>
                         <a href="/business-setup/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Practice Card 2 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">📄</div>
                         <h4 class="text-xl font-bold text-brand-dark mb-2">GST Advisory &amp; Filings</h4>
@@ -229,13 +513,13 @@
                         </p>
                     </div>
                     <div class="flex items-center justify-between border-t border-slate-200 pt-4">
-                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹2,499</span>
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹999</span>
                         <a href="/gst-advisory/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Practice Card 3 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">🛡️</div>
                         <h4 class="text-xl font-bold text-brand-dark mb-2">Brand &amp; IP Protection</h4>
@@ -244,13 +528,13 @@
                         </p>
                     </div>
                     <div class="flex items-center justify-between border-t border-slate-200 pt-4">
-                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹3,999 + Govt Fees</span>
+                        <span class="text-xs font-bold text-brand-gold">Starting @ ₹1,999 + Govt Fees</span>
                         <a href="/brand-protection/" class="text-xs font-bold text-brand-sky hover:underline">Explore Hub &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Practice Card 4 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">⚖️</div>
                         <h4 class="text-xl font-bold text-brand-dark mb-2">Corporate Secretarial &amp; MCA</h4>
@@ -265,7 +549,7 @@
                 </div>
 
                 <!-- Practice Card 5 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">📊</div>
                         <h4 class="text-xl font-bold text-brand-dark mb-2">Direct Tax &amp; Income Tax</h4>
@@ -280,7 +564,7 @@
                 </div>
 
                 <!-- Practice Card 6 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-brand-sky/40 transition flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-brand-skyLight text-brand-sky rounded-xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm">👥</div>
                         <h4 class="text-xl font-bold text-brand-dark mb-2">Workforce &amp; Digital Infrastructure</h4>
@@ -299,7 +583,7 @@
     </section>
 
     <!-- Why Us Section (Trust & Speed Pillars) -->
-    <section class="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
+    <section class="py-16 md:py-20 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-xs font-bold text-brand-sky uppercase tracking-widest mb-2">Institutional Advantage</h2>
@@ -307,22 +591,22 @@
             </div>
 
             <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm text-center">
                     <div class="text-3xl mb-3">⚡</div>
                     <h4 class="font-bold text-brand-dark text-base mb-1">7–10 Days Execution</h4>
                     <p class="text-xs text-slate-500">Accelerated SPICe+ MCA V3 processing with zero documentation friction.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm text-center">
                     <div class="text-3xl mb-3">💰</div>
                     <h4 class="font-bold text-brand-dark text-base mb-1">100% Fixed Fees</h4>
                     <p class="text-xs text-slate-500">Transparent state stamp duty parity with no surprise billing.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm text-center">
                     <div class="text-3xl mb-3">🔒</div>
                     <h4 class="font-bold text-brand-dark text-base mb-1">DPDP Act Compliant</h4>
                     <p class="text-xs text-slate-500">Encrypted document storage adhering strictly to Indian privacy laws.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm text-center">
                     <div class="text-3xl mb-3">🤝</div>
                     <h4 class="font-bold text-brand-dark text-base mb-1">Dedicated Legal Desk</h4>
                     <p class="text-xs text-slate-500">1-on-1 assistance via WhatsApp and senior compliance managers.</p>
@@ -331,7 +615,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Global Standardized Footer -->
     <footer class="bg-brand-dark text-slate-400 text-xs py-14 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -345,8 +629,8 @@
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">
                         India's enterprise corporate technology, secretarial governance, and compliance operations platform.
                     </p>
-                    <p class="text-slate-400 text-xs">Technopark, Trivandrum, Kerala, India</p>
-                    <p class="text-slate-400 text-xs mt-1">support@craftegon.com | +91 99952 04905</p>
+                    <p class="text-slate-400 text-xs">Markaz Knowledge City HQ, Kozhikode &amp; Technopark, Trivandrum, Kerala, India</p>
+                    <p class="text-slate-400 text-xs mt-1">support@craftegon.com | +91 86069 18247</p>
                 </div>
 
                 <div>
@@ -357,6 +641,7 @@
                         <li><a href="/corporate-governance/" class="hover:text-brand-sky transition">Corporate Governance &amp; MCA</a></li>
                         <li><a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax &amp; TDS</a></li>
                         <li><a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP Protection</a></li>
+                        <li><a href="/licenses.html" class="hover:text-brand-sky transition">Trade Licenses &amp; FSSAI</a></li>
                         <li><a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a></li>
                     </ul>
                 </div>
@@ -364,10 +649,10 @@
                 <div>
                     <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Platform &amp; Legal</h5>
                     <ul class="space-y-2">
-                        <li><a href="/about/" class="hover:text-brand-sky transition">About CraftEgon</a></li>
-                        <li><a href="/terms/" class="hover:text-brand-sky transition">Terms &amp; Conditions</a></li>
-                        <li><a href="/privacy/" class="hover:text-brand-sky transition">Privacy Policy</a></li>
-                        <li><a href="/data-policy/" class="hover:text-brand-sky transition">Data Protection Policy (DPDP)</a></li>
+                        <li><a href="/about.html" class="hover:text-brand-sky transition">About CraftEgon</a></li>
+                        <li><a href="/terms.html" class="hover:text-brand-sky transition">Terms &amp; Conditions</a></li>
+                        <li><a href="/privacy.html" class="hover:text-brand-sky transition">Privacy Policy</a></li>
+                        <li><a href="/data-policy.html" class="hover:text-brand-sky transition">Data Protection Policy (DPDP)</a></li>
                         <li><a href="/experts.html" class="hover:text-brand-sky transition">Expert CA/CS Directory</a></li>
                         <li><a href="/contact.html" class="hover:text-brand-sky transition">Contact &amp; Grievance Desk</a></li>
                     </ul>
@@ -376,8 +661,11 @@
                 <div>
                     <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Direct Case Desk</h5>
                     <p class="text-slate-400 mb-3">Connect directly via WhatsApp Business for express onboarding:</p>
-                    <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2.5 rounded-lg text-xs font-bold transition">
+                    <a href="https://wa.me/918606918247" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2.5 rounded-lg text-xs font-bold transition">
                         <span>💬 Direct WhatsApp Case Desk</span>
+                    </a>
+                    <a href="tel:+918606918247" class="mt-3 block text-slate-300 hover:text-white font-semibold">
+                        📞 +91 86069 18247
                     </a>
                 </div>
             </div>
@@ -392,13 +680,13 @@
                 <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-3">
                     <p>&copy; 2026 CraftEgon Corporate Services. All rights reserved.</p>
                     <div class="flex flex-wrap items-center gap-4 text-[11px] text-slate-400">
-                        <a href="/about/" class="hover:text-white transition">About Us</a>
+                        <a href="/about.html" class="hover:text-white transition">About Us</a>
                         <span>·</span>
-                        <a href="/terms/" class="hover:text-white transition">Terms &amp; Conditions</a>
+                        <a href="/terms.html" class="hover:text-white transition">Terms &amp; Conditions</a>
                         <span>·</span>
-                        <a href="/privacy/" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a>
                         <span>·</span>
-                        <a href="/data-policy/" class="hover:text-white transition">Data Policy</a>
+                        <a href="/data-policy.html" class="hover:text-white transition">Data Policy</a>
                     </div>
                     <p class="font-mono">corporateservices.craftegon.com</p>
                 </div>
@@ -407,19 +695,9 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
     <script src="/assets/js/forms.js"></script>
     <script>
-        if (window.lucide) { lucide.createIcons(); }
-
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        function toggleMobileMenu() {
-            if (mobileMenu) mobileMenu.classList.toggle('hidden');
-        }
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-        }
-
         // ── Client-side Real-time Search Engine across 60 Services ──
         let servicesData = [];
         const searchInput = document.getElementById('searchInput');
@@ -434,6 +712,35 @@
             'brand-protection': 'Brand & IP',
             'workforce-digital': 'Workforce & Digital'
         };
+
+        const queryAliases = {
+            'pvt': 'private limited',
+            'pvt ltd': 'private limited',
+            'private ltd': 'private limited',
+            'opc': 'one person company',
+            'llp': 'limited liability partnership',
+            'tm': 'trademark',
+            'itr': 'income tax',
+            'roc': 'mca roc',
+            'mca': 'corporate governance',
+            'din': 'director kyc',
+            'kyc': 'director kyc',
+            'fssai': 'license',
+            'iso': 'certification',
+            'dpdp': 'data privacy',
+            'nda': 'employment agreement'
+        };
+
+        function normalizeQuery(str) {
+            let normalized = str.toLowerCase().trim();
+            for (const [alias, expansion] of Object.entries(queryAliases)) {
+                if (normalized === alias || normalized.startsWith(alias + ' ')) {
+                    normalized = normalized.replace(alias, expansion);
+                    break;
+                }
+            }
+            return normalized;
+        }
 
         // Preload services catalog on page load
         fetch('/data/services.json')
@@ -460,7 +767,8 @@
                 return;
             }
 
-            const q = query.toLowerCase().trim();
+            const rawQ = query.toLowerCase().trim();
+            const q = normalizeQuery(rawQ);
             const words = q.split(/\s+/).filter(w => w.length > 0);
 
             // Filter and rank matches
@@ -470,9 +778,9 @@
                 const cat = (s.category || '').toLowerCase();
                 let score = 0;
 
-                if (title === q) score += 100;
-                else if (title.startsWith(q)) score += 50;
-                else if (title.includes(q)) score += 30;
+                if (title === q || title === rawQ) score += 100;
+                else if (title.startsWith(q) || title.startsWith(rawQ)) score += 50;
+                else if (title.includes(q) || title.includes(rawQ)) score += 30;
 
                 words.forEach(w => {
                     if (title.includes(w)) score += 15;
@@ -557,17 +865,24 @@
 
         function handleQuickSearch(e) {
             if (e) e.preventDefault();
-            const q = searchInput.value.toLowerCase().trim();
-            if (!q) return;
+            const rawQ = searchInput.value.toLowerCase().trim();
+            if (!rawQ) return;
+            const q = normalizeQuery(rawQ);
 
             // Direct match from loaded service catalog
             if (servicesData.length > 0) {
-                const exact = servicesData.find(s => s.title.toLowerCase() === q || s.title.toLowerCase().startsWith(q));
+                const exact = servicesData.find(s => {
+                    const t = s.title.toLowerCase();
+                    return t === q || t === rawQ || t.startsWith(q) || t.startsWith(rawQ);
+                });
                 if (exact) {
                     window.location.href = exact.product_path || exact.hub_path;
                     return;
                 }
-                const partial = servicesData.find(s => s.title.toLowerCase().includes(q));
+                const partial = servicesData.find(s => {
+                    const t = s.title.toLowerCase();
+                    return t.includes(q) || t.includes(rawQ);
+                });
                 if (partial) {
                     window.location.href = partial.product_path || partial.hub_path;
                     return;
@@ -597,11 +912,11 @@
                 `• Name: ${data.user_name}\\n` +
                 `• Phone: ${data.phone}\\n` +
                 `• Service: ${data.category}\\n` +
-                `• Desk: Requesting Free 10-Minute Consultation`
+                `• Desk: Requesting Priority 10-Minute Consultation`
             );
 
             setTimeout(() => {
-                window.open(`https://wa.me/919995204905?text=${waMsg}`, '_blank');
+                window.open(`https://wa.me/918606918247?text=${waMsg}`, '_blank');
                 btn.disabled = false;
                 btn.innerHTML = 'Submitted! Connecting...';
                 btn.classList.add('bg-emerald-600');

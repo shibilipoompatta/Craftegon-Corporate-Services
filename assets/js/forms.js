@@ -28,7 +28,7 @@ const INDIAN_STATES = [
 ];
 
 /* ── WhatsApp Contact ─────────────────────────────────────── */
-const CCS_WHATSAPP_NUMBER = '919995204905';
+const CCS_WHATSAPP_NUMBER = '918606918247';
 
 /* ============================================================
    CCSForms Namespace

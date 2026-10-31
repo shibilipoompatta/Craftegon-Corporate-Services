@@ -388,6 +388,10 @@ const CCSCalculator = (function () {
    * @private
    */
   function _buildCalculatorHTML(opts) {
+    const cleanTitle = (opts.serviceTitle || 'Corporate Registration')
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, l => l.toUpperCase());
+
     // State options
     const stateOptions = Object.keys(STAMP_DUTY_RULES)
       .filter(k => k !== '_default')
@@ -408,22 +412,21 @@ const CCSCalculator = (function () {
     </div>
     <div>
       <h3 class="text-lg font-extrabold text-brand-dark">Statutory Fee Calculator</h3>
-      <p class="text-xs text-slate-500">${opts.serviceTitle}</p>
+      <p class="text-xs text-slate-500">${cleanTitle}</p>
     </div>
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
     <div>
       <label class="block text-xs font-bold uppercase text-slate-700 mb-1" for="calc-state">State of Registration</label>
-      <select id="calc-state" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none" name="calc_state" aria-label="Select state">
-        <option value="">— Select State —</option>
+      <select id="calc-state" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition-all shadow-sm cursor-pointer" name="calc_state" aria-label="Select state">
         ${stateOptions}
       </select>
     </div>
 
     <div>
       <label class="block text-xs font-bold uppercase text-slate-700 mb-1" for="calc-capital">Authorized Capital</label>
-      <select id="calc-capital" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-brand-sky focus:outline-none" name="calc_capital" aria-label="Select authorized capital">
+      <select id="calc-capital" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-sky focus:bg-white focus:outline-none transition-all shadow-sm cursor-pointer" name="calc_capital" aria-label="Select authorized capital">
         ${slabOptions}
       </select>
     </div>
@@ -437,7 +440,7 @@ const CCSCalculator = (function () {
     </div>
     <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
       <span class="block text-[10px] uppercase font-bold text-slate-500">State Stamp Duty</span>
-      <span id="calc-stamp-val" class="font-black text-sm text-brand-gold mt-1 block">₹0</span>
+      <span id="calc-stamp-val" class="font-black text-sm text-brand-gold mt-1 block">₹5,000</span>
     </div>
     <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
       <span class="block text-[10px] uppercase font-bold text-slate-500">GST (18%)</span>
@@ -450,7 +453,7 @@ const CCSCalculator = (function () {
   </div>
 
   <!-- Detailed formula breakdown -->
-  <div id="calc-result" class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed">
+  <div id="calc-result" class="mt-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed">
     Select your state above to compute dynamic statutory stamp duty.
   </div>
 
@@ -465,7 +468,7 @@ const CCSCalculator = (function () {
       Get a Free Quote &rarr;
     </a>
     <a
-      href="https://wa.me/919995204905?text=${encodeURIComponent('Hi CraftEgon! I want a quote for ' + opts.serviceTitle + '.')}"
+      href="https://wa.me/918606918247?text=${encodeURIComponent('Hi CraftEgon! I want a statutory fee quote for ' + cleanTitle + '.')}"
       target="_blank"
       rel="noopener noreferrer"
       class="inline-flex items-center gap-2 bg-[#25D366]/10 border border-[#25D366]/40 text-[#128C7E] hover:bg-[#25D366]/20 font-bold text-xs px-4 py-2.5 rounded-lg transition"
@@ -478,6 +481,13 @@ const CCSCalculator = (function () {
   <div class="mt-6 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center gap-2.5">
     <span class="text-base shrink-0">ℹ️</span>
     <p class="leading-relaxed">
+      Estimates are indicative. Stamp duty rates are subject to change per state government notifications.
+      Government fees are charged at actuals. Final invoice will reflect current applicable rates.
+    </p>
+  </div>
+</div>
+    `;
+  }
       Estimates are indicative. Stamp duty rates are subject to change per state government notifications.
       Government fees are charged at actuals. Final invoice will reflect current applicable rates.
     </p>

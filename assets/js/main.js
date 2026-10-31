@@ -10,9 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
  * Lead Capture & Consultation Form Submission Handler
  */
 function initLeadForms() {
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form:not([role="search"]):not(#searchForm)');
     
     forms.forEach(form => {
+        // Skip forms that already have specialized handlers
+        if (form.hasAttribute('data-ccs-form') || form.hasAttribute('onsubmit')) {
+            return;
+        }
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
@@ -41,11 +46,12 @@ function initLeadForms() {
  * Mobile Navigation Drawer Toggle Handler
  */
 function initMobileNav() {
-    const toggleBtn = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const toggleBtn = document.getElementById('mobile-menu-toggle') || document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobile-menu') || document.getElementById('mobileMenu');
 
     if (toggleBtn && mobileMenu) {
-        toggleBtn.addEventListener('click', () => {
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
         });
     }

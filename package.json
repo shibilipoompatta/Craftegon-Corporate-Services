@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Official repository for Craftegon Corporate Services — managing corporate integrations, client portals, and web services.",
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/theme.css --minify",
-    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/theme.css --watch"
+    "build": "npm run build:css",
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify && tailwindcss -i ./assets/css/input.css -o ./assets/css/theme.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,6 @@
   "author": "CraftEgon",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.19"
   }
 }

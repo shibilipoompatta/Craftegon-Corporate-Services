@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Production Compiled Stylesheet -->
+  <!-- Production Compiled Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/output.css" />
   <link rel="stylesheet" href="/assets/css/theme.css" />
   
   <script type="application/ld+json">
@@ -66,9 +67,9 @@
 </head>
 <body class="bg-slate-50 text-brand-dark font-sans antialiased min-h-screen flex flex-col justify-between">
 
-<div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
-  <span>🚀 Special Offer: Get <strong>20% OFF</strong> MCA Filing &amp; Free Expert Consultation this week!</span>
-  <a href="#inquiry" class="underline hover:text-brand-goldLight font-bold transition">Claim Offer &rarr;</a>
+<div class="bg-gradient-to-r from-brand-sky to-brand-skyHover text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
+  <span>🚀 <strong>Special Offer:</strong> Get 20% OFF MCA Filing &amp; Free Expert Consultation this week!</span>
+  <a href="https://wa.me/918606918247?text=Hi%20CraftEgon!%20I%20want%20to%20claim%20the%2020%25%20OFF%20MCA%20Filing%20offer." target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-goldLight font-bold transition ml-2">Claim Offer &rarr;</a>
 </div>
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -90,18 +91,22 @@
       <a href="/corporate-governance/" class="hover:text-brand-sky transition">Governance &amp; MCA</a>
       <a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax</a>
       <a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP</a>
-      <a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a>
+      <a href="/licenses.html" class="hover:text-brand-sky transition">Licenses</a>
+      <a href="/experts.html" class="hover:text-brand-sky transition flex items-center gap-1.5 text-brand-sky">
+        <span>Talk to Experts</span>
+        <span class="bg-brand-goldLight text-brand-gold text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Live</span>
+      </a>
     </nav>
 
     <!-- CTA Buttons -->
     <div class="flex items-center gap-3">
-      <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
-        <span class="text-emerald-600 font-bold">●</span> Desk: +91 99952 04905
+      <a href="tel:+918606918247" class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700 bg-brand-slate px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition">
+        <span class="text-emerald-600 font-bold">●</span> +91 86069 18247
       </a>
       <a href="#inquiry" class="bg-brand-sky hover:bg-brand-skyHover text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
         Get Started
       </a>
-      <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
+      <button id="mobile-menu-toggle" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 min-touch flex items-center justify-center" aria-label="Toggle Menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -110,15 +115,27 @@
   </div>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 shadow-lg">
     <a href="/business-setup/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Business Setup &amp; Formation</a>
     <a href="/gst-advisory/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">GST Advisory &amp; Filings</a>
     <a href="/corporate-governance/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Corporate Governance &amp; MCA</a>
     <a href="/direct-tax/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Direct Tax &amp; TDS</a>
     <a href="/brand-protection/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Brand Protection &amp; Trademarks</a>
+    <a href="/licenses.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Licenses &amp; Certifications</a>
     <a href="/workforce-digital/" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Workforce &amp; Digital Infrastructure</a>
-    <div class="pt-2">
-      <a href="#inquiry" class="block w-full text-center bg-brand-sky text-white font-bold text-sm py-3 rounded-lg shadow">Get Free Consultation</a>
+    <a href="/experts.html" class="block text-sm font-semibold text-brand-sky py-2 border-b border-slate-100 flex items-center justify-between">
+      <span>Talk to CA/CS Experts</span>
+      <span class="bg-brand-goldLight text-brand-gold text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Live</span>
+    </a>
+    <a href="/about.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">About CraftEgon</a>
+    <a href="/contact.html" class="block text-sm font-semibold text-slate-700 hover:text-brand-sky py-2 border-b border-slate-100">Contact &amp; Grievance Desk</a>
+    <div class="pt-2 flex flex-col gap-2">
+      <a href="tel:+918606918247" class="block w-full text-center bg-slate-100 text-slate-800 font-bold text-sm py-2.5 rounded-lg border border-slate-200">
+        📞 Call: +91 86069 18247
+      </a>
+      <a href="#inquiry" class="block w-full text-center bg-brand-sky text-white font-bold text-sm py-2.5 rounded-lg shadow">
+        Get Free Consultation
+      </a>
     </div>
   </div>
 </header>
@@ -634,8 +651,8 @@
         <p class="text-slate-400 text-xs leading-relaxed mb-4">
           India's enterprise corporate technology, secretarial governance, and compliance operations platform.
         </p>
-        <p class="text-slate-400 text-xs">Technopark, Trivandrum, Kerala, India</p>
-        <p class="text-slate-400 text-xs mt-1">support@craftegon.com | +91 99952 04905</p>
+        <p class="text-slate-400 text-xs">Markaz Knowledge City HQ, Kozhikode &amp; Technopark, Trivandrum, Kerala, India</p>
+        <p class="text-slate-400 text-xs mt-1">support@craftegon.com | +91 86069 18247</p>
       </div>
 
       <div>
@@ -646,6 +663,7 @@
           <li><a href="/corporate-governance/" class="hover:text-brand-sky transition">Corporate Governance &amp; MCA</a></li>
           <li><a href="/direct-tax/" class="hover:text-brand-sky transition">Direct Tax &amp; TDS</a></li>
           <li><a href="/brand-protection/" class="hover:text-brand-sky transition">Brand &amp; IP Protection</a></li>
+          <li><a href="/licenses.html" class="hover:text-brand-sky transition">Trade Licenses &amp; FSSAI</a></li>
           <li><a href="/workforce-digital/" class="hover:text-brand-sky transition">Workforce &amp; Digital</a></li>
         </ul>
       </div>
@@ -653,10 +671,10 @@
       <div>
         <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Platform &amp; Legal</h5>
         <ul class="space-y-2">
-          <li><a href="/about/" class="hover:text-brand-sky transition">About CraftEgon</a></li>
-          <li><a href="/terms/" class="hover:text-brand-sky transition">Terms &amp; Conditions</a></li>
-          <li><a href="/privacy/" class="hover:text-brand-sky transition">Privacy Policy</a></li>
-          <li><a href="/data-policy/" class="hover:text-brand-sky transition">Data Protection Policy (DPDP)</a></li>
+          <li><a href="/about.html" class="hover:text-brand-sky transition">About CraftEgon</a></li>
+          <li><a href="/terms.html" class="hover:text-brand-sky transition">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy.html" class="hover:text-brand-sky transition">Privacy Policy</a></li>
+          <li><a href="/data-policy.html" class="hover:text-brand-sky transition">Data Protection Policy (DPDP)</a></li>
           <li><a href="/experts.html" class="hover:text-brand-sky transition">Expert CA/CS Directory</a></li>
           <li><a href="/contact.html" class="hover:text-brand-sky transition">Contact &amp; Grievance Desk</a></li>
         </ul>
@@ -665,8 +683,11 @@
       <div>
         <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Direct Case Desk</h5>
         <p class="text-slate-400 mb-3">Connect directly via WhatsApp Business for express onboarding:</p>
-        <a href="https://wa.me/919995204905" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2.5 rounded-lg text-xs font-bold transition">
+        <a href="https://wa.me/918606918247" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 px-3.5 py-2.5 rounded-lg text-xs font-bold transition">
           <span>💬 Direct WhatsApp Case Desk</span>
+        </a>
+        <a href="tel:+918606918247" class="mt-3 block text-slate-300 hover:text-white font-semibold">
+          📞 +91 86069 18247
         </a>
       </div>
     </div>
@@ -681,13 +702,13 @@
       <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-3">
         <p>&copy; 2026 CraftEgon Corporate Services. All rights reserved.</p>
         <div class="flex flex-wrap items-center gap-4 text-[11px] text-slate-400">
-          <a href="/about/" class="hover:text-white transition">About Us</a>
+          <a href="/about.html" class="hover:text-white transition">About Us</a>
           <span>·</span>
-          <a href="/terms/" class="hover:text-white transition">Terms &amp; Conditions</a>
+          <a href="/terms.html" class="hover:text-white transition">Terms &amp; Conditions</a>
           <span>·</span>
-          <a href="/privacy/" class="hover:text-white transition">Privacy Policy</a>
+          <a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a>
           <span>·</span>
-          <a href="/data-policy/" class="hover:text-white transition">Data Policy</a>
+          <a href="/data-policy.html" class="hover:text-white transition">Data Policy</a>
         </div>
         <p class="font-mono">corporateservices.craftegon.com</p>
       </div>
@@ -697,11 +718,12 @@
 
 <script src="/assets/js/forms.js"></script>
 <script src="/assets/js/calculator.js"></script>
+<script src="/assets/js/main.js"></script>
 <script>
   if (window.lucide) { lucide.createIcons(); }
 
-  const mBtn = document.getElementById('mobileMenuBtn');
-  const mMenu = document.getElementById('mobileMenu');
+  const mBtn = document.getElementById('mobile-menu-toggle') || document.getElementById('mobileMenuBtn');
+  const mMenu = document.getElementById('mobile-menu') || document.getElementById('mobileMenu');
   if (mBtn && mMenu) {
     mBtn.addEventListener('click', () => mMenu.classList.toggle('hidden'));
   }
