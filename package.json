@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Official repository for Craftegon Corporate Services — managing corporate integrations, client portals, and web services.",
   "scripts": {
-    "build": "npm run build:css",
+    "build": "npm run build:css && python inject_technical_seo.py && python build_sitemap.py",
     "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify && tailwindcss -i ./assets/css/input.css -o ./assets/css/theme.css --minify",
+    "build:seo": "python inject_technical_seo.py && python build_sitemap.py",
+    "verify": "python verify_site.py",
     "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
   },
   "repository": {

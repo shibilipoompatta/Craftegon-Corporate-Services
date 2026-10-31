@@ -6,7 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-# Grant GitHub Actions permissions to deploy to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -24,29 +23,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Step 1: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js Environment
+      - name: Step 2a: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install Dependencies & Build CSS (If package.json exists)
-        run: |
-          if [ -f package.json ]; then
-            npm ci
-            npm run build --if-present
-          fi
+      - name: Step 2b: Setup Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Setup GitHub Pages
+      - name: Step 3: Install Dependencies & Compile Tailwind CSS
+        run: |
+          npm ci
+          npm run build:css
+
+      - name: Step 4: Verify Site Integrity & Structured Data Schemas
+        run: |
+          python verify_site.py
+
+      - name: Step 5: Build Production Sitemap & Robots Configuration
+        run: |
+          python build_sitemap.py
+
+      - name: Setup GitHub Pages Configuration
         uses: actions/configure-pages@v4
 
-      - name: Upload Build Artifacts
+      - name: Upload Clean Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
-      - name: Deploy to GitHub Pages
+      - name: Step 6: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

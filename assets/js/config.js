@@ -32,3 +32,4 @@
         enableDebugLogging: false
     };
 })();
+

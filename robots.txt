@@ -1,0 +1,8 @@
+# Robots.txt for CraftEgon Corporate Services
+# https://corporateservices.craftegon.com/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://corporateservices.craftegon.com/sitemap.xml
